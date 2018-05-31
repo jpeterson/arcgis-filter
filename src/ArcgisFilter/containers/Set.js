@@ -5,7 +5,6 @@ import SetPreviewer from '../components/SetPreviewer';
 
 const Set = props => {
   const addExpression = () => {
-    console.log('add expression');
     props.addExpression(props.id);
   };
 
@@ -18,7 +17,6 @@ const Set = props => {
   };
 
   const handleRemoveExpression = expressionId => {
-    console.log('remove expression');
     props.removeExpression(props.id, expressionId);
   };
 
