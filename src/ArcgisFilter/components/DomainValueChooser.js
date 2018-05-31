@@ -2,25 +2,28 @@ import React from 'react';
 
 import { find } from 'lodash';
 
+import Select from 'calcite-react/Select';
+import { MenuItem } from 'calcite-react/Menu';
+
 const DomainValueChooser = props => {
-  const handleOnChange = e => {
-    props.onChange(find(props.codedValues, { code: e.target.value }));
+  const handleOnChange = code => {
+    props.onChange(find(props.codedValues, { code }));
   };
 
   const getOptions = codedValues => {
     return codedValues.map(codedValue => {
       return (
-        <option value={codedValue.code} key={codedValue.name}>
+        <MenuItem value={codedValue.code} key={codedValue.name}>
           {codedValue.name}
-        </option>
+        </MenuItem>
       );
     });
   };
 
   return (
-    <select value={props.selectedValue.code} onChange={handleOnChange}>
+    <Select selectedValue={props.selectedValue.code} onChange={handleOnChange}>
       {getOptions(props.codedValues)}
-    </select>
+    </Select>
   );
 };
 

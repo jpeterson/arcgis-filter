@@ -1,4 +1,8 @@
 import React from 'react';
+import moment from 'moment';
+
+import TextField from 'calcite-react/TextField';
+import DatePicker from 'calcite-react/DatePicker';
 
 const ValueInput = props => {
   const handleOnChange = e => {
@@ -11,16 +15,10 @@ const ValueInput = props => {
   const getElement = type => {
     switch (type) {
       case 'string':
-        return (
-          <input
-            value={props.value.code}
-            onChange={handleOnChange}
-            type="text"
-          />
-        );
+        return <TextField value={props.value.code} onChange={handleOnChange} />;
       case 'number':
         return (
-          <input
+          <TextField
             value={props.value.code}
             onChange={handleOnChange}
             type="number"
@@ -28,7 +26,7 @@ const ValueInput = props => {
         );
       case 'date':
         return (
-          <input
+          <TextField
             value={props.value.code}
             onChange={handleOnChange}
             type="date"

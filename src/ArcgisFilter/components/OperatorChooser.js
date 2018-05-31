@@ -2,25 +2,31 @@ import React from 'react';
 
 import { find } from 'lodash';
 
+import Select from 'calcite-react/Select';
+import { MenuItem } from 'calcite-react/Menu';
+
 const OperatorChooser = props => {
-  const handleOnChange = e => {
-    props.onChange(find(props.operators, { alias: e.target.value }));
+  const handleOnChange = value => {
+    props.onChange(find(props.operators, { alias: value }));
   };
 
   const getOptions = operators => {
     return operators.map(operator => {
       return (
-        <option value={operator.key} key={operator.alias}>
+        <MenuItem value={operator.alias} key={operator.alias}>
           {operator.alias}
-        </option>
+        </MenuItem>
       );
     });
   };
 
   return (
-    <select value={props.selectedOperator.alias} onChange={handleOnChange}>
+    <Select
+      selectedValue={props.selectedOperator.alias}
+      onChange={handleOnChange}
+    >
       {getOptions(props.operators)}
-    </select>
+    </Select>
   );
 };
 

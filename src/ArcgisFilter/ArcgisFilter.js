@@ -6,6 +6,14 @@ import FilterPreviewer from './components/FilterPreviewer';
 import { getFields, generateId } from './utils/genericUtils';
 import expressionTemplate from './defaults/expression.json';
 
+import { ThemeProvider } from 'styled-components';
+import CalciteTheme from 'calcite-react/theme/CalciteTheme';
+
+import Panel from 'calcite-react/Panel';
+import Button from 'calcite-react/Button';
+import Radio from 'calcite-react/Radio';
+import { Fieldset, Legend } from 'calcite-react/Form';
+
 class ArcgisFilter extends Component {
   constructor(props) {
     super(props);
@@ -118,44 +126,37 @@ class ArcgisFilter extends Component {
     }
 
     return (
-      <div
-        style={{
-          padding: '10px',
-          margin: '10px'
-        }}
-      >
-        <div style={{ textAlign: 'right', fontSize: '.8em' }}>
-          Filter Operator:{' '}
-          <label>
-            <input
-              value="and"
-              name="filter-and-or"
-              type="radio"
+      <ThemeProvider theme={CalciteTheme}>
+        <Panel white>
+          <Fieldset
+            style={{ textAlign: 'right', fontSize: '.8em' }}
+            name="filter-operator"
+            horizontal
+          >
+            <Legend>Set Operator:</Legend>
+            <Radio
               checked={this.state.mustMatchAll}
               onChange={() => this.handleUpdateFilterOperator(true)}
-            />
-            AND
-          </label>{' '}
-          <label>
-            <input
-              value="or"
-              name="filter-and-or"
-              type="radio"
+            >
+              AND
+            </Radio>{' '}
+            <Radio
               checked={!this.state.mustMatchAll}
               onChange={() => this.handleUpdateFilterOperator(false)}
-            />
-            OR
-          </label>
-        </div>
-        {this.getSets(this.state.sets)}
-        <FilterPreviewer
-          options={{
-            mustMatchAll: this.state.mustMatchAll,
-            sets: this.state.sets
-          }}
-        />
-        <button onClick={this.handleAddSet}>Add Set</button>
-      </div>
+            >
+              OR
+            </Radio>
+          </Fieldset>
+          {this.getSets(this.state.sets)}
+          <FilterPreviewer
+            options={{
+              mustMatchAll: this.state.mustMatchAll,
+              sets: this.state.sets
+            }}
+          />
+          <Button onClick={this.handleAddSet}>Add Set</Button>
+        </Panel>
+      </ThemeProvider>
     );
   }
 }

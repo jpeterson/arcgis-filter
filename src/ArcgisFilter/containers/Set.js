@@ -3,6 +3,11 @@ import React from 'react';
 import Expression from './Expression';
 import SetPreviewer from '../components/SetPreviewer';
 
+import Panel from 'calcite-react/Panel';
+import Button from 'calcite-react/Button';
+import Radio from 'calcite-react/Radio';
+import { Fieldset, Legend } from 'calcite-react/Form';
+
 const Set = props => {
   const addExpression = () => {
     props.addExpression(props.id);
@@ -42,37 +47,26 @@ const Set = props => {
   };
 
   return (
-    <div
-      style={{
-        backgroundColor: '#f9f9f9',
-        border: '1px dotted #ddd',
-        padding: '10px',
-        margin: '10px'
-      }}
-    >
-      <div style={{ textAlign: 'right', fontSize: '.8em' }}>
-        Set Operator:{' '}
-        <label>
-          <input
-            value="and"
-            name={`and-or-${props.id}`}
-            type="radio"
-            checked={props.mustMatchAll}
-            onChange={() => updateSetOperator(true)}
-          />
+    <Panel>
+      <Fieldset
+        style={{ textAlign: 'right', fontSize: '.8em' }}
+        name={`set-operator-${props.id}`}
+        horizontal
+      >
+        <Legend>Set Operator:</Legend>
+        <Radio
+          checked={props.mustMatchAll}
+          onChange={() => updateSetOperator(true)}
+        >
           AND
-        </label>{' '}
-        <label>
-          <input
-            value="or"
-            name={`and-or-${props.id}`}
-            type="radio"
-            checked={!props.mustMatchAll}
-            onChange={() => updateSetOperator(false)}
-          />
+        </Radio>{' '}
+        <Radio
+          checked={!props.mustMatchAll}
+          onChange={() => updateSetOperator(false)}
+        >
           OR
-        </label>
-      </div>
+        </Radio>
+      </Fieldset>
       {getExpressions(props.expressions)}
       <SetPreviewer
         options={{
@@ -80,9 +74,9 @@ const Set = props => {
           expressions: props.expressions
         }}
       />
-      <button onClick={addExpression}>Add Expression</button>
-      <button onClick={removeSet}>Remove Set</button>
-    </div>
+      <Button onClick={addExpression}>Add Expression</Button>
+      <Button onClick={removeSet}>Remove Set</Button>
+    </Panel>
   );
 };
 

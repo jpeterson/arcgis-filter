@@ -1,24 +1,27 @@
 import React from 'react';
 
+import Select from 'calcite-react/Select';
+import { MenuItem } from 'calcite-react/Menu';
+
 const FieldChooser = props => {
-  const handleOnChange = e => {
-    props.onChange(props.fields[e.target.value]);
+  const handleOnChange = field => {
+    props.onChange(props.fields[field]);
   };
 
   const getOptions = fields => {
     return Object.keys(fields).map(key => {
       return (
-        <option value={key} key={key}>
+        <MenuItem value={key} key={key}>
           {key}
-        </option>
+        </MenuItem>
       );
     });
   };
 
   return (
-    <select value={props.selectedField.name} onChange={handleOnChange}>
+    <Select selectedValue={props.selectedField.name} onChange={handleOnChange}>
       {getOptions(props.fields)}
-    </select>
+    </Select>
   );
 };
 

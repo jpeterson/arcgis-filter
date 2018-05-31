@@ -1,10 +1,14 @@
 import React from 'react';
 
+import Select from 'calcite-react/Select';
+import { MenuItem } from 'calcite-react/Menu';
+
 const UniqueValueChooser = props => {
   return (
-    <select>
-      <option>Coming Soon</option>
-    </select>
+    <Select>
+      <MenuItem>Coming Soon!</MenuItem>
+      <MenuItem />
+    </Select>
   );
 };
 

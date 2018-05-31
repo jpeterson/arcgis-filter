@@ -8,6 +8,10 @@ import ValueTypeChooser from '../components/ValueTypeChooser';
 import DomainValueChooser from '../components/DomainValueChooser';
 import ExpressionPreviewer from '../components/ExpressionPreviewer';
 
+import { Fieldset, Legend } from 'calcite-react/Form';
+import Panel from 'calcite-react/Panel';
+import Button from 'calcite-react/Button';
+
 import {
   getValidOperators,
   getDefaultFilterValue,
@@ -103,34 +107,28 @@ class Expression extends Component {
     const { field, operator, valueType } = this.props.expressionDef;
 
     return (
-      <div
-        style={{
-          backgroundColor: '#f6fdff',
-          border: '1px dotted #ddd',
-          padding: '10px',
-          margin: '10px'
-        }}
-      >
-        <FieldChooser
-          selectedField={field}
-          fields={this.props.fields}
-          onChange={this.handleFieldChanged}
-        />
-        <OperatorChooser
-          selectedOperator={operator}
-          operators={getValidOperators(field.type)}
-          onChange={this.handleOperatorChanged}
-        />
-        {this.getValueElement(this.props.expressionDef)}
-        <ValueTypeChooser
-          id={this.props.id}
-          selectedValueType={valueType}
-          onChange={this.handleValueTypeChanged}
-        />
-        <hr />
+      <Panel style={{ backgroundColor: '#f6fdff' }}>
+        <Fieldset name={`expression-${this.props.id}`} horizontal>
+          <FieldChooser
+            selectedField={field}
+            fields={this.props.fields}
+            onChange={this.handleFieldChanged}
+          />
+          <OperatorChooser
+            selectedOperator={operator}
+            operators={getValidOperators(field.type)}
+            onChange={this.handleOperatorChanged}
+          />
+          {this.getValueElement(this.props.expressionDef)}
+          <ValueTypeChooser
+            id={this.props.id}
+            selectedValueType={valueType}
+            onChange={this.handleValueTypeChanged}
+          />
+        </Fieldset>
         <ExpressionPreviewer options={this.props.expressionDef} />
-        <button onClick={this.removeExpression}>Remove Expression</button>
-      </div>
+        <Button onClick={this.removeExpression}>Remove Expression</Button>
+      </Panel>
     );
   }
 }
