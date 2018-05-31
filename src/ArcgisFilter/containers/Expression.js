@@ -18,7 +18,7 @@ class Expression extends Component {
   componentDidMount() {
     // Kinda nasty, but grabs the "first" property in the fields object
     // in the same way the FieldChooser will.
-    const field = this.props.fields[Object.keys(this.props.fields)[6]];
+    const field = this.props.fields[Object.keys(this.props.fields)[0]];
     this.setOptionsFromField(field);
   }
 
@@ -38,17 +38,14 @@ class Expression extends Component {
 
   handleOperatorChanged = operator => {
     this.updateExpression({ operator });
-    this.setState({ operator });
   };
 
   handleValueChanged = value => {
     this.updateExpression({ value });
-    this.setState({ value });
   };
 
   handleValueTypeChanged = valueType => {
     this.updateExpression({ valueType });
-    this.setState({ valueType });
   };
 
   setOptionsFromField = field => {

@@ -13,6 +13,10 @@ const Set = props => {
     props.removeSet(props.id);
   };
 
+  const updateSetOperator = mustMatchAll => {
+    props.updateSetOperator(props.id, mustMatchAll);
+  };
+
   const handleRemoveExpression = expressionId => {
     console.log('remove expression');
     props.removeExpression(props.id, expressionId);
@@ -41,6 +45,27 @@ const Set = props => {
 
   return (
     <div style={{ border: '3px dashed red', padding: '10px', margin: '10px' }}>
+      Set Operator:{' '}
+      <label>
+        <input
+          value="and"
+          name={`and-or-${props.id}`}
+          type="radio"
+          checked={props.mustMatchAll}
+          onChange={() => updateSetOperator(true)}
+        />
+        AND
+      </label>{' '}
+      <label>
+        <input
+          value="or"
+          name={`and-or-${props.id}`}
+          type="radio"
+          checked={!props.mustMatchAll}
+          onChange={() => updateSetOperator(false)}
+        />
+        OR
+      </label>
       {getExpressions(props.expressions)}
       <SetPreviewer
         options={{

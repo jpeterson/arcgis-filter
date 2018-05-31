@@ -57,6 +57,12 @@ class ArcgisFilter extends Component {
     this.setState({ sets });
   };
 
+  handleUpdateSetOperator = (setId, setOperator) => {
+    const { sets } = this.state;
+    sets[setId].mustMatchAll = setOperator;
+    this.setState({ sets });
+  };
+
   handleAddExpression = setId => {
     const { sets } = this.state;
     sets[setId].expressions[generateId()] = expressionTemplate;
@@ -79,6 +85,10 @@ class ArcgisFilter extends Component {
     this.setState({ sets });
   };
 
+  handleUpdateFilterOperator = mustMatchAll => {
+    this.setState({ mustMatchAll });
+  };
+
   getSets = sets => {
     return Object.keys(sets).map(key => {
       const set = sets[key];
@@ -93,6 +103,7 @@ class ArcgisFilter extends Component {
           onFieldChange={this.handleFieldChanged}
           onOperatorChange={this.handleOperatorChanged}
           onValueChange={this.handleValueChanged}
+          updateSetOperator={this.handleUpdateSetOperator}
           removeSet={this.handleRemoveSet}
           addExpression={this.handleAddExpression}
           removeExpression={this.handleRemoveExpression}
@@ -110,6 +121,27 @@ class ArcgisFilter extends Component {
       <div
         style={{ border: '3px dashed blue', padding: '10px', margin: '10px' }}
       >
+        Filter Operator:{' '}
+        <label>
+          <input
+            value="and"
+            name="filter-and-or"
+            type="radio"
+            checked={this.state.mustMatchAll}
+            onChange={() => this.handleUpdateFilterOperator(true)}
+          />
+          AND
+        </label>{' '}
+        <label>
+          <input
+            value="or"
+            name="filter-and-or"
+            type="radio"
+            checked={!this.state.mustMatchAll}
+            onChange={() => this.handleUpdateFilterOperator(false)}
+          />
+          OR
+        </label>
         {this.getSets(this.state.sets)}
         <FilterPreviewer
           options={{
