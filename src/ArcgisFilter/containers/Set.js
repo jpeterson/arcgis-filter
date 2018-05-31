@@ -42,28 +42,37 @@ const Set = props => {
   };
 
   return (
-    <div style={{ border: '3px dashed red', padding: '10px', margin: '10px' }}>
-      Set Operator:{' '}
-      <label>
-        <input
-          value="and"
-          name={`and-or-${props.id}`}
-          type="radio"
-          checked={props.mustMatchAll}
-          onChange={() => updateSetOperator(true)}
-        />
-        AND
-      </label>{' '}
-      <label>
-        <input
-          value="or"
-          name={`and-or-${props.id}`}
-          type="radio"
-          checked={!props.mustMatchAll}
-          onChange={() => updateSetOperator(false)}
-        />
-        OR
-      </label>
+    <div
+      style={{
+        backgroundColor: '#f9f9f9',
+        border: '1px dotted #ddd',
+        padding: '10px',
+        margin: '10px'
+      }}
+    >
+      <div style={{ textAlign: 'right', fontSize: '.8em' }}>
+        Set Operator:{' '}
+        <label>
+          <input
+            value="and"
+            name={`and-or-${props.id}`}
+            type="radio"
+            checked={props.mustMatchAll}
+            onChange={() => updateSetOperator(true)}
+          />
+          AND
+        </label>{' '}
+        <label>
+          <input
+            value="or"
+            name={`and-or-${props.id}`}
+            type="radio"
+            checked={!props.mustMatchAll}
+            onChange={() => updateSetOperator(false)}
+          />
+          OR
+        </label>
+      </div>
       {getExpressions(props.expressions)}
       <SetPreviewer
         options={{

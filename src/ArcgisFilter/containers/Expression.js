@@ -104,7 +104,12 @@ class Expression extends Component {
 
     return (
       <div
-        style={{ border: '3px dashed lime', padding: '10px', margin: '10px' }}
+        style={{
+          backgroundColor: '#f6fdff',
+          border: '1px dotted #ddd',
+          padding: '10px',
+          margin: '10px'
+        }}
       >
         <FieldChooser
           selectedField={field}

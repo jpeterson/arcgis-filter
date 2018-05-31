@@ -119,29 +119,34 @@ class ArcgisFilter extends Component {
 
     return (
       <div
-        style={{ border: '3px dashed blue', padding: '10px', margin: '10px' }}
+        style={{
+          padding: '10px',
+          margin: '10px'
+        }}
       >
-        Filter Operator:{' '}
-        <label>
-          <input
-            value="and"
-            name="filter-and-or"
-            type="radio"
-            checked={this.state.mustMatchAll}
-            onChange={() => this.handleUpdateFilterOperator(true)}
-          />
-          AND
-        </label>{' '}
-        <label>
-          <input
-            value="or"
-            name="filter-and-or"
-            type="radio"
-            checked={!this.state.mustMatchAll}
-            onChange={() => this.handleUpdateFilterOperator(false)}
-          />
-          OR
-        </label>
+        <div style={{ textAlign: 'right', fontSize: '.8em' }}>
+          Filter Operator:{' '}
+          <label>
+            <input
+              value="and"
+              name="filter-and-or"
+              type="radio"
+              checked={this.state.mustMatchAll}
+              onChange={() => this.handleUpdateFilterOperator(true)}
+            />
+            AND
+          </label>{' '}
+          <label>
+            <input
+              value="or"
+              name="filter-and-or"
+              type="radio"
+              checked={!this.state.mustMatchAll}
+              onChange={() => this.handleUpdateFilterOperator(false)}
+            />
+            OR
+          </label>
+        </div>
         {this.getSets(this.state.sets)}
         <FilterPreviewer
           options={{
