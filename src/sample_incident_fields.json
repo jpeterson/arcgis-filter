@@ -1,0 +1,2388 @@
+{
+  "ABCDMisc": {
+    "alias": "ABCD Misc",
+    "editable": true,
+    "length": 4,
+    "name": "ABCDMisc",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "AdditionalFuelModel": {
+    "alias": "Additional Fuel Model",
+    "domain": {
+      "name": "NFFL_Fuel_Model",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "Short Grass (1 foot)",
+        "code": "Short Grass (1 foot)"
+      }, {
+        "name": "Timber (Grass and Understory)",
+        "code": "Timber (Grass and Understory)"
+      }, {
+        "name": "Tall Grass (2.5 feet)",
+        "code": "Tall Grass (2.5 feet)"
+      }, {
+        "name": "Chaparral (6 feet)",
+        "code": "Chaparral (6 feet)"
+      }, {
+        "name": "Brush (2 feet)",
+        "code": "Brush (2 feet)"
+      }, {
+        "name": "Dormant Brush, Hardwood Slash",
+        "code": "Dormant Brush, Hardwood Slash"
+      }, {
+        "name": "Southern Rough",
+        "code": "Southern Rough"
+      }, {
+        "name": "Closed Timber Litter",
+        "code": "Closed Timber Litter"
+      }, {
+        "name": "Hardwood Litter",
+        "code": "Hardwood Litter"
+      }, {
+        "name": "Timber (Litter and Understory)",
+        "code": "Timber (Litter and Understory)"
+      }, {
+        "name": "Light Logging Slash",
+        "code": "Light Logging Slash"
+      }, {
+        "name": "Medium Logging Slash",
+        "code": "Medium Logging Slash"
+      }, {
+        "name": "Heavy Logging Slash",
+        "code": "Heavy Logging Slash"
+      }]
+    },
+    "editable": true,
+    "length": 30,
+    "name": "AdditionalFuelModel",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "ADSPermissionState": {
+    "alias": "ADS Permission State",
+    "domain": {
+      "name": "ADSPermissionStateDomain",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "DEFAULT",
+        "code": "DEFAULT"
+      }, {
+        "name": "ICS209",
+        "code": "ICS209"
+      }, {
+        "name": "CERTIFIED",
+        "code": "CERTIFIED"
+      }]
+    },
+    "editable": true,
+    "length": 25,
+    "name": "ADSPermissionState",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "CalculatedAcres": {
+    "alias": "Calculated Acres",
+    "editable": true,
+    "length": -1,
+    "name": "CalculatedAcres",
+    "nullable": true,
+    "type": "esriFieldTypeDouble"
+  },
+  "ConflictParentIrwinID": {
+    "alias": "Conflict Parent Irwin ID",
+    "editable": true,
+    "length": 38,
+    "name": "ConflictParentIrwinID",
+    "nullable": true,
+    "type": "esriFieldTypeGUID"
+  },
+  "ContainmentDateTime": {
+    "alias": "Containment Date Time",
+    "editable": true,
+    "length": 8,
+    "name": "ContainmentDateTime",
+    "nullable": true,
+    "type": "esriFieldTypeDate"
+  },
+  "ControlDateTime": {
+    "alias": "Control Date Time",
+    "editable": true,
+    "length": 8,
+    "name": "ControlDateTime",
+    "nullable": true,
+    "type": "esriFieldTypeDate"
+  },
+  "CreatedOnDateTime": {
+    "alias": "Created On Date Time",
+    "editable": true,
+    "length": -1,
+    "name": "CreatedOnDateTime",
+    "nullable": true,
+    "type": "esriFieldTypeDouble"
+  },
+  "CriticalResourceNeeds": {
+    "alias": "Critical Resource Needs",
+    "editable": true,
+    "length": 255,
+    "name": "CriticalResourceNeeds",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "DailyAcres": {
+    "alias": "Daily Acres",
+    "editable": true,
+    "length": -1,
+    "name": "DailyAcres",
+    "nullable": true,
+    "type": "esriFieldTypeDouble"
+  },
+  "DiscoveryAcres": {
+    "alias": "Discovery Acres",
+    "editable": true,
+    "length": -1,
+    "name": "DiscoveryAcres",
+    "nullable": true,
+    "type": "esriFieldTypeDouble"
+  },
+  "DispatchCenterID": {
+    "alias": "Dispatch Center ID",
+    "editable": true,
+    "length": 6,
+    "name": "DispatchCenterID",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "EstimatedContainmentDate": {
+    "alias": "Estimated Containment Date",
+    "editable": true,
+    "length": 8,
+    "name": "EstimatedContainmentDate",
+    "nullable": true,
+    "type": "esriFieldTypeDate"
+  },
+  "EstimatedCostToDate": {
+    "alias": "Estimated Cost To Date",
+    "editable": true,
+    "length": -1,
+    "name": "EstimatedCostToDate",
+    "nullable": true,
+    "type": "esriFieldTypeDouble"
+  },
+  "Fatalities": {
+    "alias": "Fatalities",
+    "editable": true,
+    "length": -1,
+    "name": "Fatalities",
+    "nullable": true,
+    "type": "esriFieldTypeSmallInteger"
+  },
+  "FinalAcres": {
+    "alias": "Final Acres",
+    "editable": true,
+    "length": -1,
+    "name": "FinalAcres",
+    "nullable": true,
+    "type": "esriFieldTypeDouble"
+  },
+  "FinalFireReportApprovedBy": {
+    "alias": "Final Fire Report Approved By",
+    "editable": true,
+    "length": 100,
+    "name": "FinalFireReportApprovedBy",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "FinalFireReportApprovedByTitle": {
+    "alias": "Final Fire Report Approved By Title",
+    "editable": true,
+    "length": 100,
+    "name": "FinalFireReportApprovedByTitle",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "FinalFireReportApprovedByUnit": {
+    "alias": "Final Fire Report Approved By Unit",
+    "editable": true,
+    "length": 6,
+    "name": "FinalFireReportApprovedByUnit",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "FinalFireReportApprovedDate": {
+    "alias": "Final Fire Report Approved Date",
+    "editable": true,
+    "length": 8,
+    "name": "FinalFireReportApprovedDate",
+    "nullable": true,
+    "type": "esriFieldTypeDate"
+  },
+  "FinalFireReportNarrative": {
+    "alias": "Final Fire Report Narrative",
+    "editable": true,
+    "length": 3999,
+    "name": "FinalFireReportNarrative",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "FinalStrategyAttainedDateTime": {
+    "alias": "Final Strategy Attained Date Time",
+    "editable": true,
+    "length": 8,
+    "name": "FinalStrategyAttainedDateTime",
+    "nullable": true,
+    "type": "esriFieldTypeDate"
+  },
+  "FireBehaviorDescription": {
+    "alias": "Fire Behavior Description",
+    "editable": true,
+    "length": 3999,
+    "name": "FireBehaviorDescription",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "FireBehaviorGeneral": {
+    "alias": "Fire Behavior General",
+    "domain": {
+      "name": "Fire_Behavior_General",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "Extreme",
+        "code": "Extreme"
+      }, {
+        "name": "Active",
+        "code": "Active"
+      }, {
+        "name": "Moderate",
+        "code": "Moderate"
+      }, {
+        "name": "Minimal",
+        "code": "Minimal"
+      }]
+    },
+    "editable": true,
+    "length": 20,
+    "name": "FireBehaviorGeneral",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "FireBehaviorGeneral1": {
+    "alias": "Fire Behavior General 1",
+    "domain": {
+      "name": "Fire_Behavior_General_Description",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "Crowning",
+        "code": "Crowning"
+      }, {
+        "name": "Short Crown Runs",
+        "code": "Short Crown Runs"
+      }, {
+        "name": "Uphill Runs",
+        "code": "Uphill Runs"
+      }, {
+        "name": "Wind Driven Runs",
+        "code": "Wind Driven Runs"
+      }, {
+        "name": "Running",
+        "code": "Running"
+      }, {
+        "name": "Flanking",
+        "code": "Flanking"
+      }, {
+        "name": "Backing",
+        "code": "Backing"
+      }, {
+        "name": "Creeping",
+        "code": "Creeping"
+      }, {
+        "name": "Torching",
+        "code": "Torching"
+      }, {
+        "name": "Group Torching",
+        "code": "Group Torching"
+      }, {
+        "name": "Single Tree Torching",
+        "code": "Single Tree Torching"
+      }, {
+        "name": "Isolated Torching",
+        "code": "Isolated Torching"
+      }, {
+        "name": "Spotting",
+        "code": "Spotting"
+      }, {
+        "name": "Long-range Spotting",
+        "code": "Long-range Spotting"
+      }, {
+        "name": "Short-range Spotting",
+        "code": "Short-range Spotting"
+      }, {
+        "name": "Smoldering",
+        "code": "Smoldering"
+      }]
+    },
+    "editable": true,
+    "length": 50,
+    "name": "FireBehaviorGeneral1",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "FireBehaviorGeneral2": {
+    "alias": "Fire Behavior General 2",
+    "domain": {
+      "name": "Fire_Behavior_General_Description",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "Crowning",
+        "code": "Crowning"
+      }, {
+        "name": "Short Crown Runs",
+        "code": "Short Crown Runs"
+      }, {
+        "name": "Uphill Runs",
+        "code": "Uphill Runs"
+      }, {
+        "name": "Wind Driven Runs",
+        "code": "Wind Driven Runs"
+      }, {
+        "name": "Running",
+        "code": "Running"
+      }, {
+        "name": "Flanking",
+        "code": "Flanking"
+      }, {
+        "name": "Backing",
+        "code": "Backing"
+      }, {
+        "name": "Creeping",
+        "code": "Creeping"
+      }, {
+        "name": "Torching",
+        "code": "Torching"
+      }, {
+        "name": "Group Torching",
+        "code": "Group Torching"
+      }, {
+        "name": "Single Tree Torching",
+        "code": "Single Tree Torching"
+      }, {
+        "name": "Isolated Torching",
+        "code": "Isolated Torching"
+      }, {
+        "name": "Spotting",
+        "code": "Spotting"
+      }, {
+        "name": "Long-range Spotting",
+        "code": "Long-range Spotting"
+      }, {
+        "name": "Short-range Spotting",
+        "code": "Short-range Spotting"
+      }, {
+        "name": "Smoldering",
+        "code": "Smoldering"
+      }]
+    },
+    "editable": true,
+    "length": 50,
+    "name": "FireBehaviorGeneral2",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "FireBehaviorGeneral3": {
+    "alias": "Fire Behavior General 3",
+    "domain": {
+      "name": "Fire_Behavior_General_Description",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "Crowning",
+        "code": "Crowning"
+      }, {
+        "name": "Short Crown Runs",
+        "code": "Short Crown Runs"
+      }, {
+        "name": "Uphill Runs",
+        "code": "Uphill Runs"
+      }, {
+        "name": "Wind Driven Runs",
+        "code": "Wind Driven Runs"
+      }, {
+        "name": "Running",
+        "code": "Running"
+      }, {
+        "name": "Flanking",
+        "code": "Flanking"
+      }, {
+        "name": "Backing",
+        "code": "Backing"
+      }, {
+        "name": "Creeping",
+        "code": "Creeping"
+      }, {
+        "name": "Torching",
+        "code": "Torching"
+      }, {
+        "name": "Group Torching",
+        "code": "Group Torching"
+      }, {
+        "name": "Single Tree Torching",
+        "code": "Single Tree Torching"
+      }, {
+        "name": "Isolated Torching",
+        "code": "Isolated Torching"
+      }, {
+        "name": "Spotting",
+        "code": "Spotting"
+      }, {
+        "name": "Long-range Spotting",
+        "code": "Long-range Spotting"
+      }, {
+        "name": "Short-range Spotting",
+        "code": "Short-range Spotting"
+      }, {
+        "name": "Smoldering",
+        "code": "Smoldering"
+      }]
+    },
+    "editable": true,
+    "length": 50,
+    "name": "FireBehaviorGeneral3",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "FireCause": {
+    "alias": "Fire Cause",
+    "domain": {
+      "name": "Fire_Cause",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "Natural",
+        "code": "Natural"
+      }, {
+        "name": "Human",
+        "code": "Human"
+      }, {
+        "name": "Unknown",
+        "code": "Unknown"
+      }]
+    },
+    "editable": true,
+    "length": 15,
+    "name": "FireCause",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "FireCauseGeneral": {
+    "alias": "Fire Cause General",
+    "domain": {
+      "name": "Fire_Cause_General",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "Camping",
+        "code": "Camping"
+      }, {
+        "name": "Smoking",
+        "code": "Smoking"
+      }, {
+        "name": "Incendiary",
+        "code": "Incendiary"
+      }, {
+        "name": "Equipment",
+        "code": "Equipment"
+      }, {
+        "name": "Utilities",
+        "code": "Utilities"
+      }, {
+        "name": "Firearms/Weapons",
+        "code": "Firearms/Weapons"
+      }, {
+        "name": "Debris/Open Burning",
+        "code": "Debris/Open Burning"
+      }, {
+        "name": "Other Human Cause",
+        "code": "Other Human Cause"
+      }, {
+        "name": "Other Natural Cause",
+        "code": "Other Natural Cause"
+      }, {
+        "name": "Coal Seam",
+        "code": "Coal Seam"
+      }, {
+        "name": "Lightning",
+        "code": "Lightning"
+      }, {
+        "name": "Railroad",
+        "code": "Railroad"
+      }, {
+        "name": "Volcanic",
+        "code": "Volcanic"
+      }, {
+        "name": "Investigated but Undetermined",
+        "code": "Investigated but Undetermined"
+      }, {
+        "name": "Cause and Origin Not Identified",
+        "code": "Cause and Origin Not Identified"
+      }]
+    },
+    "editable": true,
+    "length": 100,
+    "name": "FireCauseGeneral",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "FireCauseSpecific": {
+    "alias": "Fire Cause Specific",
+    "domain": {
+      "name": "Fire_Cause_Specific",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "Accident/Derailment",
+        "code": "Accident/Derailment"
+      }, {
+        "name": "Aerial Luminaries",
+        "code": "Aerial Luminaries"
+      }, {
+        "name": "Agricultural",
+        "code": "Agricultural"
+      }, {
+        "name": "Aircraft",
+        "code": "Aircraft"
+      }, {
+        "name": "Ammunition",
+        "code": "Ammunition"
+      }, {
+        "name": "Armor Piercing Incendiary/Tracer Ammunition",
+        "code": "Armor Piercing Incendiary/Tracer Ammunition"
+      }, {
+        "name": "Arson-Crime Concealment",
+        "code": "Arson-Crime Concealment"
+      }, {
+        "name": "Arson-Excitement",
+        "code": "Arson-Excitement"
+      }, {
+        "name": "Arson-Extremism/Terrorism",
+        "code": "Arson-Extremism/Terrorism"
+      }, {
+        "name": "Arson-Profit",
+        "code": "Arson-Profit"
+      }, {
+        "name": "Arson-Retaliation",
+        "code": "Arson-Retaliation"
+      }, {
+        "name": "Arson-Vandalism",
+        "code": "Arson-Vandalism"
+      }, {
+        "name": "Ash Disposal",
+        "code": "Ash Disposal"
+      }, {
+        "name": "Barrel",
+        "code": "Barrel"
+      }, {
+        "name": "Blasting",
+        "code": "Blasting"
+      }, {
+        "name": "Bonfire",
+        "code": "Bonfire"
+      }, {
+        "name": "Brake Shoe Particle",
+        "code": "Brake Shoe Particle"
+      }, {
+        "name": "Broadcast/Prescribed Burn",
+        "code": "Broadcast/Prescribed Burn"
+      }, {
+        "name": "Campfire",
+        "code": "Campfire"
+      }, {
+        "name": "Catalyst Welding",
+        "code": "Catalyst Welding"
+      }, {
+        "name": "Ceremonial/Cultural",
+        "code": "Ceremonial/Cultural"
+      }, {
+        "name": "Cigar",
+        "code": "Cigar"
+      }, {
+        "name": "Cigarette",
+        "code": "Cigarette"
+      }, {
+        "name": "Cooking",
+        "code": "Cooking"
+      }, {
+        "name": "Cooking Fire",
+        "code": "Cooking Fire"
+      }, {
+        "name": "Cultural",
+        "code": "Cultural"
+      }, {
+        "name": "Cutting/Welding",
+        "code": "Cutting/Welding"
+      }, {
+        "name": "Delayed Powder Burn",
+        "code": "Delayed Powder Burn"
+      }, {
+        "name": "Ditch/Fence",
+        "code": "Ditch/Fence"
+      }, {
+        "name": "Drug Operations",
+        "code": "Drug Operations"
+      }, {
+        "name": "Drug Paraphernalia",
+        "code": "Drug Paraphernalia"
+      }, {
+        "name": "Dump Burning",
+        "code": "Dump Burning"
+      }, {
+        "name": "Dynamic Grid Failure",
+        "code": "Dynamic Grid Failure"
+      }, {
+        "name": "E-cigarette",
+        "code": "E-cigarette"
+      }, {
+        "name": "Electric Fences",
+        "code": "Electric Fences"
+      }, {
+        "name": "Exhaust System Particle",
+        "code": "Exhaust System Particle"
+      }, {
+        "name": "Exploding Targets",
+        "code": "Exploding Targets"
+      }, {
+        "name": "Farming Equipment",
+        "code": "Farming Equipment"
+      }, {
+        "name": "Field Burning",
+        "code": "Field Burning"
+      }, {
+        "name": "Fire Play",
+        "code": "Fire Play"
+      }, {
+        "name": "Fireworks (Consumer or Personal Use)",
+        "code": "Fireworks (Consumer or Personal Use)"
+      }, {
+        "name": "Fireworks (Display or Professional Use)",
+        "code": "Fireworks (Display or Professional Use)"
+      }, {
+        "name": "Flares",
+        "code": "Flares"
+      }, {
+        "name": "Flue Sparks",
+        "code": "Flue Sparks"
+      }, {
+        "name": "Glass Refraction/Magnification",
+        "code": "Glass Refraction/Magnification"
+      }, {
+        "name": "Grazing Improvement",
+        "code": "Grazing Improvement"
+      }, {
+        "name": "Habitat Improvement",
+        "code": "Habitat Improvement"
+      }, {
+        "name": "Heavy Equipment",
+        "code": "Heavy Equipment"
+      }, {
+        "name": "Home Outdoor Wood Burning Furnaces",
+        "code": "Home Outdoor Wood Burning Furnaces"
+      }, {
+        "name": "Incendiary Ammunition",
+        "code": "Incendiary Ammunition"
+      }, {
+        "name": "Incendiary Device",
+        "code": "Incendiary Device"
+      }, {
+        "name": "Incendiary Tracer Ammunition",
+        "code": "Incendiary Tracer Ammunition"
+      }, {
+        "name": "Land Clearing",
+        "code": "Land Clearing"
+      }, {
+        "name": "Lantern/Catalytic Heater",
+        "code": "Lantern/Catalytic Heater"
+      }, {
+        "name": "Lighter",
+        "code": "Lighter"
+      }, {
+        "name": "Logging Equipment",
+        "code": "Logging Equipment"
+      }, {
+        "name": "Match(s)",
+        "code": "Match(s)"
+      }, {
+        "name": "Military Ordinance",
+        "code": "Military Ordinance"
+      }, {
+        "name": "Motor Vehicle",
+        "code": "Motor Vehicle"
+      }, {
+        "name": "Motor Vehicles",
+        "code": "Motor Vehicles"
+      }, {
+        "name": "Mowing",
+        "code": "Mowing"
+      }, {
+        "name": "Muzzle-loading Firearms",
+        "code": "Muzzle-loading Firearms"
+      }, {
+        "name": "Oil and Gas Production",
+        "code": "Oil and Gas Production"
+      }, {
+        "name": "Other, Known",
+        "code": "Other, Known"
+      }, {
+        "name": "Other, Unknown",
+        "code": "Other, Unknown"
+      }, {
+        "name": "Pipe",
+        "code": "Pipe"
+      }, {
+        "name": "Portable Stove",
+        "code": "Portable Stove"
+      }, {
+        "name": "Power Generation/Transmission",
+        "code": "Power Generation/Transmission"
+      }, {
+        "name": "Power Tools",
+        "code": "Power Tools"
+      }, {
+        "name": "Propelled Flares",
+        "code": "Propelled Flares"
+      }, {
+        "name": "Rail/Track Grinding",
+        "code": "Rail/Track Grinding"
+      }, {
+        "name": "Right-of-Way",
+        "code": "Right-of-Way"
+      }, {
+        "name": "Right-of-Way Maintenance",
+        "code": "Right-of-Way Maintenance"
+      }, {
+        "name": "Signal Flares",
+        "code": "Signal Flares"
+      }, {
+        "name": "Small Engine Equipment",
+        "code": "Small Engine Equipment"
+      }, {
+        "name": "Smoke Out",
+        "code": "Smoke Out"
+      }, {
+        "name": "Smoker/Camp Stove",
+        "code": "Smoker/Camp Stove"
+      }, {
+        "name": "Smoking",
+        "code": "Smoking"
+      }, {
+        "name": "Spontaneous Combustion",
+        "code": "Spontaneous Combustion"
+      }, {
+        "name": "Starburst Ammunition",
+        "code": "Starburst Ammunition"
+      }, {
+        "name": "Steel Component Ammunition",
+        "code": "Steel Component Ammunition"
+      }, {
+        "name": "Structure",
+        "code": "Structure"
+      }, {
+        "name": "Tracer Ammunition",
+        "code": "Tracer Ammunition"
+      }, {
+        "name": "Trash Burning",
+        "code": "Trash Burning"
+      }, {
+        "name": "Turbocharger",
+        "code": "Turbocharger"
+      }, {
+        "name": "Warming",
+        "code": "Warming"
+      }, {
+        "name": "Wheel Bearing Failure",
+        "code": "Wheel Bearing Failure"
+      }, {
+        "name": "Wheel Slip/Slide",
+        "code": "Wheel Slip/Slide"
+      }, {
+        "name": "Yard Debris",
+        "code": "Yard Debris"
+      }]
+    },
+    "editable": true,
+    "length": 200,
+    "name": "FireCauseSpecific",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "FireCode": {
+    "alias": "Fire Code",
+    "editable": true,
+    "length": 4,
+    "name": "FireCode",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "FireDepartmentID": {
+    "alias": "Fire Department ID",
+    "editable": true,
+    "length": 5,
+    "name": "FireDepartmentID",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "FireDiscoveryDateTime": {
+    "alias": "Fire Discovery Date Time",
+    "editable": true,
+    "length": 8,
+    "name": "FireDiscoveryDateTime",
+    "nullable": false,
+    "type": "esriFieldTypeDate"
+  },
+  "FireGrowthCessationDateTime": {
+    "alias": "Fire Growth Cessation Date Time",
+    "editable": true,
+    "length": 8,
+    "name": "FireGrowthCessationDateTime",
+    "nullable": true,
+    "type": "esriFieldTypeDate"
+  },
+  "FireIgnitionDateTime": {
+    "alias": "Fire Ignition Date Time",
+    "editable": true,
+    "length": 8,
+    "name": "FireIgnitionDateTime",
+    "nullable": true,
+    "type": "esriFieldTypeDate"
+  },
+  "FireMgmtComplexity": {
+    "alias": "Fire Mgmt Complexity",
+    "domain": {
+      "name": "Management_Complexity_Level",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "Highest management level utilized during the wildfire event is Type 1",
+        "code": "Type 1 Incident"
+      }, {
+        "name": "Highest management level utilized during the wildfire event is Type 2",
+        "code": "Type 2 Incident"
+      }, {
+        "name": "Highest management level utilized during the wildfire event is Type 3",
+        "code": "Type 3 Incident"
+      }, {
+        "name": "Highest management level utilized during the wildfire event is Type 4",
+        "code": "Type 4 Incident"
+      }, {
+        "name": "Highest management level utilized during the wildfire event is Type 5",
+        "code": "Type 5 Incident"
+      }, {
+        "name": "Highest management level utilized during the prescribed fire event is Type 1",
+        "code": "Type 1 Prescribed Fire"
+      }, {
+        "name": "Highest management level utilized during the prescribed fire event is Type 2",
+        "code": "Type 2 Prescribed Fire"
+      }, {
+        "name": "Highest management level utilized during the prescribed fire event is Type 3",
+        "code": "Type 3 Prescribed Fire"
+      }]
+    },
+    "editable": true,
+    "length": 25,
+    "name": "FireMgmtComplexity",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "FireOutDateTime": {
+    "alias": "Fire Out Date Time",
+    "editable": true,
+    "length": 8,
+    "name": "FireOutDateTime",
+    "nullable": true,
+    "type": "esriFieldTypeDate"
+  },
+  "FireStrategyConfinePercent": {
+    "alias": "Fire Strategy Confine Percent",
+    "editable": true,
+    "length": -1,
+    "name": "FireStrategyConfinePercent",
+    "nullable": true,
+    "type": "esriFieldTypeSmallInteger"
+  },
+  "FireStrategyFullSuppPercent": {
+    "alias": "Fire Strategy Full Supp Percent",
+    "editable": true,
+    "length": -1,
+    "name": "FireStrategyFullSuppPercent",
+    "nullable": true,
+    "type": "esriFieldTypeSmallInteger"
+  },
+  "FireStrategyMonitorPercent": {
+    "alias": "Fire Strategy Monitor Percent",
+    "editable": true,
+    "length": -1,
+    "name": "FireStrategyMonitorPercent",
+    "nullable": true,
+    "type": "esriFieldTypeSmallInteger"
+  },
+  "FireStrategyPointZonePercent": {
+    "alias": "Fire Strategy Point Zone Percent",
+    "editable": true,
+    "length": -1,
+    "name": "FireStrategyPointZonePercent",
+    "nullable": true,
+    "type": "esriFieldTypeSmallInteger"
+  },
+  "FiscallyResponsibleUnit": {
+    "alias": "Fiscally Responsible Unit",
+    "editable": true,
+    "length": 6,
+    "name": "FiscallyResponsibleUnit",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "FSJobCode": {
+    "alias": "FS Job Code",
+    "editable": true,
+    "length": 2,
+    "name": "FSJobCode",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "FSOverrideCode": {
+    "alias": "FS Override Code",
+    "editable": true,
+    "length": 4,
+    "name": "FSOverrideCode",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "GACC": {
+    "alias": "Geographic Area Coordination Center Code",
+    "domain": {
+      "name": "GACC_Domain",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "NICC",
+        "code": "NICC"
+      }, {
+        "name": "CIFC",
+        "code": "CIFC"
+      }, {
+        "name": "AKCC",
+        "code": "AKCC"
+      }, {
+        "name": "EACC",
+        "code": "EACC"
+      }, {
+        "name": "ONCC",
+        "code": "ONCC"
+      }, {
+        "name": "GBCC",
+        "code": "GBCC"
+      }, {
+        "name": "OSCC",
+        "code": "OSCC"
+      }, {
+        "name": "NRCC",
+        "code": "NRCC"
+      }, {
+        "name": "NWCC",
+        "code": "NWCC"
+      }, {
+        "name": "RMCC",
+        "code": "RMCC"
+      }, {
+        "name": "SACC",
+        "code": "SACC"
+      }, {
+        "name": "SWCC",
+        "code": "SWCC"
+      }, {
+        "name": "N/A",
+        "code": "N/A"
+      }]
+    },
+    "editable": true,
+    "length": 50,
+    "name": "GACC",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "HasFatalities": {
+    "alias": "Has Fatalities",
+    "domain": {
+      "name": "Boolean",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "false",
+        "code": 0
+      }, {
+        "name": "true",
+        "code": 1
+      }]
+    },
+    "editable": true,
+    "length": -1,
+    "name": "HasFatalities",
+    "nullable": true,
+    "type": "esriFieldTypeSmallInteger"
+  },
+  "HasInjuries": {
+    "alias": "Has Injuries",
+    "domain": {
+      "name": "Boolean",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "false",
+        "code": 0
+      }, {
+        "name": "true",
+        "code": 1
+      }]
+    },
+    "editable": true,
+    "length": -1,
+    "name": "HasInjuries",
+    "nullable": true,
+    "type": "esriFieldTypeSmallInteger"
+  },
+  "ICS209Remarks": {
+    "alias": "ICS209 Remarks",
+    "editable": true,
+    "length": 3999,
+    "name": "ICS209Remarks",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "ICS209ReportDateTime": {
+    "alias": "ICS209 Report Date Time",
+    "editable": true,
+    "length": 8,
+    "name": "ICS209ReportDateTime",
+    "nullable": true,
+    "type": "esriFieldTypeDate"
+  },
+  "ICS209ReportForTimePeriodFrom": {
+    "alias": "ICS209 Report For Time Period From",
+    "editable": true,
+    "length": 8,
+    "name": "ICS209ReportForTimePeriodFrom",
+    "nullable": true,
+    "type": "esriFieldTypeDate"
+  },
+  "ICS209ReportForTimePeriodTo": {
+    "alias": "ICS209 Report For Time Period To",
+    "editable": true,
+    "length": 8,
+    "name": "ICS209ReportForTimePeriodTo",
+    "nullable": true,
+    "type": "esriFieldTypeDate"
+  },
+  "ICS209ReportStatus": {
+    "alias": "ICS209 Report Status",
+    "domain": {
+      "name": "ICS_209_Report_Status",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "Initial",
+        "code": "I"
+      }, {
+        "name": "Update",
+        "code": "U"
+      }, {
+        "name": "Final",
+        "code": "F"
+      }]
+    },
+    "editable": true,
+    "length": 1,
+    "name": "ICS209ReportStatus",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "IncidentCommanderName": {
+    "alias": "Incident Commander Name",
+    "editable": true,
+    "length": 255,
+    "name": "IncidentCommanderName",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "IncidentManagementOrganization": {
+    "alias": "Incident Management Organization",
+    "domain": {
+      "name": "Incident_Management_Organization",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "Area Command",
+        "code": "Area Command"
+      }, {
+        "name": "NIMO",
+        "code": "NIMO"
+      }, {
+        "name": "SOPL",
+        "code": "SOPL"
+      }, {
+        "name": "Type 1 IC",
+        "code": "Type 1 IC"
+      }, {
+        "name": "Type 1 Team",
+        "code": "Type 1 Team"
+      }, {
+        "name": "Type 2 IC",
+        "code": "Type 2 IC"
+      }, {
+        "name": "Type 2 Team",
+        "code": "Type 2 Team"
+      }, {
+        "name": "Type 3 IC",
+        "code": "Type 3 IC"
+      }, {
+        "name": "Type 3 Team",
+        "code": "Type 3 Team"
+      }, {
+        "name": "Type 4 IC",
+        "code": "Type 4 IC"
+      }, {
+        "name": "Type 5 IC",
+        "code": "Type 5 IC"
+      }]
+    },
+    "editable": true,
+    "length": 255,
+    "name": "IncidentManagementOrganization",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "IncidentName": {
+    "alias": "Incident Name",
+    "editable": true,
+    "length": 50,
+    "name": "IncidentName",
+    "nullable": false,
+    "type": "esriFieldTypeString"
+  },
+  "IncidentShortDescription": {
+    "alias": "Incident Short Description",
+    "editable": true,
+    "length": 80,
+    "name": "IncidentShortDescription",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "IncidentTypeCategory": {
+    "alias": "Incident Type Category",
+    "domain": {
+      "name": "Event_Category",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "Debris / Product Fire",
+        "code": "DF"
+      }, {
+        "name": "False Alarm",
+        "code": "FA"
+      }, {
+        "name": "Prescribed Fire",
+        "code": "RX"
+      }, {
+        "name": "Structure Fire",
+        "code": "SF"
+      }, {
+        "name": "Vehicle Fire",
+        "code": "VF"
+      }, {
+        "name": "Wildfire",
+        "code": "WF"
+      }, {
+        "name": "Support Order",
+        "code": "SU"
+      }, {
+        "name": "Preposition / Prepare",
+        "code": "PP"
+      }, {
+        "name": "Complex",
+        "code": "CX"
+      }, {
+        "name": "Out of Area Response",
+        "code": "OR"
+      }]
+    },
+    "editable": true,
+    "length": 2,
+    "name": "IncidentTypeCategory",
+    "nullable": false,
+    "type": "esriFieldTypeString"
+  },
+  "IncidentTypeKind": {
+    "alias": "Incident Type Kind",
+    "domain": {
+      "name": "Event_Kind",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "Fire",
+        "code": "FI"
+      }]
+    },
+    "editable": true,
+    "length": 2,
+    "name": "IncidentTypeKind",
+    "nullable": false,
+    "type": "esriFieldTypeString"
+  },
+  "INFORMUserName": {
+    "alias": "INFORM User Name",
+    "editable": true,
+    "length": 50,
+    "name": "INFORMUserName",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "InFuelTreatment": {
+    "alias": "In Fuel Treatment",
+    "domain": {
+      "name": "Boolean",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "false",
+        "code": 0
+      }, {
+        "name": "true",
+        "code": 1
+      }]
+    },
+    "editable": true,
+    "length": -1,
+    "name": "InFuelTreatment",
+    "nullable": true,
+    "type": "esriFieldTypeSmallInteger"
+  },
+  "InitialFireStrategy": {
+    "alias": "Initial Fire Strategy",
+    "domain": {
+      "name": "Initial_Fire_Strategy",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "Full Suppression",
+        "code": "Full Suppression"
+      }, {
+        "name": "Point Zone Protection",
+        "code": "Point Zone Protection"
+      }, {
+        "name": "Confine",
+        "code": "Confine"
+      }, {
+        "name": "Monitor",
+        "code": "Monitor"
+      }]
+    },
+    "editable": true,
+    "length": 50,
+    "name": "InitialFireStrategy",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "InitialLatitude": {
+    "alias": "Initial Latitude",
+    "editable": true,
+    "length": -1,
+    "name": "InitialLatitude",
+    "nullable": true,
+    "type": "esriFieldTypeDouble"
+  },
+  "InitialLongitude": {
+    "alias": "Initial Longitude",
+    "editable": true,
+    "length": -1,
+    "name": "InitialLongitude",
+    "nullable": true,
+    "type": "esriFieldTypeDouble"
+  },
+  "InitialResponseAcres": {
+    "alias": "Initial Response Acres",
+    "editable": true,
+    "length": -1,
+    "name": "InitialResponseAcres",
+    "nullable": true,
+    "type": "esriFieldTypeDouble"
+  },
+  "InitialResponseDateTime": {
+    "alias": "Initial Response Date Time",
+    "editable": true,
+    "length": 8,
+    "name": "InitialResponseDateTime",
+    "nullable": true,
+    "type": "esriFieldTypeDate"
+  },
+  "Injuries": {
+    "alias": "Injuries",
+    "editable": true,
+    "length": -1,
+    "name": "Injuries",
+    "nullable": true,
+    "type": "esriFieldTypeSmallInteger"
+  },
+  "InNFPORS": {
+    "alias": "In NFPORS",
+    "domain": {
+      "name": "Boolean",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "false",
+        "code": 0
+      }, {
+        "name": "true",
+        "code": 1
+      }]
+    },
+    "editable": true,
+    "length": -1,
+    "name": "InNFPORS",
+    "nullable": true,
+    "type": "esriFieldTypeSmallInteger"
+  },
+  "IrwinID": {
+    "alias": "Irwin ID",
+    "editable": true,
+    "length": 38,
+    "name": "IrwinID",
+    "nullable": false,
+    "type": "esriFieldTypeGUID"
+  },
+  "IsFireCauseInvestigated": {
+    "alias": "Is Fire Cause Investigated",
+    "domain": {
+      "name": "Boolean",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "false",
+        "code": 0
+      }, {
+        "name": "true",
+        "code": 1
+      }]
+    },
+    "editable": true,
+    "length": -1,
+    "name": "IsFireCauseInvestigated",
+    "nullable": true,
+    "type": "esriFieldTypeSmallInteger"
+  },
+  "IsFireCodeRequested": {
+    "alias": "Is Fire Code Requested",
+    "domain": {
+      "name": "Boolean",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "false",
+        "code": 0
+      }, {
+        "name": "true",
+        "code": 1
+      }]
+    },
+    "editable": true,
+    "length": -1,
+    "name": "IsFireCodeRequested",
+    "nullable": false,
+    "type": "esriFieldTypeSmallInteger"
+  },
+  "IsFSAssisted": {
+    "alias": "Is FS Assisted",
+    "domain": {
+      "name": "Boolean",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "false",
+        "code": 0
+      }, {
+        "name": "true",
+        "code": 1
+      }]
+    },
+    "editable": true,
+    "length": -1,
+    "name": "IsFSAssisted",
+    "nullable": true,
+    "type": "esriFieldTypeSmallInteger"
+  },
+  "IsInitialFireStrategyMet": {
+    "alias": "Is Initial Fire Strategy Met",
+    "domain": {
+      "name": "Boolean",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "false",
+        "code": 0
+      }, {
+        "name": "true",
+        "code": 1
+      }]
+    },
+    "editable": true,
+    "length": -1,
+    "name": "IsInitialFireStrategyMet",
+    "nullable": true,
+    "type": "esriFieldTypeSmallInteger"
+  },
+  "IsMultiJurisdictional": {
+    "alias": "Is Multi Jurisdictional",
+    "domain": {
+      "name": "Boolean",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "false",
+        "code": 0
+      }, {
+        "name": "true",
+        "code": 1
+      }]
+    },
+    "editable": true,
+    "length": -1,
+    "name": "IsMultiJurisdictional",
+    "nullable": true,
+    "type": "esriFieldTypeSmallInteger"
+  },
+  "IsQuarantined": {
+    "alias": "Is Quarantined",
+    "domain": {
+      "name": "Boolean",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "false",
+        "code": 0
+      }, {
+        "name": "true",
+        "code": 1
+      }]
+    },
+    "editable": true,
+    "length": -1,
+    "name": "IsQuarantined",
+    "nullable": true,
+    "type": "esriFieldTypeSmallInteger"
+  },
+  "IsReimbursable": {
+    "alias": "Is Reimbursable",
+    "domain": {
+      "name": "Boolean",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "false",
+        "code": 0
+      }, {
+        "name": "true",
+        "code": 1
+      }]
+    },
+    "editable": true,
+    "length": -1,
+    "name": "IsReimbursable",
+    "nullable": true,
+    "type": "esriFieldTypeSmallInteger"
+  },
+  "IsTrespass": {
+    "alias": "Is Trespass",
+    "domain": {
+      "name": "Boolean",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "false",
+        "code": 0
+      }, {
+        "name": "true",
+        "code": 1
+      }]
+    },
+    "editable": true,
+    "length": -1,
+    "name": "IsTrespass",
+    "nullable": true,
+    "type": "esriFieldTypeSmallInteger"
+  },
+  "IsUnifiedCommand": {
+    "alias": "Is Unified Command",
+    "domain": {
+      "name": "Boolean",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "false",
+        "code": 0
+      }, {
+        "name": "true",
+        "code": 1
+      }]
+    },
+    "editable": true,
+    "length": -1,
+    "name": "IsUnifiedCommand",
+    "nullable": true,
+    "type": "esriFieldTypeSmallInteger"
+  },
+  "IsValid": {
+    "alias": "Is Valid",
+    "domain": {
+      "name": "Boolean",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "false",
+        "code": 0
+      }, {
+        "name": "true",
+        "code": 1
+      }]
+    },
+    "editable": true,
+    "length": -1,
+    "name": "IsValid",
+    "nullable": true,
+    "type": "esriFieldTypeSmallInteger"
+  },
+  "LocalIncidentIdentifier": {
+    "alias": "Local Incident Identifier",
+    "editable": true,
+    "length": 10,
+    "name": "LocalIncidentIdentifier",
+    "nullable": false,
+    "type": "esriFieldTypeString"
+  },
+  "ModifiedOnDateTime": {
+    "alias": "Modified On Date Time",
+    "editable": true,
+    "length": -1,
+    "name": "ModifiedOnDateTime",
+    "nullable": true,
+    "type": "esriFieldTypeDate"
+  },
+  "OBJECTID": {
+    "alias": "OBJECTID",
+    "editable": false,
+    "length": -1,
+    "name": "OBJECTID",
+    "nullable": false,
+    "type": "esriFieldTypeOID"
+  },
+  "OtherStructuresDestroyed": {
+    "alias": "Other Structures Destroyed",
+    "editable": true,
+    "length": -1,
+    "name": "OtherStructuresDestroyed",
+    "nullable": true,
+    "type": "esriFieldTypeInteger"
+  },
+  "OtherStructuresThreatened": {
+    "alias": "Other Structures Threatened",
+    "editable": true,
+    "length": -1,
+    "name": "OtherStructuresThreatened",
+    "nullable": true,
+    "type": "esriFieldTypeInteger"
+  },
+  "PercentContained": {
+    "alias": "Percent Contained",
+    "editable": true,
+    "length": -1,
+    "name": "PercentContained",
+    "nullable": true,
+    "type": "esriFieldTypeDouble"
+  },
+  "PercentPerimeterToBeContained": {
+    "alias": "Percent Perimeter To Be Contained",
+    "editable": true,
+    "length": -1,
+    "name": "PercentPerimeterToBeContained",
+    "nullable": true,
+    "type": "esriFieldTypeDouble"
+  },
+  "PlannedActions": {
+    "alias": "Planned Actions",
+    "editable": true,
+    "length": 3999,
+    "name": "PlannedActions",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "POOCity": {
+    "alias": "POO City",
+    "editable": true,
+    "length": 50,
+    "name": "POOCity",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "POOCounty": {
+    "alias": "POO County",
+    "editable": true,
+    "length": 100,
+    "name": "POOCounty",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "POODispatchCenterID": {
+    "alias": "POO Dispatch Center ID",
+    "editable": true,
+    "length": 6,
+    "name": "POODispatchCenterID",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "POOFips": {
+    "alias": "POO Fips",
+    "editable": true,
+    "length": 5,
+    "name": "POOFips",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "POOJurisdictionalAgency": {
+    "alias": "POO Jurisdictional Agency",
+    "editable": true,
+    "length": 50,
+    "name": "POOJurisdictionalAgency",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "POOJurisdictionalUnit": {
+    "alias": "POO Jurisdictional Unit",
+    "editable": true,
+    "length": 6,
+    "name": "POOJurisdictionalUnit",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "POOJurisdictionalUnitParentUnit": {
+    "alias": "POO Jurisdictional Unit Parent Unit",
+    "editable": true,
+    "length": 6,
+    "name": "POOJurisdictionalUnitParentUnit",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "POOLandownerCategory": {
+    "alias": "POO Landowner Category",
+    "domain": {
+      "name": "Land_Owner_Category",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "Bureau of Indian Affairs",
+        "code": "BIA"
+      }, {
+        "name": "Bureau of Land Management",
+        "code": "BLM"
+      }, {
+        "name": "Bureau of Reclamation",
+        "code": "BOR"
+      }, {
+        "name": "Department of Defense",
+        "code": "DOD"
+      }, {
+        "name": "Department of Energy",
+        "code": "DOE"
+      }, {
+        "name": "National Park Service",
+        "code": "NPS"
+      }, {
+        "name": "US Forest Service",
+        "code": "USFS"
+      }, {
+        "name": "US Fish and Wildlife Service",
+        "code": "USFWS"
+      }, {
+        "name": "Foreign Government",
+        "code": "Foreign"
+      }, {
+        "name": "Tribal Government (non-trust lands) or Alaska Native Corporation",
+        "code": "Tribal"
+      }, {
+        "name": "City or Equivalent Government",
+        "code": "City"
+      }, {
+        "name": "County or Equivalent Government",
+        "code": "County"
+      }, {
+        "name": "State or Equivalent Government",
+        "code": "State"
+      }, {
+        "name": "Individual or Private Corporation",
+        "code": "Private"
+      }, {
+        "name": "Alaska Native Claims Settlement Act",
+        "code": "ANCSA"
+      }]
+    },
+    "editable": true,
+    "length": 7,
+    "name": "POOLandownerCategory",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "POOLandownerKind": {
+    "alias": "POO Landowner Kind",
+    "domain": {
+      "name": "Land_Owner_Kind",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "Federal",
+        "code": "Federal"
+      }, {
+        "name": "Other",
+        "code": "Other"
+      }, {
+        "name": "Private",
+        "code": "Private"
+      }]
+    },
+    "editable": true,
+    "length": 7,
+    "name": "POOLandownerKind",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "POOLegalDescPrincipalMeridian": {
+    "alias": "POO Legal Desc Principal Meridian",
+    "editable": true,
+    "length": 30,
+    "name": "POOLegalDescPrincipalMeridian",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "POOLegalDescQtr": {
+    "alias": "POO Legal Desc Qtr",
+    "domain": {
+      "name": "Quarters",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "NE",
+        "code": "NE"
+      }, {
+        "name": "SE",
+        "code": "SE"
+      }, {
+        "name": "NW",
+        "code": "NW"
+      }, {
+        "name": "SW",
+        "code": "SW"
+      }]
+    },
+    "editable": true,
+    "length": 2,
+    "name": "POOLegalDescQtr",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "POOLegalDescQtrQtr": {
+    "alias": "POO Legal Desc Qtr Qtr",
+    "domain": {
+      "name": "Quarters",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "NE",
+        "code": "NE"
+      }, {
+        "name": "SE",
+        "code": "SE"
+      }, {
+        "name": "NW",
+        "code": "NW"
+      }, {
+        "name": "SW",
+        "code": "SW"
+      }]
+    },
+    "editable": true,
+    "length": 2,
+    "name": "POOLegalDescQtrQtr",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "POOLegalDescRange": {
+    "alias": "POO Legal Desc Range",
+    "editable": true,
+    "length": 5,
+    "name": "POOLegalDescRange",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "POOLegalDescSection": {
+    "alias": "POO Legal Desc Section",
+    "editable": true,
+    "length": -1,
+    "name": "POOLegalDescSection",
+    "nullable": true,
+    "type": "esriFieldTypeSmallInteger"
+  },
+  "POOLegalDescTownship": {
+    "alias": "POO Legal Desc Township",
+    "editable": true,
+    "length": 5,
+    "name": "POOLegalDescTownship",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "POOPredictiveServiceAreaID": {
+    "alias": "POO Predictive Service Area ID",
+    "editable": true,
+    "length": 6,
+    "name": "POOPredictiveServiceAreaID",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "POOProtectingAgency": {
+    "alias": "POO Protecting Agency",
+    "domain": {
+      "name": "Land_Owner_Category",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "Bureau of Indian Affairs",
+        "code": "BIA"
+      }, {
+        "name": "Bureau of Land Management",
+        "code": "BLM"
+      }, {
+        "name": "Bureau of Reclamation",
+        "code": "BOR"
+      }, {
+        "name": "Department of Defense",
+        "code": "DOD"
+      }, {
+        "name": "Department of Energy",
+        "code": "DOE"
+      }, {
+        "name": "National Park Service",
+        "code": "NPS"
+      }, {
+        "name": "US Forest Service",
+        "code": "USFS"
+      }, {
+        "name": "US Fish and Wildlife Service",
+        "code": "USFWS"
+      }, {
+        "name": "Foreign Government",
+        "code": "Foreign"
+      }, {
+        "name": "Tribal Government (non-trust lands) or Alaska Native Corporation",
+        "code": "Tribal"
+      }, {
+        "name": "City or Equivalent Government",
+        "code": "City"
+      }, {
+        "name": "County or Equivalent Government",
+        "code": "County"
+      }, {
+        "name": "State or Equivalent Government",
+        "code": "State"
+      }, {
+        "name": "Individual or Private Corporation",
+        "code": "Private"
+      }, {
+        "name": "Alaska Native Claims Settlement Act",
+        "code": "ANCSA"
+      }]
+    },
+    "editable": true,
+    "length": 50,
+    "name": "POOProtectingAgency",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "POOProtectingUnit": {
+    "alias": "POO Protecting Unit",
+    "editable": true,
+    "length": 6,
+    "name": "POOProtectingUnit",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "POOState": {
+    "alias": "POO State",
+    "domain": {
+      "name": "ISO_3166_2_Country_and_Subdivision_codes",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "Alabama",
+        "code": "US-AL"
+      }, {
+        "name": "Alaska",
+        "code": "US-AK"
+      }, {
+        "name": "Arizona",
+        "code": "US-AZ"
+      }, {
+        "name": "Arkansas",
+        "code": "US-AR"
+      }, {
+        "name": "California",
+        "code": "US-CA"
+      }, {
+        "name": "Colorado",
+        "code": "US-CO"
+      }, {
+        "name": "Connecticut",
+        "code": "US-CT"
+      }, {
+        "name": "Delaware",
+        "code": "US-DE"
+      }, {
+        "name": "Florida",
+        "code": "US-FL"
+      }, {
+        "name": "Georgia",
+        "code": "US-GA"
+      }, {
+        "name": "Hawaii",
+        "code": "US-HI"
+      }, {
+        "name": "Idaho",
+        "code": "US-ID"
+      }, {
+        "name": "Illinois",
+        "code": "US-IL"
+      }, {
+        "name": "Indiana",
+        "code": "US-IN"
+      }, {
+        "name": "Iowa",
+        "code": "US-IA"
+      }, {
+        "name": "Kansas",
+        "code": "US-KS"
+      }, {
+        "name": "Kentucky",
+        "code": "US-KY"
+      }, {
+        "name": "Louisiana",
+        "code": "US-LA"
+      }, {
+        "name": "Maine",
+        "code": "US-ME"
+      }, {
+        "name": "Maryland",
+        "code": "US-MD"
+      }, {
+        "name": "Massachusetts",
+        "code": "US-MA"
+      }, {
+        "name": "Michigan",
+        "code": "US-MI"
+      }, {
+        "name": "Minnesota",
+        "code": "US-MN"
+      }, {
+        "name": "Mississippi",
+        "code": "US-MS"
+      }, {
+        "name": "Missouri",
+        "code": "US-MO"
+      }, {
+        "name": "Montana",
+        "code": "US-MT"
+      }, {
+        "name": "Nebraska",
+        "code": "US-NE"
+      }, {
+        "name": "Nevada",
+        "code": "US-NV"
+      }, {
+        "name": "New Hampshire",
+        "code": "US-NH"
+      }, {
+        "name": "New Jersey",
+        "code": "US-NJ"
+      }, {
+        "name": "New Mexico",
+        "code": "US-NM"
+      }, {
+        "name": "New York",
+        "code": "US-NY"
+      }, {
+        "name": "North Carolina",
+        "code": "US-NC"
+      }, {
+        "name": "North Dakota",
+        "code": "US-ND"
+      }, {
+        "name": "Ohio",
+        "code": "US-OH"
+      }, {
+        "name": "Oklahoma",
+        "code": "US-OK"
+      }, {
+        "name": "Oregon",
+        "code": "US-OR"
+      }, {
+        "name": "Pennsylvania",
+        "code": "US-PA"
+      }, {
+        "name": "Rhode Island",
+        "code": "US-RI"
+      }, {
+        "name": "South Carolina",
+        "code": "US-SC"
+      }, {
+        "name": "South Dakota",
+        "code": "US-SD"
+      }, {
+        "name": "Tennessee",
+        "code": "US-TN"
+      }, {
+        "name": "Texas",
+        "code": "US-TX"
+      }, {
+        "name": "Utah",
+        "code": "US-UT"
+      }, {
+        "name": "Vermont",
+        "code": "US-VT"
+      }, {
+        "name": "Virginia",
+        "code": "US-VA"
+      }, {
+        "name": "Washington",
+        "code": "US-WA"
+      }, {
+        "name": "West Virginia",
+        "code": "US-WV"
+      }, {
+        "name": "Wisconsin",
+        "code": "US-WI"
+      }, {
+        "name": "Wyoming",
+        "code": "US-WY"
+      }, {
+        "name": "District of Columbia",
+        "code": "US-DC"
+      }, {
+        "name": "American Samoa",
+        "code": "US-AS"
+      }, {
+        "name": "Guam",
+        "code": "US-GU"
+      }, {
+        "name": "Northern Mariana Islands",
+        "code": "US-MP"
+      }, {
+        "name": "Puerto Rico",
+        "code": "US-PR"
+      }, {
+        "name": "United States Minor Outlying Islands",
+        "code": "US-UM"
+      }, {
+        "name": "Virgin Islands, U.S.",
+        "code": "US-VI"
+      }, {
+        "name": "Alberta",
+        "code": "CA-AB"
+      }, {
+        "name": "British Columbia",
+        "code": "CA-BC"
+      }, {
+        "name": "Manitoba",
+        "code": "CA-MB"
+      }, {
+        "name": "New Brunswick",
+        "code": "CA-NB"
+      }, {
+        "name": "Ontario",
+        "code": "CA-ON"
+      }, {
+        "name": "Quebec",
+        "code": "CA-QC"
+      }, {
+        "name": "Saskatchewan",
+        "code": "CA-SK"
+      }, {
+        "name": "Yukon Territory",
+        "code": "CA-YT"
+      }, {
+        "name": "Baja California",
+        "code": "MX-BCN"
+      }, {
+        "name": "Chihuahua",
+        "code": "MX-CHH"
+      }, {
+        "name": "Coahuila",
+        "code": "MX-COA"
+      }, {
+        "name": "Nuevo Leon",
+        "code": "MX-NLE"
+      }, {
+        "name": "Sonora",
+        "code": "MX-SON"
+      }, {
+        "name": "Tamaulipas",
+        "code": "MX-TAM"
+      }]
+    },
+    "editable": true,
+    "length": 6,
+    "name": "POOState",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "PredominantFuelGroup": {
+    "alias": "Predominant Fuel Group",
+    "editable": true,
+    "length": 100,
+    "name": "PredominantFuelGroup",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "PredominantFuelModel": {
+    "alias": "Predominant Fuel Model",
+    "domain": {
+      "name": "Predominate_Fuel_Model",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "Grass",
+        "code": "Grass"
+      }, {
+        "name": "Brush",
+        "code": "Brush"
+      }, {
+        "name": "Timber",
+        "code": "Timber"
+      }, {
+        "name": "Slash",
+        "code": "Slash"
+      }]
+    },
+    "editable": true,
+    "length": 100,
+    "name": "PredominantFuelModel",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "PrimaryFuelModel": {
+    "alias": "Primary Fuel Model",
+    "domain": {
+      "name": "NFFL_Fuel_Model",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "Short Grass (1 foot)",
+        "code": "Short Grass (1 foot)"
+      }, {
+        "name": "Timber (Grass and Understory)",
+        "code": "Timber (Grass and Understory)"
+      }, {
+        "name": "Tall Grass (2.5 feet)",
+        "code": "Tall Grass (2.5 feet)"
+      }, {
+        "name": "Chaparral (6 feet)",
+        "code": "Chaparral (6 feet)"
+      }, {
+        "name": "Brush (2 feet)",
+        "code": "Brush (2 feet)"
+      }, {
+        "name": "Dormant Brush, Hardwood Slash",
+        "code": "Dormant Brush, Hardwood Slash"
+      }, {
+        "name": "Southern Rough",
+        "code": "Southern Rough"
+      }, {
+        "name": "Closed Timber Litter",
+        "code": "Closed Timber Litter"
+      }, {
+        "name": "Hardwood Litter",
+        "code": "Hardwood Litter"
+      }, {
+        "name": "Timber (Litter and Understory)",
+        "code": "Timber (Litter and Understory)"
+      }, {
+        "name": "Light Logging Slash",
+        "code": "Light Logging Slash"
+      }, {
+        "name": "Medium Logging Slash",
+        "code": "Medium Logging Slash"
+      }, {
+        "name": "Heavy Logging Slash",
+        "code": "Heavy Logging Slash"
+      }]
+    },
+    "editable": true,
+    "length": 30,
+    "name": "PrimaryFuelModel",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "ProjectedIncidentActivity12": {
+    "alias": "Projected Incident Activity 12",
+    "editable": true,
+    "length": 3999,
+    "name": "ProjectedIncidentActivity12",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "ProjectedIncidentActivity24": {
+    "alias": "Projected Incident Activity 24",
+    "editable": true,
+    "length": 3999,
+    "name": "ProjectedIncidentActivity24",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "ProjectedIncidentActivity48": {
+    "alias": "Projected Incident Activity 48",
+    "editable": true,
+    "length": 3999,
+    "name": "ProjectedIncidentActivity48",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "ProjectedIncidentActivity72": {
+    "alias": "Projected Incident Activity 72",
+    "editable": true,
+    "length": 3999,
+    "name": "ProjectedIncidentActivity72",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "ProjectedIncidentActivity72Plus": {
+    "alias": "Projected Incident Activity 72 Plus",
+    "editable": true,
+    "length": 3999,
+    "name": "ProjectedIncidentActivity72Plus",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "ResidencesDestroyed": {
+    "alias": "Residences Destroyed",
+    "editable": true,
+    "length": -1,
+    "name": "ResidencesDestroyed",
+    "nullable": true,
+    "type": "esriFieldTypeInteger"
+  },
+  "ResidencesThreatened": {
+    "alias": "Residences Threatened",
+    "editable": true,
+    "length": -1,
+    "name": "ResidencesThreatened",
+    "nullable": true,
+    "type": "esriFieldTypeInteger"
+  },
+  "SecondaryFuelModel": {
+    "alias": "Secondary Fuel Model",
+    "domain": {
+      "name": "NFFL_Fuel_Model",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "Short Grass (1 foot)",
+        "code": "Short Grass (1 foot)"
+      }, {
+        "name": "Timber (Grass and Understory)",
+        "code": "Timber (Grass and Understory)"
+      }, {
+        "name": "Tall Grass (2.5 feet)",
+        "code": "Tall Grass (2.5 feet)"
+      }, {
+        "name": "Chaparral (6 feet)",
+        "code": "Chaparral (6 feet)"
+      }, {
+        "name": "Brush (2 feet)",
+        "code": "Brush (2 feet)"
+      }, {
+        "name": "Dormant Brush, Hardwood Slash",
+        "code": "Dormant Brush, Hardwood Slash"
+      }, {
+        "name": "Southern Rough",
+        "code": "Southern Rough"
+      }, {
+        "name": "Closed Timber Litter",
+        "code": "Closed Timber Litter"
+      }, {
+        "name": "Hardwood Litter",
+        "code": "Hardwood Litter"
+      }, {
+        "name": "Timber (Litter and Understory)",
+        "code": "Timber (Litter and Understory)"
+      }, {
+        "name": "Light Logging Slash",
+        "code": "Light Logging Slash"
+      }, {
+        "name": "Medium Logging Slash",
+        "code": "Medium Logging Slash"
+      }, {
+        "name": "Heavy Logging Slash",
+        "code": "Heavy Logging Slash"
+      }]
+    },
+    "editable": true,
+    "length": 30,
+    "name": "SecondaryFuelModel",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "SignificantEvents": {
+    "alias": "Significant Events",
+    "editable": true,
+    "length": 3999,
+    "name": "SignificantEvents",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "SummaryFuelModel": {
+    "alias": "Summary Fuel Model",
+    "editable": true,
+    "length": 3999,
+    "name": "SummaryFuelModel",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "TotalIncidentPersonnel": {
+    "alias": "Total Incident Personnel",
+    "editable": true,
+    "length": -1,
+    "name": "TotalIncidentPersonnel",
+    "nullable": true,
+    "type": "esriFieldTypeInteger"
+  },
+  "UniqueFireIdentifier": {
+    "alias": "Unique Fire Identifier",
+    "editable": true,
+    "length": 22,
+    "name": "UniqueFireIdentifier",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "WeatherConcerns": {
+    "alias": "Weather Concerns",
+    "editable": true,
+    "length": 3999,
+    "name": "WeatherConcerns",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "WFDSSDecisionStatus": {
+    "alias": "WFDSS Decision Status",
+    "domain": {
+      "name": "WFDSS_Decision_Status",
+      "type": "codedValue",
+      "codedValues": [{
+        "name": "No Decision",
+        "code": "No Decision"
+      }, {
+        "name": "Pending Decision",
+        "code": "Pending Decision"
+      }, {
+        "name": "Approved Decision",
+        "code": "Approved Decision"
+      }]
+    },
+    "editable": true,
+    "length": 20,
+    "name": "WFDSSDecisionStatus",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "CreatedBySystem": {
+    "alias": "Created By System",
+    "editable": true,
+    "length": 255,
+    "name": "CreatedBySystem",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  },
+  "ModifiedBySystem": {
+    "alias": "Modified By System",
+    "editable": true,
+    "length": 255,
+    "name": "ModifiedBySystem",
+    "nullable": true,
+    "type": "esriFieldTypeString"
+  }
+}
