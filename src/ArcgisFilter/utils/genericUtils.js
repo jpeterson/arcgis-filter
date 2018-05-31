@@ -46,6 +46,7 @@ export function getValidOperators(fieldType) {
 export function getGenericFieldType(fieldType) {
   switch (fieldType) {
     case 'esriFieldTypeString':
+    case 'esriFieldTypeGUID':
       return 'string';
     case 'esriFieldTypeOID':
     case 'esriFieldTypeSmallInteger':
