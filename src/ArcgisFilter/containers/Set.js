@@ -39,6 +39,7 @@ const Set = props => {
         <Expression
           key={key}
           id={key}
+          disableUnique={props.disableUnique}
           expressionDef={expression}
           field={expression.field}
           fields={props.fields}

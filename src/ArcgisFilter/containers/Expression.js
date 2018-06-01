@@ -74,6 +74,17 @@ class Expression extends Component {
     });
   };
 
+  getValueTypeChooser = (valueType, disableUnique) => {
+    if (disableUnique) return null;
+    return (
+      <ValueTypeChooser
+        id={this.props.id}
+        selectedValueType={valueType}
+        onChange={this.handleValueTypeChanged}
+      />
+    );
+  };
+
   getValueElement = expressionDef => {
     const { valueType, field, operator, value } = expressionDef;
 
@@ -132,11 +143,7 @@ class Expression extends Component {
             {this.getValueElement(this.props.expressionDef)}
           </FormControl>
           <FormControl style={formControlStyles}>
-            <ValueTypeChooser
-              id={this.props.id}
-              selectedValueType={valueType}
-              onChange={this.handleValueTypeChanged}
-            />
+            {this.getValueTypeChooser(valueType, this.props.disableUnique)}
           </FormControl>
           <FormControl style={formControlStyles}>
             <Tooltip title="Remove Expression">

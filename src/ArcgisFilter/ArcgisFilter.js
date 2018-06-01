@@ -118,6 +118,7 @@ class ArcgisFilter extends Component {
           fields={this.state.fields}
           mustMatchAll={set.mustMatchAll}
           expressions={set.expressions}
+          disableUnique={this.props.disableUnique}
           updateExpression={this.handleUpdateExpression}
           onFieldChange={this.handleFieldChanged}
           onOperatorChange={this.handleOperatorChanged}
@@ -183,12 +184,16 @@ class ArcgisFilter extends Component {
 }
 
 ArcgisFilter.propTypes = {
-  /** ArcGIS REST API or JSAPI fields definition object */
+  /** ArcGIS REST API or JSAPI fields definition object. */
   fields: PropTypes.object.isRequired,
   /** Fired when the filter changes. Receives the filter string as an argument  */
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  /** Disables the option to pick from unique values. */
+  disableUnique: PropTypes.bool
 };
 
-ArcgisFilter.defaultProps = {};
+ArcgisFilter.defaultProps = {
+  disableUnique: false
+};
 
 export default ArcgisFilter;

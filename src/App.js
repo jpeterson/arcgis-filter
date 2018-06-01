@@ -28,6 +28,7 @@ class App extends Component {
         <div className="component-showcase">
           <ArcgisFilter
             fields={fieldsDefinition}
+            disableUnique={true}
             onChange={this.handleFilterChanged}
           />
         </div>
