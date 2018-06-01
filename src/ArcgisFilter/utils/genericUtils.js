@@ -32,7 +32,9 @@ export function getDefaultFilterValue(field) {
 }
 
 export function getValidOperators(fieldType) {
-  return operatorDefs[getGenericFieldType(fieldType)];
+  const operators = operatorDefs[getGenericFieldType(fieldType)];
+
+  return operators || [];
 }
 
 export function getGenericFieldType(fieldType) {
@@ -49,6 +51,9 @@ export function getGenericFieldType(fieldType) {
   //small-integer | integer | single | double | long | string | date | oid | geometry | blob | raster | guid | global-id | xml
 
   switch (fieldType) {
+    case null:
+      return null;
+
     case 'esriFieldTypeString':
     case 'esriFieldTypeGUID':
     case 'oid':

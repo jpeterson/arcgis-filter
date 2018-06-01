@@ -27,8 +27,8 @@ class Expression extends Component {
   componentDidMount() {
     // Kinda nasty, but grabs the "first" property in the fields object
     // in the same way the FieldChooser will.
-    const field = this.props.fields[Object.keys(this.props.fields)[0]];
-    this.setOptionsFromField(field);
+    // const field = this.props.fields[Object.keys(this.props.fields)[0]];
+    // this.setOptionsFromField(field);
   }
 
   updateExpression = updates => {
@@ -78,7 +78,7 @@ class Expression extends Component {
     const { valueType, field, operator, value } = expressionDef;
 
     // Operator does not require a value
-    if (operator.omitValue) return null;
+    if (operator && operator.omitValue) return null;
 
     // TODO: need to implement this
     if (valueType === 'unique') {
@@ -86,7 +86,7 @@ class Expression extends Component {
     }
 
     // NOTE: only supporting coded value domains for now
-    if (field.domain && field.domain.codedValues) {
+    if (field && field.domain && field.domain.codedValues) {
       return (
         <DomainValueChooser
           codedValues={field.domain.codedValues}
@@ -100,14 +100,14 @@ class Expression extends Component {
     return (
       <ValueInput
         value={value}
-        type={getGenericFieldType(field.type)}
+        type={getGenericFieldType(field && field.type)}
         onChange={this.handleValueChanged}
       />
     );
   };
 
   render() {
-    if (!this.props.expressionDef.field) return null;
+    if (!this.props.fields) return null;
 
     const { field, operator, valueType } = this.props.expressionDef;
 
@@ -124,7 +124,7 @@ class Expression extends Component {
           <FormControl style={formControlStyles}>
             <OperatorChooser
               selectedOperator={operator}
-              operators={getValidOperators(field.type)}
+              operators={getValidOperators(field && field.type)}
               onChange={this.handleOperatorChanged}
             />
           </FormControl>

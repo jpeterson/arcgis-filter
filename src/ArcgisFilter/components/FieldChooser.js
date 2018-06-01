@@ -40,7 +40,7 @@ const FieldChooser = props => {
       style={{ whiteSpace: 'nowrap', width: '100%' }}
       menuStyle={{ maxHeight: '400px' }}
       filterable
-      selectedValue={props.selectedField.name}
+      selectedValue={props.selectedField && props.selectedField.name}
       onChange={handleOnChange}
       placeholder="Select Field..."
     >

@@ -22,7 +22,8 @@ const OperatorChooser = props => {
 
   return (
     <Select
-      selectedValue={props.selectedOperator.alias}
+      selectedValue={props.selectedOperator && props.selectedOperator.alias}
+      disabled={!props.operators.length}
       onChange={handleOnChange}
     >
       {getOptions(props.operators)}

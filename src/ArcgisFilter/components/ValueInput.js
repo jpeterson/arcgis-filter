@@ -33,6 +33,13 @@ const ValueInput = props => {
           />
         );
       default:
+        return (
+          <TextField
+            disabled
+            value={props.value.code}
+            onChange={handleOnChange}
+          />
+        );
     }
   };
 
