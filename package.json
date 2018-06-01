@@ -1,6 +1,6 @@
 {
   "name": "arcgis-filter",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "./dist",
   "dependencies": {
     "calcite-react": "^0.5.0",
@@ -17,8 +17,7 @@
     "build-demo": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "build":
-      "npm run clean-dist && cross-env NODE_ENV=production && babel ./src/ArcgisFilter --out-dir ./dist",
+    "build": "npm run clean-dist && cross-env NODE_ENV=production && babel ./src/ArcgisFilter --out-dir ./dist",
     "clean-dist": "rimraf ./dist",
     "release:patch": "npm version patch && npm run build && npm publish",
     "release:minor": "npm version minor && npm run build && npm publish",
