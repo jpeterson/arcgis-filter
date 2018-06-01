@@ -2,7 +2,7 @@ import { formatDate, getDayStart, getDayEnd } from './dateUtils';
 import { getGenericFieldType } from './genericUtils';
 
 export function buildExpression(options) {
-  if (!options.field) return null;
+  if (!options || !options.field) return null;
 
   const fieldName = options.field.name;
   const fieldType = getGenericFieldType(options.field.type);
@@ -60,13 +60,19 @@ export function buildSet(options) {
 
   const set = Object.keys(expressions)
     .map(key => {
-      const expression = expressions[key];
+      const expression = buildExpression(expressions[key]);
 
-      return `(${buildExpression(expression)})`;
+      if (!expression) return null;
+
+      return `(${expression})`;
     })
-    .join(` ${setOperator} `);
+    .filter(expression => expression);
 
-  return set;
+  if (set.length) {
+    return set.join(` ${setOperator} `);
+  }
+
+  return '';
 }
 
 export function buildFilter(options) {
@@ -76,11 +82,21 @@ export function buildFilter(options) {
 
   const filter = Object.keys(sets)
     .map(key => {
-      const set = sets[key];
+      const set = buildSet(sets[key]);
 
-      return `(${buildSet(set)})`;
+      if (!set) return null;
+
+      if (Object.keys(sets).length <= 1) {
+        return set;
+      }
+
+      return `(${set})`;
     })
-    .join(` ${filterOperator} `);
+    .filter(set => set);
 
-  return filter;
+  if (filter.length) {
+    return filter.join(` ${filterOperator} `);
+  }
+
+  return '';
 }
