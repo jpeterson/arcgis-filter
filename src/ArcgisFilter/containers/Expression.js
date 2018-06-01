@@ -20,7 +20,8 @@ import {
 } from '../utils/genericUtils';
 
 const formControlStyles = {
-  marginBottom: '5px'
+  marginBottom: '5px',
+  justifyContent: 'flex-end'
 };
 
 class Expression extends Component {

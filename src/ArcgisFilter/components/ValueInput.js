@@ -1,49 +1,85 @@
-import React from 'react';
+import React, { Component } from 'react';
 import moment from 'moment';
 
 import TextField from 'calcite-react/TextField';
 import DatePicker from 'calcite-react/DatePicker';
 
-const ValueInput = props => {
-  const handleOnChange = e => {
-    props.onChange({
+class ValueInput extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      datePickerFocused: false
+    };
+  }
+
+  onFocusChange = ({ focused }) => {
+    this.setState({
+      datePickerFocused: focused
+    });
+  };
+
+  handleOnChange = e => {
+    this.props.onChange({
       name: e.target.value,
       code: e.target.value
     });
   };
 
-  const getElement = type => {
+  handleOnDateChange = e => {
+    this.props.onChange({
+      name: e,
+      code: e
+    });
+  };
+
+  getMomentDate = date => {
+    if (date) {
+      return moment(date);
+    }
+
+    return moment();
+  };
+
+  getElement = type => {
     switch (type) {
       case 'string':
-        return <TextField value={props.value.code} onChange={handleOnChange} />;
+        return (
+          <TextField
+            value={this.props.value.code}
+            onChange={this.handleOnChange}
+          />
+        );
       case 'number':
         return (
           <TextField
-            value={props.value.code}
-            onChange={handleOnChange}
+            value={this.props.value.code}
+            onChange={this.handleOnChange}
             type="number"
           />
         );
       case 'date':
         return (
-          <TextField
-            value={props.value.code}
-            onChange={handleOnChange}
-            type="date"
+          <DatePicker
+            date={this.getMomentDate(this.props.value.code)}
+            onDateChange={this.handleOnDateChange}
+            focused={this.state.datePickerFocused}
+            onFocusChange={this.onFocusChange}
           />
         );
       default:
         return (
           <TextField
             disabled
-            value={props.value.code}
-            onChange={handleOnChange}
+            value={this.props.value.code}
+            onChange={this.handleOnChange}
           />
         );
     }
   };
 
-  return getElement(props.type);
-};
+  render() {
+    return this.getElement(this.props.type);
+  }
+}
 
 export default ValueInput;
