@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import Set from './containers/Set';
 import FilterPreviewer from './components/FilterPreviewer';
 
 import { getFields, generateId } from './utils/genericUtils';
+import { buildFilter } from './utils/sqlUtils';
 import expressionTemplate from './defaults/expression';
 
 import { ThemeProvider } from 'styled-components';
@@ -42,16 +44,19 @@ class ArcgisFilter extends Component {
     this.setState({ fields });
   }
 
-  handleFieldChanged = field => {
-    this.setState({ field });
+  onChange = state => {
+    const filter = buildFilter(state);
+    this.props.onChange(filter);
   };
 
-  handleOperatorChanged = operator => {
-    this.setState({ operator });
+  updateSets = sets => {
+    this.setState({ sets }, () => {
+      this.onChange(this.state);
+    });
   };
 
-  handleValueChanged = value => {
-    this.setState({ value });
+  updateSetOperator = mustMatchAll => {
+    this.setState({ mustMatchAll });
   };
 
   handleAddSet = () => {
@@ -62,31 +67,31 @@ class ArcgisFilter extends Component {
         [generateId()]: expressionTemplate
       }
     };
-    this.setState({ sets });
+    this.updateSets(sets);
   };
 
   handleRemoveSet = setId => {
     const { sets } = this.state;
     delete sets[setId];
-    this.setState({ sets });
+    this.updateSets(sets);
   };
 
   handleUpdateSetOperator = (setId, setOperator) => {
     const { sets } = this.state;
     sets[setId].mustMatchAll = setOperator;
-    this.setState({ sets });
+    this.updateSets(sets);
   };
 
   handleAddExpression = setId => {
     const { sets } = this.state;
     sets[setId].expressions[generateId()] = expressionTemplate;
-    this.setState({ sets });
+    this.updateSets(sets);
   };
 
   handleRemoveExpression = (setId, expressionId) => {
     const { sets } = this.state;
     delete sets[setId].expressions[expressionId];
-    this.setState({ sets });
+    this.updateSets(sets);
   };
 
   handleUpdateExpression = (setId, expression) => {
@@ -96,11 +101,11 @@ class ArcgisFilter extends Component {
       ...currentExpression,
       ...expression
     };
-    this.setState({ sets });
+    this.updateSets(sets);
   };
 
   handleUpdateFilterOperator = mustMatchAll => {
-    this.setState({ mustMatchAll });
+    this.updateSetOperator(mustMatchAll);
   };
 
   getSets = sets => {
@@ -176,5 +181,14 @@ class ArcgisFilter extends Component {
     );
   }
 }
+
+ArcgisFilter.propTypes = {
+  /** ArcGIS REST API or JSAPI fields definition object */
+  fields: PropTypes.object.isRequired,
+  /** Fired when the filter changes. Receives the filter string as an argument  */
+  onChange: PropTypes.func
+};
+
+ArcgisFilter.defaultProps = {};
 
 export default ArcgisFilter;

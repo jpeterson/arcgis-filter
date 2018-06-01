@@ -7,6 +7,17 @@ import logo from './esri.png';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      filter: null
+    };
+  }
+
+  handleFilterChanged = filter => {
+    this.setState({ filter });
+  };
+
   render() {
     return (
       <div className="App">
@@ -15,7 +26,10 @@ class App extends Component {
           <h1 className="App-title">ArcGIS Filter Component</h1>
         </header>
         <div className="component-showcase">
-          <ArcgisFilter fields={fieldsDefinition} />
+          <ArcgisFilter
+            fields={fieldsDefinition}
+            onChange={this.handleFilterChanged}
+          />
         </div>
       </div>
     );
