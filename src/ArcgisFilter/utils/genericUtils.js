@@ -32,6 +32,11 @@ export function getDefaultFilterValue(field) {
 }
 
 export function getValidOperators(fieldType) {
+  return operatorDefs[getGenericFieldType(fieldType)];
+}
+
+export function getGenericFieldType(fieldType) {
+  // REST API Field Types
   // strings: 'esriFieldTypeString',
   // dates: 'esriFieldTypeDate',
   // numbers: ['esriFieldTypeOID',
@@ -40,25 +45,37 @@ export function getValidOperators(fieldType) {
   //           'esriFieldTypeSingle',
   //           'esriFieldTypeDouble'],
 
-  return operatorDefs[getGenericFieldType(fieldType)];
-}
+  // JSAPI Field Types
+  //small-integer | integer | single | double | long | string | date | oid | geometry | blob | raster | guid | global-id | xml
 
-export function getGenericFieldType(fieldType) {
   switch (fieldType) {
     case 'esriFieldTypeString':
     case 'esriFieldTypeGUID':
+    case 'oid':
+    case 'guid':
+    case 'global-id':
+    case 'string':
       return 'string';
+
     case 'esriFieldTypeOID':
     case 'esriFieldTypeSmallInteger':
     case 'esriFieldTypeInteger':
     case 'esriFieldTypeSingle':
     case 'esriFieldTypeDouble':
+    case 'small-integer':
+    case 'integer':
+    case 'single':
+    case 'double':
+    case 'long':
       return 'number';
+
     case 'esriFieldTypeDate':
+    case 'date':
       return 'date';
+
     default:
-      console.warn('Invalid field type!');
-      return null;
+      console.warn('Invalid field type! Defaulting to string.', fieldType);
+      return 'string';
   }
 }
 
