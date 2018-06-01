@@ -21,7 +21,13 @@ const DomainValueChooser = props => {
   };
 
   return (
-    <Select selectedValue={props.selectedValue.code} onChange={handleOnChange}>
+    <Select
+      style={{ whiteSpace: 'nowrap', width: '100%' }}
+      menuStyle={{ maxHeight: '400px' }}
+      filterable
+      selectedValue={props.selectedValue.code}
+      onChange={handleOnChange}
+    >
       {getOptions(props.codedValues)}
     </Select>
   );

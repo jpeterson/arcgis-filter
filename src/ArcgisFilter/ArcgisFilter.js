@@ -10,9 +10,15 @@ import { ThemeProvider } from 'styled-components';
 import CalciteTheme from 'calcite-react/theme/CalciteTheme';
 
 import Panel from 'calcite-react/Panel';
-import Button from 'calcite-react/Button';
-import Radio from 'calcite-react/Radio';
-import { Fieldset, Legend } from 'calcite-react/Form';
+import Button, { ButtonGroup } from 'calcite-react/Button';
+import { FormControl, FormControlLabel } from 'calcite-react/Form';
+import Tooltip from 'calcite-react/Tooltip';
+import PlusIcon from './icons/PlusIcon';
+
+import {
+  StyledSetHeaderRow,
+  StyledAddSetButton
+} from './containers/Set-styled';
 
 class ArcgisFilter extends Component {
   constructor(props) {
@@ -128,33 +134,43 @@ class ArcgisFilter extends Component {
     return (
       <ThemeProvider theme={CalciteTheme}>
         <Panel white>
-          <Fieldset
-            style={{ textAlign: 'right', fontSize: '.8em' }}
-            name="filter-operator"
-            horizontal
-          >
-            <Legend>Set Operator:</Legend>
-            <Radio
-              checked={this.state.mustMatchAll}
-              onChange={() => this.handleUpdateFilterOperator(true)}
-            >
-              AND
-            </Radio>{' '}
-            <Radio
-              checked={!this.state.mustMatchAll}
-              onChange={() => this.handleUpdateFilterOperator(false)}
-            >
-              OR
-            </Radio>
-          </Fieldset>
+          <StyledSetHeaderRow>
+            <FormControl horizontal style={{ marginBottom: '5px' }}>
+              <FormControlLabel style={{ marginRight: '10px' }}>
+                Filter Operator:
+              </FormControlLabel>
+              <ButtonGroup>
+                <Tooltip title="All Expressions Must Match" enterDelay={400}>
+                  <Button
+                    small
+                    clear={!this.state.mustMatchAll}
+                    onClick={() => this.handleUpdateFilterOperator(true)}
+                  >
+                    AND
+                  </Button>
+                </Tooltip>
+                <Tooltip title="All Expressions Must Match" enterDelay={400}>
+                  <Button
+                    small
+                    clear={this.state.mustMatchAll}
+                    onClick={() => this.handleUpdateFilterOperator(false)}
+                  >
+                    OR
+                  </Button>
+                </Tooltip>
+              </ButtonGroup>
+            </FormControl>
+          </StyledSetHeaderRow>
           {this.getSets(this.state.sets)}
+          <StyledAddSetButton onClick={this.handleAddSet}>
+            <PlusIcon fill={CalciteTheme.palette.gray} /> Add Set
+          </StyledAddSetButton>
           <FilterPreviewer
             options={{
               mustMatchAll: this.state.mustMatchAll,
               sets: this.state.sets
             }}
           />
-          <Button onClick={this.handleAddSet}>Add Set</Button>
         </Panel>
       </ThemeProvider>
     );

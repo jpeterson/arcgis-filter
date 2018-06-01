@@ -1,12 +1,15 @@
 import React from 'react';
 
 import Expression from './Expression';
-import SetPreviewer from '../components/SetPreviewer';
 
 import Panel from 'calcite-react/Panel';
-import Button from 'calcite-react/Button';
-import Radio from 'calcite-react/Radio';
-import { Fieldset, Legend } from 'calcite-react/Form';
+import Button, { ButtonGroup } from 'calcite-react/Button';
+import { FormControl, FormControlLabel } from 'calcite-react/Form';
+import Tooltip from 'calcite-react/Tooltip';
+import PlusIcon from '../icons/PlusIcon';
+
+import { StyledSetHeaderRow, StyledAddSetButton } from './Set-styled';
+import CalciteTheme from 'calcite-react/theme/CalciteTheme';
 
 const Set = props => {
   const addExpression = () => {
@@ -48,34 +51,42 @@ const Set = props => {
 
   return (
     <Panel>
-      <Fieldset
-        style={{ textAlign: 'right', fontSize: '.8em' }}
-        name={`set-operator-${props.id}`}
-        horizontal
-      >
-        <Legend>Set Operator:</Legend>
-        <Radio
-          checked={props.mustMatchAll}
-          onChange={() => updateSetOperator(true)}
-        >
-          AND
-        </Radio>{' '}
-        <Radio
-          checked={!props.mustMatchAll}
-          onChange={() => updateSetOperator(false)}
-        >
-          OR
-        </Radio>
-      </Fieldset>
+      <StyledSetHeaderRow>
+        <FormControl horizontal style={{ marginBottom: '5px' }}>
+          <FormControlLabel style={{ marginRight: '10px' }}>
+            Set Operator:
+          </FormControlLabel>
+          <ButtonGroup>
+            <Tooltip title="All Expressions Must Match" enterDelay={400}>
+              <Button
+                small
+                clear={!props.mustMatchAll}
+                onClick={() => updateSetOperator(true)}
+              >
+                AND
+              </Button>
+            </Tooltip>
+            <Tooltip title="All Expressions Must Match" enterDelay={400}>
+              <Button
+                small
+                clear={props.mustMatchAll}
+                onClick={() => updateSetOperator(false)}
+              >
+                OR
+              </Button>
+            </Tooltip>
+          </ButtonGroup>
+        </FormControl>
+        <FormControl horizontal style={{ margin: 0 }}>
+          <Button small onClick={removeSet}>
+            Remove Set
+          </Button>
+        </FormControl>
+      </StyledSetHeaderRow>
       {getExpressions(props.expressions)}
-      <SetPreviewer
-        options={{
-          mustMatchAll: props.mustMatchAll,
-          expressions: props.expressions
-        }}
-      />
-      <Button onClick={addExpression}>Add Expression</Button>
-      <Button onClick={removeSet}>Remove Set</Button>
+      <StyledAddSetButton onClick={addExpression}>
+        <PlusIcon fill={CalciteTheme.palette.gray} /> Add Expression
+      </StyledAddSetButton>
     </Panel>
   );
 };

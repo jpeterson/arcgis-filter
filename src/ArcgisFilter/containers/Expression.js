@@ -6,17 +6,22 @@ import ValueInput from '../components/ValueInput';
 import UniqueValueChooser from '../components/UniqueValueChooser';
 import ValueTypeChooser from '../components/ValueTypeChooser';
 import DomainValueChooser from '../components/DomainValueChooser';
-import ExpressionPreviewer from '../components/ExpressionPreviewer';
 
-import { Fieldset, Legend } from 'calcite-react/Form';
+import { FormControl, Fieldset } from 'calcite-react/Form';
 import Panel from 'calcite-react/Panel';
 import Button from 'calcite-react/Button';
+import Tooltip from 'calcite-react/Tooltip';
+import DeleteIcon from '../icons/DeleteIcon';
 
 import {
   getValidOperators,
   getDefaultFilterValue,
   getGenericFieldType
 } from '../utils/genericUtils';
+
+const formControlStyles = {
+  marginBottom: '5px'
+};
 
 class Expression extends Component {
   componentDidMount() {
@@ -109,25 +114,41 @@ class Expression extends Component {
     return (
       <Panel style={{ backgroundColor: '#f6fdff' }}>
         <Fieldset name={`expression-${this.props.id}`} horizontal>
-          <FieldChooser
-            selectedField={field}
-            fields={this.props.fields}
-            onChange={this.handleFieldChanged}
-          />
-          <OperatorChooser
-            selectedOperator={operator}
-            operators={getValidOperators(field.type)}
-            onChange={this.handleOperatorChanged}
-          />
-          {this.getValueElement(this.props.expressionDef)}
-          <ValueTypeChooser
-            id={this.props.id}
-            selectedValueType={valueType}
-            onChange={this.handleValueTypeChanged}
-          />
+          <FormControl style={{ flex: '1 0 150px', ...formControlStyles }}>
+            <FieldChooser
+              selectedField={field}
+              fields={this.props.fields}
+              onChange={this.handleFieldChanged}
+            />
+          </FormControl>
+          <FormControl style={formControlStyles}>
+            <OperatorChooser
+              selectedOperator={operator}
+              operators={getValidOperators(field.type)}
+              onChange={this.handleOperatorChanged}
+            />
+          </FormControl>
+          <FormControl style={{ flex: '1 0 150px', ...formControlStyles }}>
+            {this.getValueElement(this.props.expressionDef)}
+          </FormControl>
+          <FormControl style={formControlStyles}>
+            <ValueTypeChooser
+              id={this.props.id}
+              selectedValueType={valueType}
+              onChange={this.handleValueTypeChanged}
+            />
+          </FormControl>
+          <FormControl style={formControlStyles}>
+            <Tooltip title="Remove Expression">
+              <Button
+                style={{ margin: '0.25rem 0 0 0' }}
+                iconButton
+                icon={<DeleteIcon />}
+                onClick={this.removeExpression}
+              />
+            </Tooltip>
+          </FormControl>
         </Fieldset>
-        <ExpressionPreviewer options={this.props.expressionDef} />
-        <Button onClick={this.removeExpression}>Remove Expression</Button>
       </Panel>
     );
   }
