@@ -4,7 +4,7 @@ import Set from './containers/Set';
 import FilterPreviewer from './components/FilterPreviewer';
 
 import { getFields, generateId } from './utils/genericUtils';
-import expressionTemplate from './defaults/expression.json';
+import expressionTemplate from './defaults/expression';
 
 import { ThemeProvider } from 'styled-components';
 import CalciteTheme from 'calcite-react/theme/CalciteTheme';

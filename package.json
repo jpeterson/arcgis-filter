@@ -1,7 +1,7 @@
 {
   "name": "arcgis-filter",
   "version": "0.1.0",
-  "private": true,
+  "main": "./dist",
   "dependencies": {
     "calcite-react": "^0.5.0",
     "date-fns": "^1.29.0",
@@ -14,11 +14,22 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build-demo": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build":
+      "npm run clean-dist && cross-env NODE_ENV=production && babel ./src/ArcgisFilter --out-dir ./dist",
+    "clean-dist": "rimraf ./dist",
+    "copy-files": "babel-node ./scripts/copy-files.js"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "cross-env": "^5.1.6",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-config-react-app": "^2.1.0",
@@ -26,6 +37,7 @@
     "eslint-plugin-jsx-a11y": "^5.0.1",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.8.2",
-    "prettier": "^1.13.3"
+    "prettier": "^1.13.3",
+    "rimraf": "^2.6.2"
   }
 }

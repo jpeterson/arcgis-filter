@@ -2,7 +2,7 @@ import { keyBy } from 'lodash';
 
 import uuidv1 from 'uuid/v1';
 
-import operatorDefs from '../defaults/operators.json';
+import operatorDefs from '../defaults/operators';
 
 // Accepts an ArcGIS fields definition and returns an array of fields for filtering
 export function getFields(fieldsDefinition) {
