@@ -40,8 +40,8 @@ class ArcgisFilter extends Component {
   }
 
   componentDidMount() {
-    if (this.props.sql) {
-      this.setState(this.props.sql, () => {
+    if (this.props.filterState) {
+      this.setState(this.props.filterState, () => {
         this.onChange(this.state);
       });
     }

@@ -28,7 +28,7 @@ class App extends Component {
         </header>
         <div className="component-showcase">
           <ArcgisFilter
-            sql={sql}
+            filterState={sql}
             fields={fieldsDefinition}
             disableUnique={true}
             onChange={this.handleFilterChanged}
