@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Set from './containers/Set';
 import FilterPreviewer from './components/FilterPreviewer';
 
-import { getFields, generateId } from './utils/genericUtils';
+import { generateId } from './utils/genericUtils';
 import { buildFilter } from './utils/sqlUtils';
 import expressionTemplate from './defaults/expression';
 
@@ -40,13 +40,16 @@ class ArcgisFilter extends Component {
   }
 
   componentDidMount() {
-    const fields = getFields(this.props.fields);
-    this.setState({ fields });
+    if (this.props.sql) {
+      this.setState(this.props.sql, () => {
+        this.onChange(this.state);
+      });
+    }
   }
 
   onChange = state => {
     const filter = buildFilter(state);
-    this.props.onChange(filter);
+    this.props.onChange(filter, state);
   };
 
   updateSets = sets => {
@@ -115,7 +118,7 @@ class ArcgisFilter extends Component {
         <Set
           key={key}
           id={key}
-          fields={this.state.fields}
+          fields={this.props.fields}
           mustMatchAll={set.mustMatchAll}
           expressions={set.expressions}
           disableUnique={this.props.disableUnique}
@@ -133,7 +136,7 @@ class ArcgisFilter extends Component {
   };
 
   render() {
-    if (!this.state.fields) {
+    if (!this.props.fields) {
       return null;
     }
 
@@ -186,6 +189,8 @@ class ArcgisFilter extends Component {
 ArcgisFilter.propTypes = {
   /** ArcGIS REST API or JSAPI fields definition object. */
   fields: PropTypes.object.isRequired,
+  /** Object used to persist/rehydrate the filter */
+  filterState: PropTypes.object,
   /** Fired when the filter changes. Receives the filter string as an argument  */
   onChange: PropTypes.func,
   /** Disables the option to pick from unique values. */

@@ -4,25 +4,6 @@ import uuidv1 from 'uuid/v1';
 
 import operatorDefs from '../defaults/operators';
 
-// Accepts an ArcGIS fields definition and returns an array of fields for filtering
-export function getFields(fieldsDefinition) {
-  const def = Object.keys(fieldsDefinition).map(key => {
-    const { alias, length, name, nullable, type, domain } = fieldsDefinition[
-      key
-    ];
-    return {
-      alias,
-      length,
-      name,
-      nullable,
-      type,
-      domain
-    };
-  });
-
-  return getFieldsLookup(def);
-}
-
 export function getDefaultFilterValue(field) {
   if (field.domain && field.domain.codedValues) {
     return field.domain.codedValues[0];
