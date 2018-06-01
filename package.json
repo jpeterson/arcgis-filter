@@ -20,7 +20,9 @@
     "build":
       "npm run clean-dist && cross-env NODE_ENV=production && babel ./src/ArcgisFilter --out-dir ./dist",
     "clean-dist": "rimraf ./dist",
-    "copy-files": "babel-node ./scripts/copy-files.js"
+    "release:patch": "npm version patch && npm run build && npm publish",
+    "release:minor": "npm version minor && npm run build && npm publish",
+    "release:major": "npm version major && npm run build && npm publish"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
