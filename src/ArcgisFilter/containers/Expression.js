@@ -147,7 +147,7 @@ class Expression extends Component {
             {this.getValueTypeChooser(valueType, this.props.disableUnique)}
           </FormControl>
           <FormControl style={formControlStyles}>
-            <Tooltip title="Remove Expression">
+            <Tooltip title="Remove Expression" placement="left">
               <Button
                 style={{ margin: '0.25rem 0 0 0' }}
                 iconButton

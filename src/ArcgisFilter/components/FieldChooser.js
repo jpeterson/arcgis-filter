@@ -37,6 +37,7 @@ const FieldChooser = props => {
 
   return (
     <Select
+      fullWidth
       style={{ whiteSpace: 'nowrap', width: '100%' }}
       menuStyle={{ maxHeight: '400px' }}
       filterable

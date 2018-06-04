@@ -22,6 +22,7 @@ const OperatorChooser = props => {
 
   return (
     <Select
+      style={style.select}
       selectedValue={props.selectedOperator && props.selectedOperator.alias}
       disabled={!props.operators.length}
       onChange={handleOnChange}
@@ -29,6 +30,12 @@ const OperatorChooser = props => {
       {getOptions(props.operators)}
     </Select>
   );
+};
+
+const style = {
+  select: {
+    flex: '0 0 80px'
+  }
 };
 
 export default OperatorChooser;

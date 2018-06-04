@@ -62,6 +62,8 @@ class ValueInput extends Component {
           <DatePicker
             date={this.getMomentDate(this.props.value.code)}
             isOutsideRange={() => false}
+            numberOfMonths={1}
+            anchorDirection="right"
             onDateChange={this.handleOnDateChange}
             focused={this.state.datePickerFocused}
             onFocusChange={this.onFocusChange}

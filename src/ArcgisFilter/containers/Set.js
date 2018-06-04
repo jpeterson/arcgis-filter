@@ -58,18 +58,18 @@ const Set = props => {
             Set Operator:
           </FormControlLabel>
           <ButtonGroup>
-            <Tooltip title="All Expressions Must Match" enterDelay={400}>
+            <Tooltip title="All Expressions Match" enterDelay={400}>
               <Button
-                small
+                extraSmall
                 clear={!props.mustMatchAll}
                 onClick={() => updateSetOperator(true)}
               >
                 AND
               </Button>
             </Tooltip>
-            <Tooltip title="All Expressions Must Match" enterDelay={400}>
+            <Tooltip title="Any Expressions Match" enterDelay={400}>
               <Button
-                small
+                extraSmall
                 clear={props.mustMatchAll}
                 onClick={() => updateSetOperator(false)}
               >
@@ -79,7 +79,7 @@ const Set = props => {
           </ButtonGroup>
         </FormControl>
         <FormControl horizontal style={{ margin: 0 }}>
-          <Button small onClick={removeSet}>
+          <Button extraSmall onClick={removeSet}>
             Remove Set
           </Button>
         </FormControl>

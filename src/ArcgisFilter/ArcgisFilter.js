@@ -150,18 +150,18 @@ class ArcgisFilter extends Component {
                 Filter Operator:
               </FormControlLabel>
               <ButtonGroup>
-                <Tooltip title="All Expressions Must Match" enterDelay={400}>
+                <Tooltip title="All Expressions Match" enterDelay={400}>
                   <Button
-                    small
+                    extraSmall
                     clear={!this.state.mustMatchAll}
                     onClick={() => this.handleUpdateFilterOperator(true)}
                   >
                     AND
                   </Button>
                 </Tooltip>
-                <Tooltip title="All Expressions Must Match" enterDelay={400}>
+                <Tooltip title="Any Expressions Match" enterDelay={400}>
                   <Button
-                    small
+                    extraSmall
                     clear={this.state.mustMatchAll}
                     onClick={() => this.handleUpdateFilterOperator(false)}
                   >
