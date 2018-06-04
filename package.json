@@ -3,7 +3,7 @@
   "version": "0.3.8",
   "main": "./dist",
   "dependencies": {
-    "calcite-react": "^0.5.2",
+    "calcite-react": "^0.5.3",
     "date-fns": "^1.29.0",
     "lodash": "^4.17.10",
     "prop-types": "^15.6.1",
