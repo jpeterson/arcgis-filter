@@ -114,5 +114,43 @@ export default {
       operator: 'IS NOT NULL',
       omitValue: true
     }
+  ],
+  epoch: [
+    {
+      alias: 'is on',
+      fullDay: true,
+      operator: 'BETWEEN'
+    },
+    {
+      alias: 'is not on',
+      fullDay: true,
+      operator: 'NOT BETWEEN'
+    },
+    {
+      alias: 'is before',
+      operator: '<'
+    },
+    {
+      alias: 'is after',
+      operator: '>'
+    },
+    {
+      alias: 'is on or before',
+      operator: '<='
+    },
+    {
+      alias: 'is on or after',
+      operator: '>='
+    },
+    {
+      alias: 'is blank',
+      operator: 'IS NULL',
+      omitValue: true
+    },
+    {
+      alias: 'is not blank',
+      operator: 'IS NOT NULL',
+      omitValue: true
+    }
   ]
 };

@@ -12,46 +12,60 @@
     "domain": {
       "name": "NFFL_Fuel_Model",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "Short Grass (1 foot)",
-        "code": "Short Grass (1 foot)"
-      }, {
-        "name": "Timber (Grass and Understory)",
-        "code": "Timber (Grass and Understory)"
-      }, {
-        "name": "Tall Grass (2.5 feet)",
-        "code": "Tall Grass (2.5 feet)"
-      }, {
-        "name": "Chaparral (6 feet)",
-        "code": "Chaparral (6 feet)"
-      }, {
-        "name": "Brush (2 feet)",
-        "code": "Brush (2 feet)"
-      }, {
-        "name": "Dormant Brush, Hardwood Slash",
-        "code": "Dormant Brush, Hardwood Slash"
-      }, {
-        "name": "Southern Rough",
-        "code": "Southern Rough"
-      }, {
-        "name": "Closed Timber Litter",
-        "code": "Closed Timber Litter"
-      }, {
-        "name": "Hardwood Litter",
-        "code": "Hardwood Litter"
-      }, {
-        "name": "Timber (Litter and Understory)",
-        "code": "Timber (Litter and Understory)"
-      }, {
-        "name": "Light Logging Slash",
-        "code": "Light Logging Slash"
-      }, {
-        "name": "Medium Logging Slash",
-        "code": "Medium Logging Slash"
-      }, {
-        "name": "Heavy Logging Slash",
-        "code": "Heavy Logging Slash"
-      }]
+      "codedValues": [
+        {
+          "name": "Short Grass (1 foot)",
+          "code": "Short Grass (1 foot)"
+        },
+        {
+          "name": "Timber (Grass and Understory)",
+          "code": "Timber (Grass and Understory)"
+        },
+        {
+          "name": "Tall Grass (2.5 feet)",
+          "code": "Tall Grass (2.5 feet)"
+        },
+        {
+          "name": "Chaparral (6 feet)",
+          "code": "Chaparral (6 feet)"
+        },
+        {
+          "name": "Brush (2 feet)",
+          "code": "Brush (2 feet)"
+        },
+        {
+          "name": "Dormant Brush, Hardwood Slash",
+          "code": "Dormant Brush, Hardwood Slash"
+        },
+        {
+          "name": "Southern Rough",
+          "code": "Southern Rough"
+        },
+        {
+          "name": "Closed Timber Litter",
+          "code": "Closed Timber Litter"
+        },
+        {
+          "name": "Hardwood Litter",
+          "code": "Hardwood Litter"
+        },
+        {
+          "name": "Timber (Litter and Understory)",
+          "code": "Timber (Litter and Understory)"
+        },
+        {
+          "name": "Light Logging Slash",
+          "code": "Light Logging Slash"
+        },
+        {
+          "name": "Medium Logging Slash",
+          "code": "Medium Logging Slash"
+        },
+        {
+          "name": "Heavy Logging Slash",
+          "code": "Heavy Logging Slash"
+        }
+      ]
     },
     "editable": true,
     "length": 30,
@@ -64,16 +78,20 @@
     "domain": {
       "name": "ADSPermissionStateDomain",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "DEFAULT",
-        "code": "DEFAULT"
-      }, {
-        "name": "ICS209",
-        "code": "ICS209"
-      }, {
-        "name": "CERTIFIED",
-        "code": "CERTIFIED"
-      }]
+      "codedValues": [
+        {
+          "name": "DEFAULT",
+          "code": "DEFAULT"
+        },
+        {
+          "name": "ICS209",
+          "code": "ICS209"
+        },
+        {
+          "name": "CERTIFIED",
+          "code": "CERTIFIED"
+        }
+      ]
     },
     "editable": true,
     "length": 25,
@@ -119,7 +137,7 @@
     "length": -1,
     "name": "CreatedOnDateTime",
     "nullable": true,
-    "type": "esriFieldTypeDouble"
+    "type": "epoch"
   },
   "CriticalResourceNeeds": {
     "alias": "Critical Resource Needs",
@@ -246,19 +264,24 @@
     "domain": {
       "name": "Fire_Behavior_General",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "Extreme",
-        "code": "Extreme"
-      }, {
-        "name": "Active",
-        "code": "Active"
-      }, {
-        "name": "Moderate",
-        "code": "Moderate"
-      }, {
-        "name": "Minimal",
-        "code": "Minimal"
-      }]
+      "codedValues": [
+        {
+          "name": "Extreme",
+          "code": "Extreme"
+        },
+        {
+          "name": "Active",
+          "code": "Active"
+        },
+        {
+          "name": "Moderate",
+          "code": "Moderate"
+        },
+        {
+          "name": "Minimal",
+          "code": "Minimal"
+        }
+      ]
     },
     "editable": true,
     "length": 20,
@@ -271,55 +294,72 @@
     "domain": {
       "name": "Fire_Behavior_General_Description",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "Crowning",
-        "code": "Crowning"
-      }, {
-        "name": "Short Crown Runs",
-        "code": "Short Crown Runs"
-      }, {
-        "name": "Uphill Runs",
-        "code": "Uphill Runs"
-      }, {
-        "name": "Wind Driven Runs",
-        "code": "Wind Driven Runs"
-      }, {
-        "name": "Running",
-        "code": "Running"
-      }, {
-        "name": "Flanking",
-        "code": "Flanking"
-      }, {
-        "name": "Backing",
-        "code": "Backing"
-      }, {
-        "name": "Creeping",
-        "code": "Creeping"
-      }, {
-        "name": "Torching",
-        "code": "Torching"
-      }, {
-        "name": "Group Torching",
-        "code": "Group Torching"
-      }, {
-        "name": "Single Tree Torching",
-        "code": "Single Tree Torching"
-      }, {
-        "name": "Isolated Torching",
-        "code": "Isolated Torching"
-      }, {
-        "name": "Spotting",
-        "code": "Spotting"
-      }, {
-        "name": "Long-range Spotting",
-        "code": "Long-range Spotting"
-      }, {
-        "name": "Short-range Spotting",
-        "code": "Short-range Spotting"
-      }, {
-        "name": "Smoldering",
-        "code": "Smoldering"
-      }]
+      "codedValues": [
+        {
+          "name": "Crowning",
+          "code": "Crowning"
+        },
+        {
+          "name": "Short Crown Runs",
+          "code": "Short Crown Runs"
+        },
+        {
+          "name": "Uphill Runs",
+          "code": "Uphill Runs"
+        },
+        {
+          "name": "Wind Driven Runs",
+          "code": "Wind Driven Runs"
+        },
+        {
+          "name": "Running",
+          "code": "Running"
+        },
+        {
+          "name": "Flanking",
+          "code": "Flanking"
+        },
+        {
+          "name": "Backing",
+          "code": "Backing"
+        },
+        {
+          "name": "Creeping",
+          "code": "Creeping"
+        },
+        {
+          "name": "Torching",
+          "code": "Torching"
+        },
+        {
+          "name": "Group Torching",
+          "code": "Group Torching"
+        },
+        {
+          "name": "Single Tree Torching",
+          "code": "Single Tree Torching"
+        },
+        {
+          "name": "Isolated Torching",
+          "code": "Isolated Torching"
+        },
+        {
+          "name": "Spotting",
+          "code": "Spotting"
+        },
+        {
+          "name": "Long-range Spotting",
+          "code": "Long-range Spotting"
+        },
+        {
+          "name": "Short-range Spotting",
+          "code": "Short-range Spotting"
+        },
+        {
+          "name": "Smoldering",
+          "code": "Smoldering"
+        }
+      ]
     },
     "editable": true,
     "length": 50,
@@ -332,55 +372,72 @@
     "domain": {
       "name": "Fire_Behavior_General_Description",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "Crowning",
-        "code": "Crowning"
-      }, {
-        "name": "Short Crown Runs",
-        "code": "Short Crown Runs"
-      }, {
-        "name": "Uphill Runs",
-        "code": "Uphill Runs"
-      }, {
-        "name": "Wind Driven Runs",
-        "code": "Wind Driven Runs"
-      }, {
-        "name": "Running",
-        "code": "Running"
-      }, {
-        "name": "Flanking",
-        "code": "Flanking"
-      }, {
-        "name": "Backing",
-        "code": "Backing"
-      }, {
-        "name": "Creeping",
-        "code": "Creeping"
-      }, {
-        "name": "Torching",
-        "code": "Torching"
-      }, {
-        "name": "Group Torching",
-        "code": "Group Torching"
-      }, {
-        "name": "Single Tree Torching",
-        "code": "Single Tree Torching"
-      }, {
-        "name": "Isolated Torching",
-        "code": "Isolated Torching"
-      }, {
-        "name": "Spotting",
-        "code": "Spotting"
-      }, {
-        "name": "Long-range Spotting",
-        "code": "Long-range Spotting"
-      }, {
-        "name": "Short-range Spotting",
-        "code": "Short-range Spotting"
-      }, {
-        "name": "Smoldering",
-        "code": "Smoldering"
-      }]
+      "codedValues": [
+        {
+          "name": "Crowning",
+          "code": "Crowning"
+        },
+        {
+          "name": "Short Crown Runs",
+          "code": "Short Crown Runs"
+        },
+        {
+          "name": "Uphill Runs",
+          "code": "Uphill Runs"
+        },
+        {
+          "name": "Wind Driven Runs",
+          "code": "Wind Driven Runs"
+        },
+        {
+          "name": "Running",
+          "code": "Running"
+        },
+        {
+          "name": "Flanking",
+          "code": "Flanking"
+        },
+        {
+          "name": "Backing",
+          "code": "Backing"
+        },
+        {
+          "name": "Creeping",
+          "code": "Creeping"
+        },
+        {
+          "name": "Torching",
+          "code": "Torching"
+        },
+        {
+          "name": "Group Torching",
+          "code": "Group Torching"
+        },
+        {
+          "name": "Single Tree Torching",
+          "code": "Single Tree Torching"
+        },
+        {
+          "name": "Isolated Torching",
+          "code": "Isolated Torching"
+        },
+        {
+          "name": "Spotting",
+          "code": "Spotting"
+        },
+        {
+          "name": "Long-range Spotting",
+          "code": "Long-range Spotting"
+        },
+        {
+          "name": "Short-range Spotting",
+          "code": "Short-range Spotting"
+        },
+        {
+          "name": "Smoldering",
+          "code": "Smoldering"
+        }
+      ]
     },
     "editable": true,
     "length": 50,
@@ -393,55 +450,72 @@
     "domain": {
       "name": "Fire_Behavior_General_Description",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "Crowning",
-        "code": "Crowning"
-      }, {
-        "name": "Short Crown Runs",
-        "code": "Short Crown Runs"
-      }, {
-        "name": "Uphill Runs",
-        "code": "Uphill Runs"
-      }, {
-        "name": "Wind Driven Runs",
-        "code": "Wind Driven Runs"
-      }, {
-        "name": "Running",
-        "code": "Running"
-      }, {
-        "name": "Flanking",
-        "code": "Flanking"
-      }, {
-        "name": "Backing",
-        "code": "Backing"
-      }, {
-        "name": "Creeping",
-        "code": "Creeping"
-      }, {
-        "name": "Torching",
-        "code": "Torching"
-      }, {
-        "name": "Group Torching",
-        "code": "Group Torching"
-      }, {
-        "name": "Single Tree Torching",
-        "code": "Single Tree Torching"
-      }, {
-        "name": "Isolated Torching",
-        "code": "Isolated Torching"
-      }, {
-        "name": "Spotting",
-        "code": "Spotting"
-      }, {
-        "name": "Long-range Spotting",
-        "code": "Long-range Spotting"
-      }, {
-        "name": "Short-range Spotting",
-        "code": "Short-range Spotting"
-      }, {
-        "name": "Smoldering",
-        "code": "Smoldering"
-      }]
+      "codedValues": [
+        {
+          "name": "Crowning",
+          "code": "Crowning"
+        },
+        {
+          "name": "Short Crown Runs",
+          "code": "Short Crown Runs"
+        },
+        {
+          "name": "Uphill Runs",
+          "code": "Uphill Runs"
+        },
+        {
+          "name": "Wind Driven Runs",
+          "code": "Wind Driven Runs"
+        },
+        {
+          "name": "Running",
+          "code": "Running"
+        },
+        {
+          "name": "Flanking",
+          "code": "Flanking"
+        },
+        {
+          "name": "Backing",
+          "code": "Backing"
+        },
+        {
+          "name": "Creeping",
+          "code": "Creeping"
+        },
+        {
+          "name": "Torching",
+          "code": "Torching"
+        },
+        {
+          "name": "Group Torching",
+          "code": "Group Torching"
+        },
+        {
+          "name": "Single Tree Torching",
+          "code": "Single Tree Torching"
+        },
+        {
+          "name": "Isolated Torching",
+          "code": "Isolated Torching"
+        },
+        {
+          "name": "Spotting",
+          "code": "Spotting"
+        },
+        {
+          "name": "Long-range Spotting",
+          "code": "Long-range Spotting"
+        },
+        {
+          "name": "Short-range Spotting",
+          "code": "Short-range Spotting"
+        },
+        {
+          "name": "Smoldering",
+          "code": "Smoldering"
+        }
+      ]
     },
     "editable": true,
     "length": 50,
@@ -454,16 +528,20 @@
     "domain": {
       "name": "Fire_Cause",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "Natural",
-        "code": "Natural"
-      }, {
-        "name": "Human",
-        "code": "Human"
-      }, {
-        "name": "Unknown",
-        "code": "Unknown"
-      }]
+      "codedValues": [
+        {
+          "name": "Natural",
+          "code": "Natural"
+        },
+        {
+          "name": "Human",
+          "code": "Human"
+        },
+        {
+          "name": "Unknown",
+          "code": "Unknown"
+        }
+      ]
     },
     "editable": true,
     "length": 15,
@@ -476,52 +554,68 @@
     "domain": {
       "name": "Fire_Cause_General",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "Camping",
-        "code": "Camping"
-      }, {
-        "name": "Smoking",
-        "code": "Smoking"
-      }, {
-        "name": "Incendiary",
-        "code": "Incendiary"
-      }, {
-        "name": "Equipment",
-        "code": "Equipment"
-      }, {
-        "name": "Utilities",
-        "code": "Utilities"
-      }, {
-        "name": "Firearms/Weapons",
-        "code": "Firearms/Weapons"
-      }, {
-        "name": "Debris/Open Burning",
-        "code": "Debris/Open Burning"
-      }, {
-        "name": "Other Human Cause",
-        "code": "Other Human Cause"
-      }, {
-        "name": "Other Natural Cause",
-        "code": "Other Natural Cause"
-      }, {
-        "name": "Coal Seam",
-        "code": "Coal Seam"
-      }, {
-        "name": "Lightning",
-        "code": "Lightning"
-      }, {
-        "name": "Railroad",
-        "code": "Railroad"
-      }, {
-        "name": "Volcanic",
-        "code": "Volcanic"
-      }, {
-        "name": "Investigated but Undetermined",
-        "code": "Investigated but Undetermined"
-      }, {
-        "name": "Cause and Origin Not Identified",
-        "code": "Cause and Origin Not Identified"
-      }]
+      "codedValues": [
+        {
+          "name": "Camping",
+          "code": "Camping"
+        },
+        {
+          "name": "Smoking",
+          "code": "Smoking"
+        },
+        {
+          "name": "Incendiary",
+          "code": "Incendiary"
+        },
+        {
+          "name": "Equipment",
+          "code": "Equipment"
+        },
+        {
+          "name": "Utilities",
+          "code": "Utilities"
+        },
+        {
+          "name": "Firearms/Weapons",
+          "code": "Firearms/Weapons"
+        },
+        {
+          "name": "Debris/Open Burning",
+          "code": "Debris/Open Burning"
+        },
+        {
+          "name": "Other Human Cause",
+          "code": "Other Human Cause"
+        },
+        {
+          "name": "Other Natural Cause",
+          "code": "Other Natural Cause"
+        },
+        {
+          "name": "Coal Seam",
+          "code": "Coal Seam"
+        },
+        {
+          "name": "Lightning",
+          "code": "Lightning"
+        },
+        {
+          "name": "Railroad",
+          "code": "Railroad"
+        },
+        {
+          "name": "Volcanic",
+          "code": "Volcanic"
+        },
+        {
+          "name": "Investigated but Undetermined",
+          "code": "Investigated but Undetermined"
+        },
+        {
+          "name": "Cause and Origin Not Identified",
+          "code": "Cause and Origin Not Identified"
+        }
+      ]
     },
     "editable": true,
     "length": 100,
@@ -534,274 +628,364 @@
     "domain": {
       "name": "Fire_Cause_Specific",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "Accident/Derailment",
-        "code": "Accident/Derailment"
-      }, {
-        "name": "Aerial Luminaries",
-        "code": "Aerial Luminaries"
-      }, {
-        "name": "Agricultural",
-        "code": "Agricultural"
-      }, {
-        "name": "Aircraft",
-        "code": "Aircraft"
-      }, {
-        "name": "Ammunition",
-        "code": "Ammunition"
-      }, {
-        "name": "Armor Piercing Incendiary/Tracer Ammunition",
-        "code": "Armor Piercing Incendiary/Tracer Ammunition"
-      }, {
-        "name": "Arson-Crime Concealment",
-        "code": "Arson-Crime Concealment"
-      }, {
-        "name": "Arson-Excitement",
-        "code": "Arson-Excitement"
-      }, {
-        "name": "Arson-Extremism/Terrorism",
-        "code": "Arson-Extremism/Terrorism"
-      }, {
-        "name": "Arson-Profit",
-        "code": "Arson-Profit"
-      }, {
-        "name": "Arson-Retaliation",
-        "code": "Arson-Retaliation"
-      }, {
-        "name": "Arson-Vandalism",
-        "code": "Arson-Vandalism"
-      }, {
-        "name": "Ash Disposal",
-        "code": "Ash Disposal"
-      }, {
-        "name": "Barrel",
-        "code": "Barrel"
-      }, {
-        "name": "Blasting",
-        "code": "Blasting"
-      }, {
-        "name": "Bonfire",
-        "code": "Bonfire"
-      }, {
-        "name": "Brake Shoe Particle",
-        "code": "Brake Shoe Particle"
-      }, {
-        "name": "Broadcast/Prescribed Burn",
-        "code": "Broadcast/Prescribed Burn"
-      }, {
-        "name": "Campfire",
-        "code": "Campfire"
-      }, {
-        "name": "Catalyst Welding",
-        "code": "Catalyst Welding"
-      }, {
-        "name": "Ceremonial/Cultural",
-        "code": "Ceremonial/Cultural"
-      }, {
-        "name": "Cigar",
-        "code": "Cigar"
-      }, {
-        "name": "Cigarette",
-        "code": "Cigarette"
-      }, {
-        "name": "Cooking",
-        "code": "Cooking"
-      }, {
-        "name": "Cooking Fire",
-        "code": "Cooking Fire"
-      }, {
-        "name": "Cultural",
-        "code": "Cultural"
-      }, {
-        "name": "Cutting/Welding",
-        "code": "Cutting/Welding"
-      }, {
-        "name": "Delayed Powder Burn",
-        "code": "Delayed Powder Burn"
-      }, {
-        "name": "Ditch/Fence",
-        "code": "Ditch/Fence"
-      }, {
-        "name": "Drug Operations",
-        "code": "Drug Operations"
-      }, {
-        "name": "Drug Paraphernalia",
-        "code": "Drug Paraphernalia"
-      }, {
-        "name": "Dump Burning",
-        "code": "Dump Burning"
-      }, {
-        "name": "Dynamic Grid Failure",
-        "code": "Dynamic Grid Failure"
-      }, {
-        "name": "E-cigarette",
-        "code": "E-cigarette"
-      }, {
-        "name": "Electric Fences",
-        "code": "Electric Fences"
-      }, {
-        "name": "Exhaust System Particle",
-        "code": "Exhaust System Particle"
-      }, {
-        "name": "Exploding Targets",
-        "code": "Exploding Targets"
-      }, {
-        "name": "Farming Equipment",
-        "code": "Farming Equipment"
-      }, {
-        "name": "Field Burning",
-        "code": "Field Burning"
-      }, {
-        "name": "Fire Play",
-        "code": "Fire Play"
-      }, {
-        "name": "Fireworks (Consumer or Personal Use)",
-        "code": "Fireworks (Consumer or Personal Use)"
-      }, {
-        "name": "Fireworks (Display or Professional Use)",
-        "code": "Fireworks (Display or Professional Use)"
-      }, {
-        "name": "Flares",
-        "code": "Flares"
-      }, {
-        "name": "Flue Sparks",
-        "code": "Flue Sparks"
-      }, {
-        "name": "Glass Refraction/Magnification",
-        "code": "Glass Refraction/Magnification"
-      }, {
-        "name": "Grazing Improvement",
-        "code": "Grazing Improvement"
-      }, {
-        "name": "Habitat Improvement",
-        "code": "Habitat Improvement"
-      }, {
-        "name": "Heavy Equipment",
-        "code": "Heavy Equipment"
-      }, {
-        "name": "Home Outdoor Wood Burning Furnaces",
-        "code": "Home Outdoor Wood Burning Furnaces"
-      }, {
-        "name": "Incendiary Ammunition",
-        "code": "Incendiary Ammunition"
-      }, {
-        "name": "Incendiary Device",
-        "code": "Incendiary Device"
-      }, {
-        "name": "Incendiary Tracer Ammunition",
-        "code": "Incendiary Tracer Ammunition"
-      }, {
-        "name": "Land Clearing",
-        "code": "Land Clearing"
-      }, {
-        "name": "Lantern/Catalytic Heater",
-        "code": "Lantern/Catalytic Heater"
-      }, {
-        "name": "Lighter",
-        "code": "Lighter"
-      }, {
-        "name": "Logging Equipment",
-        "code": "Logging Equipment"
-      }, {
-        "name": "Match(s)",
-        "code": "Match(s)"
-      }, {
-        "name": "Military Ordinance",
-        "code": "Military Ordinance"
-      }, {
-        "name": "Motor Vehicle",
-        "code": "Motor Vehicle"
-      }, {
-        "name": "Motor Vehicles",
-        "code": "Motor Vehicles"
-      }, {
-        "name": "Mowing",
-        "code": "Mowing"
-      }, {
-        "name": "Muzzle-loading Firearms",
-        "code": "Muzzle-loading Firearms"
-      }, {
-        "name": "Oil and Gas Production",
-        "code": "Oil and Gas Production"
-      }, {
-        "name": "Other, Known",
-        "code": "Other, Known"
-      }, {
-        "name": "Other, Unknown",
-        "code": "Other, Unknown"
-      }, {
-        "name": "Pipe",
-        "code": "Pipe"
-      }, {
-        "name": "Portable Stove",
-        "code": "Portable Stove"
-      }, {
-        "name": "Power Generation/Transmission",
-        "code": "Power Generation/Transmission"
-      }, {
-        "name": "Power Tools",
-        "code": "Power Tools"
-      }, {
-        "name": "Propelled Flares",
-        "code": "Propelled Flares"
-      }, {
-        "name": "Rail/Track Grinding",
-        "code": "Rail/Track Grinding"
-      }, {
-        "name": "Right-of-Way",
-        "code": "Right-of-Way"
-      }, {
-        "name": "Right-of-Way Maintenance",
-        "code": "Right-of-Way Maintenance"
-      }, {
-        "name": "Signal Flares",
-        "code": "Signal Flares"
-      }, {
-        "name": "Small Engine Equipment",
-        "code": "Small Engine Equipment"
-      }, {
-        "name": "Smoke Out",
-        "code": "Smoke Out"
-      }, {
-        "name": "Smoker/Camp Stove",
-        "code": "Smoker/Camp Stove"
-      }, {
-        "name": "Smoking",
-        "code": "Smoking"
-      }, {
-        "name": "Spontaneous Combustion",
-        "code": "Spontaneous Combustion"
-      }, {
-        "name": "Starburst Ammunition",
-        "code": "Starburst Ammunition"
-      }, {
-        "name": "Steel Component Ammunition",
-        "code": "Steel Component Ammunition"
-      }, {
-        "name": "Structure",
-        "code": "Structure"
-      }, {
-        "name": "Tracer Ammunition",
-        "code": "Tracer Ammunition"
-      }, {
-        "name": "Trash Burning",
-        "code": "Trash Burning"
-      }, {
-        "name": "Turbocharger",
-        "code": "Turbocharger"
-      }, {
-        "name": "Warming",
-        "code": "Warming"
-      }, {
-        "name": "Wheel Bearing Failure",
-        "code": "Wheel Bearing Failure"
-      }, {
-        "name": "Wheel Slip/Slide",
-        "code": "Wheel Slip/Slide"
-      }, {
-        "name": "Yard Debris",
-        "code": "Yard Debris"
-      }]
+      "codedValues": [
+        {
+          "name": "Accident/Derailment",
+          "code": "Accident/Derailment"
+        },
+        {
+          "name": "Aerial Luminaries",
+          "code": "Aerial Luminaries"
+        },
+        {
+          "name": "Agricultural",
+          "code": "Agricultural"
+        },
+        {
+          "name": "Aircraft",
+          "code": "Aircraft"
+        },
+        {
+          "name": "Ammunition",
+          "code": "Ammunition"
+        },
+        {
+          "name": "Armor Piercing Incendiary/Tracer Ammunition",
+          "code": "Armor Piercing Incendiary/Tracer Ammunition"
+        },
+        {
+          "name": "Arson-Crime Concealment",
+          "code": "Arson-Crime Concealment"
+        },
+        {
+          "name": "Arson-Excitement",
+          "code": "Arson-Excitement"
+        },
+        {
+          "name": "Arson-Extremism/Terrorism",
+          "code": "Arson-Extremism/Terrorism"
+        },
+        {
+          "name": "Arson-Profit",
+          "code": "Arson-Profit"
+        },
+        {
+          "name": "Arson-Retaliation",
+          "code": "Arson-Retaliation"
+        },
+        {
+          "name": "Arson-Vandalism",
+          "code": "Arson-Vandalism"
+        },
+        {
+          "name": "Ash Disposal",
+          "code": "Ash Disposal"
+        },
+        {
+          "name": "Barrel",
+          "code": "Barrel"
+        },
+        {
+          "name": "Blasting",
+          "code": "Blasting"
+        },
+        {
+          "name": "Bonfire",
+          "code": "Bonfire"
+        },
+        {
+          "name": "Brake Shoe Particle",
+          "code": "Brake Shoe Particle"
+        },
+        {
+          "name": "Broadcast/Prescribed Burn",
+          "code": "Broadcast/Prescribed Burn"
+        },
+        {
+          "name": "Campfire",
+          "code": "Campfire"
+        },
+        {
+          "name": "Catalyst Welding",
+          "code": "Catalyst Welding"
+        },
+        {
+          "name": "Ceremonial/Cultural",
+          "code": "Ceremonial/Cultural"
+        },
+        {
+          "name": "Cigar",
+          "code": "Cigar"
+        },
+        {
+          "name": "Cigarette",
+          "code": "Cigarette"
+        },
+        {
+          "name": "Cooking",
+          "code": "Cooking"
+        },
+        {
+          "name": "Cooking Fire",
+          "code": "Cooking Fire"
+        },
+        {
+          "name": "Cultural",
+          "code": "Cultural"
+        },
+        {
+          "name": "Cutting/Welding",
+          "code": "Cutting/Welding"
+        },
+        {
+          "name": "Delayed Powder Burn",
+          "code": "Delayed Powder Burn"
+        },
+        {
+          "name": "Ditch/Fence",
+          "code": "Ditch/Fence"
+        },
+        {
+          "name": "Drug Operations",
+          "code": "Drug Operations"
+        },
+        {
+          "name": "Drug Paraphernalia",
+          "code": "Drug Paraphernalia"
+        },
+        {
+          "name": "Dump Burning",
+          "code": "Dump Burning"
+        },
+        {
+          "name": "Dynamic Grid Failure",
+          "code": "Dynamic Grid Failure"
+        },
+        {
+          "name": "E-cigarette",
+          "code": "E-cigarette"
+        },
+        {
+          "name": "Electric Fences",
+          "code": "Electric Fences"
+        },
+        {
+          "name": "Exhaust System Particle",
+          "code": "Exhaust System Particle"
+        },
+        {
+          "name": "Exploding Targets",
+          "code": "Exploding Targets"
+        },
+        {
+          "name": "Farming Equipment",
+          "code": "Farming Equipment"
+        },
+        {
+          "name": "Field Burning",
+          "code": "Field Burning"
+        },
+        {
+          "name": "Fire Play",
+          "code": "Fire Play"
+        },
+        {
+          "name": "Fireworks (Consumer or Personal Use)",
+          "code": "Fireworks (Consumer or Personal Use)"
+        },
+        {
+          "name": "Fireworks (Display or Professional Use)",
+          "code": "Fireworks (Display or Professional Use)"
+        },
+        {
+          "name": "Flares",
+          "code": "Flares"
+        },
+        {
+          "name": "Flue Sparks",
+          "code": "Flue Sparks"
+        },
+        {
+          "name": "Glass Refraction/Magnification",
+          "code": "Glass Refraction/Magnification"
+        },
+        {
+          "name": "Grazing Improvement",
+          "code": "Grazing Improvement"
+        },
+        {
+          "name": "Habitat Improvement",
+          "code": "Habitat Improvement"
+        },
+        {
+          "name": "Heavy Equipment",
+          "code": "Heavy Equipment"
+        },
+        {
+          "name": "Home Outdoor Wood Burning Furnaces",
+          "code": "Home Outdoor Wood Burning Furnaces"
+        },
+        {
+          "name": "Incendiary Ammunition",
+          "code": "Incendiary Ammunition"
+        },
+        {
+          "name": "Incendiary Device",
+          "code": "Incendiary Device"
+        },
+        {
+          "name": "Incendiary Tracer Ammunition",
+          "code": "Incendiary Tracer Ammunition"
+        },
+        {
+          "name": "Land Clearing",
+          "code": "Land Clearing"
+        },
+        {
+          "name": "Lantern/Catalytic Heater",
+          "code": "Lantern/Catalytic Heater"
+        },
+        {
+          "name": "Lighter",
+          "code": "Lighter"
+        },
+        {
+          "name": "Logging Equipment",
+          "code": "Logging Equipment"
+        },
+        {
+          "name": "Match(s)",
+          "code": "Match(s)"
+        },
+        {
+          "name": "Military Ordinance",
+          "code": "Military Ordinance"
+        },
+        {
+          "name": "Motor Vehicle",
+          "code": "Motor Vehicle"
+        },
+        {
+          "name": "Motor Vehicles",
+          "code": "Motor Vehicles"
+        },
+        {
+          "name": "Mowing",
+          "code": "Mowing"
+        },
+        {
+          "name": "Muzzle-loading Firearms",
+          "code": "Muzzle-loading Firearms"
+        },
+        {
+          "name": "Oil and Gas Production",
+          "code": "Oil and Gas Production"
+        },
+        {
+          "name": "Other, Known",
+          "code": "Other, Known"
+        },
+        {
+          "name": "Other, Unknown",
+          "code": "Other, Unknown"
+        },
+        {
+          "name": "Pipe",
+          "code": "Pipe"
+        },
+        {
+          "name": "Portable Stove",
+          "code": "Portable Stove"
+        },
+        {
+          "name": "Power Generation/Transmission",
+          "code": "Power Generation/Transmission"
+        },
+        {
+          "name": "Power Tools",
+          "code": "Power Tools"
+        },
+        {
+          "name": "Propelled Flares",
+          "code": "Propelled Flares"
+        },
+        {
+          "name": "Rail/Track Grinding",
+          "code": "Rail/Track Grinding"
+        },
+        {
+          "name": "Right-of-Way",
+          "code": "Right-of-Way"
+        },
+        {
+          "name": "Right-of-Way Maintenance",
+          "code": "Right-of-Way Maintenance"
+        },
+        {
+          "name": "Signal Flares",
+          "code": "Signal Flares"
+        },
+        {
+          "name": "Small Engine Equipment",
+          "code": "Small Engine Equipment"
+        },
+        {
+          "name": "Smoke Out",
+          "code": "Smoke Out"
+        },
+        {
+          "name": "Smoker/Camp Stove",
+          "code": "Smoker/Camp Stove"
+        },
+        {
+          "name": "Smoking",
+          "code": "Smoking"
+        },
+        {
+          "name": "Spontaneous Combustion",
+          "code": "Spontaneous Combustion"
+        },
+        {
+          "name": "Starburst Ammunition",
+          "code": "Starburst Ammunition"
+        },
+        {
+          "name": "Steel Component Ammunition",
+          "code": "Steel Component Ammunition"
+        },
+        {
+          "name": "Structure",
+          "code": "Structure"
+        },
+        {
+          "name": "Tracer Ammunition",
+          "code": "Tracer Ammunition"
+        },
+        {
+          "name": "Trash Burning",
+          "code": "Trash Burning"
+        },
+        {
+          "name": "Turbocharger",
+          "code": "Turbocharger"
+        },
+        {
+          "name": "Warming",
+          "code": "Warming"
+        },
+        {
+          "name": "Wheel Bearing Failure",
+          "code": "Wheel Bearing Failure"
+        },
+        {
+          "name": "Wheel Slip/Slide",
+          "code": "Wheel Slip/Slide"
+        },
+        {
+          "name": "Yard Debris",
+          "code": "Yard Debris"
+        }
+      ]
     },
     "editable": true,
     "length": 200,
@@ -854,31 +1038,48 @@
     "domain": {
       "name": "Management_Complexity_Level",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "Highest management level utilized during the wildfire event is Type 1",
-        "code": "Type 1 Incident"
-      }, {
-        "name": "Highest management level utilized during the wildfire event is Type 2",
-        "code": "Type 2 Incident"
-      }, {
-        "name": "Highest management level utilized during the wildfire event is Type 3",
-        "code": "Type 3 Incident"
-      }, {
-        "name": "Highest management level utilized during the wildfire event is Type 4",
-        "code": "Type 4 Incident"
-      }, {
-        "name": "Highest management level utilized during the wildfire event is Type 5",
-        "code": "Type 5 Incident"
-      }, {
-        "name": "Highest management level utilized during the prescribed fire event is Type 1",
-        "code": "Type 1 Prescribed Fire"
-      }, {
-        "name": "Highest management level utilized during the prescribed fire event is Type 2",
-        "code": "Type 2 Prescribed Fire"
-      }, {
-        "name": "Highest management level utilized during the prescribed fire event is Type 3",
-        "code": "Type 3 Prescribed Fire"
-      }]
+      "codedValues": [
+        {
+          "name":
+            "Highest management level utilized during the wildfire event is Type 1",
+          "code": "Type 1 Incident"
+        },
+        {
+          "name":
+            "Highest management level utilized during the wildfire event is Type 2",
+          "code": "Type 2 Incident"
+        },
+        {
+          "name":
+            "Highest management level utilized during the wildfire event is Type 3",
+          "code": "Type 3 Incident"
+        },
+        {
+          "name":
+            "Highest management level utilized during the wildfire event is Type 4",
+          "code": "Type 4 Incident"
+        },
+        {
+          "name":
+            "Highest management level utilized during the wildfire event is Type 5",
+          "code": "Type 5 Incident"
+        },
+        {
+          "name":
+            "Highest management level utilized during the prescribed fire event is Type 1",
+          "code": "Type 1 Prescribed Fire"
+        },
+        {
+          "name":
+            "Highest management level utilized during the prescribed fire event is Type 2",
+          "code": "Type 2 Prescribed Fire"
+        },
+        {
+          "name":
+            "Highest management level utilized during the prescribed fire event is Type 3",
+          "code": "Type 3 Prescribed Fire"
+        }
+      ]
     },
     "editable": true,
     "length": 25,
@@ -955,46 +1156,60 @@
     "domain": {
       "name": "GACC_Domain",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "NICC",
-        "code": "NICC"
-      }, {
-        "name": "CIFC",
-        "code": "CIFC"
-      }, {
-        "name": "AKCC",
-        "code": "AKCC"
-      }, {
-        "name": "EACC",
-        "code": "EACC"
-      }, {
-        "name": "ONCC",
-        "code": "ONCC"
-      }, {
-        "name": "GBCC",
-        "code": "GBCC"
-      }, {
-        "name": "OSCC",
-        "code": "OSCC"
-      }, {
-        "name": "NRCC",
-        "code": "NRCC"
-      }, {
-        "name": "NWCC",
-        "code": "NWCC"
-      }, {
-        "name": "RMCC",
-        "code": "RMCC"
-      }, {
-        "name": "SACC",
-        "code": "SACC"
-      }, {
-        "name": "SWCC",
-        "code": "SWCC"
-      }, {
-        "name": "N/A",
-        "code": "N/A"
-      }]
+      "codedValues": [
+        {
+          "name": "NICC",
+          "code": "NICC"
+        },
+        {
+          "name": "CIFC",
+          "code": "CIFC"
+        },
+        {
+          "name": "AKCC",
+          "code": "AKCC"
+        },
+        {
+          "name": "EACC",
+          "code": "EACC"
+        },
+        {
+          "name": "ONCC",
+          "code": "ONCC"
+        },
+        {
+          "name": "GBCC",
+          "code": "GBCC"
+        },
+        {
+          "name": "OSCC",
+          "code": "OSCC"
+        },
+        {
+          "name": "NRCC",
+          "code": "NRCC"
+        },
+        {
+          "name": "NWCC",
+          "code": "NWCC"
+        },
+        {
+          "name": "RMCC",
+          "code": "RMCC"
+        },
+        {
+          "name": "SACC",
+          "code": "SACC"
+        },
+        {
+          "name": "SWCC",
+          "code": "SWCC"
+        },
+        {
+          "name": "N/A",
+          "code": "N/A"
+        }
+      ]
     },
     "editable": true,
     "length": 50,
@@ -1007,13 +1222,16 @@
     "domain": {
       "name": "Boolean",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "false",
-        "code": 0
-      }, {
-        "name": "true",
-        "code": 1
-      }]
+      "codedValues": [
+        {
+          "name": "false",
+          "code": 0
+        },
+        {
+          "name": "true",
+          "code": 1
+        }
+      ]
     },
     "editable": true,
     "length": -1,
@@ -1026,13 +1244,16 @@
     "domain": {
       "name": "Boolean",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "false",
-        "code": 0
-      }, {
-        "name": "true",
-        "code": 1
-      }]
+      "codedValues": [
+        {
+          "name": "false",
+          "code": 0
+        },
+        {
+          "name": "true",
+          "code": 1
+        }
+      ]
     },
     "editable": true,
     "length": -1,
@@ -1077,16 +1298,20 @@
     "domain": {
       "name": "ICS_209_Report_Status",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "Initial",
-        "code": "I"
-      }, {
-        "name": "Update",
-        "code": "U"
-      }, {
-        "name": "Final",
-        "code": "F"
-      }]
+      "codedValues": [
+        {
+          "name": "Initial",
+          "code": "I"
+        },
+        {
+          "name": "Update",
+          "code": "U"
+        },
+        {
+          "name": "Final",
+          "code": "F"
+        }
+      ]
     },
     "editable": true,
     "length": 1,
@@ -1107,40 +1332,52 @@
     "domain": {
       "name": "Incident_Management_Organization",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "Area Command",
-        "code": "Area Command"
-      }, {
-        "name": "NIMO",
-        "code": "NIMO"
-      }, {
-        "name": "SOPL",
-        "code": "SOPL"
-      }, {
-        "name": "Type 1 IC",
-        "code": "Type 1 IC"
-      }, {
-        "name": "Type 1 Team",
-        "code": "Type 1 Team"
-      }, {
-        "name": "Type 2 IC",
-        "code": "Type 2 IC"
-      }, {
-        "name": "Type 2 Team",
-        "code": "Type 2 Team"
-      }, {
-        "name": "Type 3 IC",
-        "code": "Type 3 IC"
-      }, {
-        "name": "Type 3 Team",
-        "code": "Type 3 Team"
-      }, {
-        "name": "Type 4 IC",
-        "code": "Type 4 IC"
-      }, {
-        "name": "Type 5 IC",
-        "code": "Type 5 IC"
-      }]
+      "codedValues": [
+        {
+          "name": "Area Command",
+          "code": "Area Command"
+        },
+        {
+          "name": "NIMO",
+          "code": "NIMO"
+        },
+        {
+          "name": "SOPL",
+          "code": "SOPL"
+        },
+        {
+          "name": "Type 1 IC",
+          "code": "Type 1 IC"
+        },
+        {
+          "name": "Type 1 Team",
+          "code": "Type 1 Team"
+        },
+        {
+          "name": "Type 2 IC",
+          "code": "Type 2 IC"
+        },
+        {
+          "name": "Type 2 Team",
+          "code": "Type 2 Team"
+        },
+        {
+          "name": "Type 3 IC",
+          "code": "Type 3 IC"
+        },
+        {
+          "name": "Type 3 Team",
+          "code": "Type 3 Team"
+        },
+        {
+          "name": "Type 4 IC",
+          "code": "Type 4 IC"
+        },
+        {
+          "name": "Type 5 IC",
+          "code": "Type 5 IC"
+        }
+      ]
     },
     "editable": true,
     "length": 255,
@@ -1169,37 +1406,48 @@
     "domain": {
       "name": "Event_Category",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "Debris / Product Fire",
-        "code": "DF"
-      }, {
-        "name": "False Alarm",
-        "code": "FA"
-      }, {
-        "name": "Prescribed Fire",
-        "code": "RX"
-      }, {
-        "name": "Structure Fire",
-        "code": "SF"
-      }, {
-        "name": "Vehicle Fire",
-        "code": "VF"
-      }, {
-        "name": "Wildfire",
-        "code": "WF"
-      }, {
-        "name": "Support Order",
-        "code": "SU"
-      }, {
-        "name": "Preposition / Prepare",
-        "code": "PP"
-      }, {
-        "name": "Complex",
-        "code": "CX"
-      }, {
-        "name": "Out of Area Response",
-        "code": "OR"
-      }]
+      "codedValues": [
+        {
+          "name": "Debris / Product Fire",
+          "code": "DF"
+        },
+        {
+          "name": "False Alarm",
+          "code": "FA"
+        },
+        {
+          "name": "Prescribed Fire",
+          "code": "RX"
+        },
+        {
+          "name": "Structure Fire",
+          "code": "SF"
+        },
+        {
+          "name": "Vehicle Fire",
+          "code": "VF"
+        },
+        {
+          "name": "Wildfire",
+          "code": "WF"
+        },
+        {
+          "name": "Support Order",
+          "code": "SU"
+        },
+        {
+          "name": "Preposition / Prepare",
+          "code": "PP"
+        },
+        {
+          "name": "Complex",
+          "code": "CX"
+        },
+        {
+          "name": "Out of Area Response",
+          "code": "OR"
+        }
+      ]
     },
     "editable": true,
     "length": 2,
@@ -1212,10 +1460,12 @@
     "domain": {
       "name": "Event_Kind",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "Fire",
-        "code": "FI"
-      }]
+      "codedValues": [
+        {
+          "name": "Fire",
+          "code": "FI"
+        }
+      ]
     },
     "editable": true,
     "length": 2,
@@ -1236,13 +1486,16 @@
     "domain": {
       "name": "Boolean",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "false",
-        "code": 0
-      }, {
-        "name": "true",
-        "code": 1
-      }]
+      "codedValues": [
+        {
+          "name": "false",
+          "code": 0
+        },
+        {
+          "name": "true",
+          "code": 1
+        }
+      ]
     },
     "editable": true,
     "length": -1,
@@ -1255,19 +1508,24 @@
     "domain": {
       "name": "Initial_Fire_Strategy",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "Full Suppression",
-        "code": "Full Suppression"
-      }, {
-        "name": "Point Zone Protection",
-        "code": "Point Zone Protection"
-      }, {
-        "name": "Confine",
-        "code": "Confine"
-      }, {
-        "name": "Monitor",
-        "code": "Monitor"
-      }]
+      "codedValues": [
+        {
+          "name": "Full Suppression",
+          "code": "Full Suppression"
+        },
+        {
+          "name": "Point Zone Protection",
+          "code": "Point Zone Protection"
+        },
+        {
+          "name": "Confine",
+          "code": "Confine"
+        },
+        {
+          "name": "Monitor",
+          "code": "Monitor"
+        }
+      ]
     },
     "editable": true,
     "length": 50,
@@ -1320,13 +1578,16 @@
     "domain": {
       "name": "Boolean",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "false",
-        "code": 0
-      }, {
-        "name": "true",
-        "code": 1
-      }]
+      "codedValues": [
+        {
+          "name": "false",
+          "code": 0
+        },
+        {
+          "name": "true",
+          "code": 1
+        }
+      ]
     },
     "editable": true,
     "length": -1,
@@ -1347,13 +1608,16 @@
     "domain": {
       "name": "Boolean",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "false",
-        "code": 0
-      }, {
-        "name": "true",
-        "code": 1
-      }]
+      "codedValues": [
+        {
+          "name": "false",
+          "code": 0
+        },
+        {
+          "name": "true",
+          "code": 1
+        }
+      ]
     },
     "editable": true,
     "length": -1,
@@ -1366,13 +1630,16 @@
     "domain": {
       "name": "Boolean",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "false",
-        "code": 0
-      }, {
-        "name": "true",
-        "code": 1
-      }]
+      "codedValues": [
+        {
+          "name": "false",
+          "code": 0
+        },
+        {
+          "name": "true",
+          "code": 1
+        }
+      ]
     },
     "editable": true,
     "length": -1,
@@ -1385,13 +1652,16 @@
     "domain": {
       "name": "Boolean",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "false",
-        "code": 0
-      }, {
-        "name": "true",
-        "code": 1
-      }]
+      "codedValues": [
+        {
+          "name": "false",
+          "code": 0
+        },
+        {
+          "name": "true",
+          "code": 1
+        }
+      ]
     },
     "editable": true,
     "length": -1,
@@ -1404,13 +1674,16 @@
     "domain": {
       "name": "Boolean",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "false",
-        "code": 0
-      }, {
-        "name": "true",
-        "code": 1
-      }]
+      "codedValues": [
+        {
+          "name": "false",
+          "code": 0
+        },
+        {
+          "name": "true",
+          "code": 1
+        }
+      ]
     },
     "editable": true,
     "length": -1,
@@ -1423,13 +1696,16 @@
     "domain": {
       "name": "Boolean",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "false",
-        "code": 0
-      }, {
-        "name": "true",
-        "code": 1
-      }]
+      "codedValues": [
+        {
+          "name": "false",
+          "code": 0
+        },
+        {
+          "name": "true",
+          "code": 1
+        }
+      ]
     },
     "editable": true,
     "length": -1,
@@ -1442,13 +1718,16 @@
     "domain": {
       "name": "Boolean",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "false",
-        "code": 0
-      }, {
-        "name": "true",
-        "code": 1
-      }]
+      "codedValues": [
+        {
+          "name": "false",
+          "code": 0
+        },
+        {
+          "name": "true",
+          "code": 1
+        }
+      ]
     },
     "editable": true,
     "length": -1,
@@ -1461,13 +1740,16 @@
     "domain": {
       "name": "Boolean",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "false",
-        "code": 0
-      }, {
-        "name": "true",
-        "code": 1
-      }]
+      "codedValues": [
+        {
+          "name": "false",
+          "code": 0
+        },
+        {
+          "name": "true",
+          "code": 1
+        }
+      ]
     },
     "editable": true,
     "length": -1,
@@ -1480,13 +1762,16 @@
     "domain": {
       "name": "Boolean",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "false",
-        "code": 0
-      }, {
-        "name": "true",
-        "code": 1
-      }]
+      "codedValues": [
+        {
+          "name": "false",
+          "code": 0
+        },
+        {
+          "name": "true",
+          "code": 1
+        }
+      ]
     },
     "editable": true,
     "length": -1,
@@ -1499,13 +1784,16 @@
     "domain": {
       "name": "Boolean",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "false",
-        "code": 0
-      }, {
-        "name": "true",
-        "code": 1
-      }]
+      "codedValues": [
+        {
+          "name": "false",
+          "code": 0
+        },
+        {
+          "name": "true",
+          "code": 1
+        }
+      ]
     },
     "editable": true,
     "length": -1,
@@ -1518,13 +1806,16 @@
     "domain": {
       "name": "Boolean",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "false",
-        "code": 0
-      }, {
-        "name": "true",
-        "code": 1
-      }]
+      "codedValues": [
+        {
+          "name": "false",
+          "code": 0
+        },
+        {
+          "name": "true",
+          "code": 1
+        }
+      ]
     },
     "editable": true,
     "length": -1,
@@ -1657,52 +1948,69 @@
     "domain": {
       "name": "Land_Owner_Category",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "Bureau of Indian Affairs",
-        "code": "BIA"
-      }, {
-        "name": "Bureau of Land Management",
-        "code": "BLM"
-      }, {
-        "name": "Bureau of Reclamation",
-        "code": "BOR"
-      }, {
-        "name": "Department of Defense",
-        "code": "DOD"
-      }, {
-        "name": "Department of Energy",
-        "code": "DOE"
-      }, {
-        "name": "National Park Service",
-        "code": "NPS"
-      }, {
-        "name": "US Forest Service",
-        "code": "USFS"
-      }, {
-        "name": "US Fish and Wildlife Service",
-        "code": "USFWS"
-      }, {
-        "name": "Foreign Government",
-        "code": "Foreign"
-      }, {
-        "name": "Tribal Government (non-trust lands) or Alaska Native Corporation",
-        "code": "Tribal"
-      }, {
-        "name": "City or Equivalent Government",
-        "code": "City"
-      }, {
-        "name": "County or Equivalent Government",
-        "code": "County"
-      }, {
-        "name": "State or Equivalent Government",
-        "code": "State"
-      }, {
-        "name": "Individual or Private Corporation",
-        "code": "Private"
-      }, {
-        "name": "Alaska Native Claims Settlement Act",
-        "code": "ANCSA"
-      }]
+      "codedValues": [
+        {
+          "name": "Bureau of Indian Affairs",
+          "code": "BIA"
+        },
+        {
+          "name": "Bureau of Land Management",
+          "code": "BLM"
+        },
+        {
+          "name": "Bureau of Reclamation",
+          "code": "BOR"
+        },
+        {
+          "name": "Department of Defense",
+          "code": "DOD"
+        },
+        {
+          "name": "Department of Energy",
+          "code": "DOE"
+        },
+        {
+          "name": "National Park Service",
+          "code": "NPS"
+        },
+        {
+          "name": "US Forest Service",
+          "code": "USFS"
+        },
+        {
+          "name": "US Fish and Wildlife Service",
+          "code": "USFWS"
+        },
+        {
+          "name": "Foreign Government",
+          "code": "Foreign"
+        },
+        {
+          "name":
+            "Tribal Government (non-trust lands) or Alaska Native Corporation",
+          "code": "Tribal"
+        },
+        {
+          "name": "City or Equivalent Government",
+          "code": "City"
+        },
+        {
+          "name": "County or Equivalent Government",
+          "code": "County"
+        },
+        {
+          "name": "State or Equivalent Government",
+          "code": "State"
+        },
+        {
+          "name": "Individual or Private Corporation",
+          "code": "Private"
+        },
+        {
+          "name": "Alaska Native Claims Settlement Act",
+          "code": "ANCSA"
+        }
+      ]
     },
     "editable": true,
     "length": 7,
@@ -1715,16 +2023,20 @@
     "domain": {
       "name": "Land_Owner_Kind",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "Federal",
-        "code": "Federal"
-      }, {
-        "name": "Other",
-        "code": "Other"
-      }, {
-        "name": "Private",
-        "code": "Private"
-      }]
+      "codedValues": [
+        {
+          "name": "Federal",
+          "code": "Federal"
+        },
+        {
+          "name": "Other",
+          "code": "Other"
+        },
+        {
+          "name": "Private",
+          "code": "Private"
+        }
+      ]
     },
     "editable": true,
     "length": 7,
@@ -1745,19 +2057,24 @@
     "domain": {
       "name": "Quarters",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "NE",
-        "code": "NE"
-      }, {
-        "name": "SE",
-        "code": "SE"
-      }, {
-        "name": "NW",
-        "code": "NW"
-      }, {
-        "name": "SW",
-        "code": "SW"
-      }]
+      "codedValues": [
+        {
+          "name": "NE",
+          "code": "NE"
+        },
+        {
+          "name": "SE",
+          "code": "SE"
+        },
+        {
+          "name": "NW",
+          "code": "NW"
+        },
+        {
+          "name": "SW",
+          "code": "SW"
+        }
+      ]
     },
     "editable": true,
     "length": 2,
@@ -1770,19 +2087,24 @@
     "domain": {
       "name": "Quarters",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "NE",
-        "code": "NE"
-      }, {
-        "name": "SE",
-        "code": "SE"
-      }, {
-        "name": "NW",
-        "code": "NW"
-      }, {
-        "name": "SW",
-        "code": "SW"
-      }]
+      "codedValues": [
+        {
+          "name": "NE",
+          "code": "NE"
+        },
+        {
+          "name": "SE",
+          "code": "SE"
+        },
+        {
+          "name": "NW",
+          "code": "NW"
+        },
+        {
+          "name": "SW",
+          "code": "SW"
+        }
+      ]
     },
     "editable": true,
     "length": 2,
@@ -1827,52 +2149,69 @@
     "domain": {
       "name": "Land_Owner_Category",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "Bureau of Indian Affairs",
-        "code": "BIA"
-      }, {
-        "name": "Bureau of Land Management",
-        "code": "BLM"
-      }, {
-        "name": "Bureau of Reclamation",
-        "code": "BOR"
-      }, {
-        "name": "Department of Defense",
-        "code": "DOD"
-      }, {
-        "name": "Department of Energy",
-        "code": "DOE"
-      }, {
-        "name": "National Park Service",
-        "code": "NPS"
-      }, {
-        "name": "US Forest Service",
-        "code": "USFS"
-      }, {
-        "name": "US Fish and Wildlife Service",
-        "code": "USFWS"
-      }, {
-        "name": "Foreign Government",
-        "code": "Foreign"
-      }, {
-        "name": "Tribal Government (non-trust lands) or Alaska Native Corporation",
-        "code": "Tribal"
-      }, {
-        "name": "City or Equivalent Government",
-        "code": "City"
-      }, {
-        "name": "County or Equivalent Government",
-        "code": "County"
-      }, {
-        "name": "State or Equivalent Government",
-        "code": "State"
-      }, {
-        "name": "Individual or Private Corporation",
-        "code": "Private"
-      }, {
-        "name": "Alaska Native Claims Settlement Act",
-        "code": "ANCSA"
-      }]
+      "codedValues": [
+        {
+          "name": "Bureau of Indian Affairs",
+          "code": "BIA"
+        },
+        {
+          "name": "Bureau of Land Management",
+          "code": "BLM"
+        },
+        {
+          "name": "Bureau of Reclamation",
+          "code": "BOR"
+        },
+        {
+          "name": "Department of Defense",
+          "code": "DOD"
+        },
+        {
+          "name": "Department of Energy",
+          "code": "DOE"
+        },
+        {
+          "name": "National Park Service",
+          "code": "NPS"
+        },
+        {
+          "name": "US Forest Service",
+          "code": "USFS"
+        },
+        {
+          "name": "US Fish and Wildlife Service",
+          "code": "USFWS"
+        },
+        {
+          "name": "Foreign Government",
+          "code": "Foreign"
+        },
+        {
+          "name":
+            "Tribal Government (non-trust lands) or Alaska Native Corporation",
+          "code": "Tribal"
+        },
+        {
+          "name": "City or Equivalent Government",
+          "code": "City"
+        },
+        {
+          "name": "County or Equivalent Government",
+          "code": "County"
+        },
+        {
+          "name": "State or Equivalent Government",
+          "code": "State"
+        },
+        {
+          "name": "Individual or Private Corporation",
+          "code": "Private"
+        },
+        {
+          "name": "Alaska Native Claims Settlement Act",
+          "code": "ANCSA"
+        }
+      ]
     },
     "editable": true,
     "length": 50,
@@ -1893,220 +2232,292 @@
     "domain": {
       "name": "ISO_3166_2_Country_and_Subdivision_codes",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "Alabama",
-        "code": "US-AL"
-      }, {
-        "name": "Alaska",
-        "code": "US-AK"
-      }, {
-        "name": "Arizona",
-        "code": "US-AZ"
-      }, {
-        "name": "Arkansas",
-        "code": "US-AR"
-      }, {
-        "name": "California",
-        "code": "US-CA"
-      }, {
-        "name": "Colorado",
-        "code": "US-CO"
-      }, {
-        "name": "Connecticut",
-        "code": "US-CT"
-      }, {
-        "name": "Delaware",
-        "code": "US-DE"
-      }, {
-        "name": "Florida",
-        "code": "US-FL"
-      }, {
-        "name": "Georgia",
-        "code": "US-GA"
-      }, {
-        "name": "Hawaii",
-        "code": "US-HI"
-      }, {
-        "name": "Idaho",
-        "code": "US-ID"
-      }, {
-        "name": "Illinois",
-        "code": "US-IL"
-      }, {
-        "name": "Indiana",
-        "code": "US-IN"
-      }, {
-        "name": "Iowa",
-        "code": "US-IA"
-      }, {
-        "name": "Kansas",
-        "code": "US-KS"
-      }, {
-        "name": "Kentucky",
-        "code": "US-KY"
-      }, {
-        "name": "Louisiana",
-        "code": "US-LA"
-      }, {
-        "name": "Maine",
-        "code": "US-ME"
-      }, {
-        "name": "Maryland",
-        "code": "US-MD"
-      }, {
-        "name": "Massachusetts",
-        "code": "US-MA"
-      }, {
-        "name": "Michigan",
-        "code": "US-MI"
-      }, {
-        "name": "Minnesota",
-        "code": "US-MN"
-      }, {
-        "name": "Mississippi",
-        "code": "US-MS"
-      }, {
-        "name": "Missouri",
-        "code": "US-MO"
-      }, {
-        "name": "Montana",
-        "code": "US-MT"
-      }, {
-        "name": "Nebraska",
-        "code": "US-NE"
-      }, {
-        "name": "Nevada",
-        "code": "US-NV"
-      }, {
-        "name": "New Hampshire",
-        "code": "US-NH"
-      }, {
-        "name": "New Jersey",
-        "code": "US-NJ"
-      }, {
-        "name": "New Mexico",
-        "code": "US-NM"
-      }, {
-        "name": "New York",
-        "code": "US-NY"
-      }, {
-        "name": "North Carolina",
-        "code": "US-NC"
-      }, {
-        "name": "North Dakota",
-        "code": "US-ND"
-      }, {
-        "name": "Ohio",
-        "code": "US-OH"
-      }, {
-        "name": "Oklahoma",
-        "code": "US-OK"
-      }, {
-        "name": "Oregon",
-        "code": "US-OR"
-      }, {
-        "name": "Pennsylvania",
-        "code": "US-PA"
-      }, {
-        "name": "Rhode Island",
-        "code": "US-RI"
-      }, {
-        "name": "South Carolina",
-        "code": "US-SC"
-      }, {
-        "name": "South Dakota",
-        "code": "US-SD"
-      }, {
-        "name": "Tennessee",
-        "code": "US-TN"
-      }, {
-        "name": "Texas",
-        "code": "US-TX"
-      }, {
-        "name": "Utah",
-        "code": "US-UT"
-      }, {
-        "name": "Vermont",
-        "code": "US-VT"
-      }, {
-        "name": "Virginia",
-        "code": "US-VA"
-      }, {
-        "name": "Washington",
-        "code": "US-WA"
-      }, {
-        "name": "West Virginia",
-        "code": "US-WV"
-      }, {
-        "name": "Wisconsin",
-        "code": "US-WI"
-      }, {
-        "name": "Wyoming",
-        "code": "US-WY"
-      }, {
-        "name": "District of Columbia",
-        "code": "US-DC"
-      }, {
-        "name": "American Samoa",
-        "code": "US-AS"
-      }, {
-        "name": "Guam",
-        "code": "US-GU"
-      }, {
-        "name": "Northern Mariana Islands",
-        "code": "US-MP"
-      }, {
-        "name": "Puerto Rico",
-        "code": "US-PR"
-      }, {
-        "name": "United States Minor Outlying Islands",
-        "code": "US-UM"
-      }, {
-        "name": "Virgin Islands, U.S.",
-        "code": "US-VI"
-      }, {
-        "name": "Alberta",
-        "code": "CA-AB"
-      }, {
-        "name": "British Columbia",
-        "code": "CA-BC"
-      }, {
-        "name": "Manitoba",
-        "code": "CA-MB"
-      }, {
-        "name": "New Brunswick",
-        "code": "CA-NB"
-      }, {
-        "name": "Ontario",
-        "code": "CA-ON"
-      }, {
-        "name": "Quebec",
-        "code": "CA-QC"
-      }, {
-        "name": "Saskatchewan",
-        "code": "CA-SK"
-      }, {
-        "name": "Yukon Territory",
-        "code": "CA-YT"
-      }, {
-        "name": "Baja California",
-        "code": "MX-BCN"
-      }, {
-        "name": "Chihuahua",
-        "code": "MX-CHH"
-      }, {
-        "name": "Coahuila",
-        "code": "MX-COA"
-      }, {
-        "name": "Nuevo Leon",
-        "code": "MX-NLE"
-      }, {
-        "name": "Sonora",
-        "code": "MX-SON"
-      }, {
-        "name": "Tamaulipas",
-        "code": "MX-TAM"
-      }]
+      "codedValues": [
+        {
+          "name": "Alabama",
+          "code": "US-AL"
+        },
+        {
+          "name": "Alaska",
+          "code": "US-AK"
+        },
+        {
+          "name": "Arizona",
+          "code": "US-AZ"
+        },
+        {
+          "name": "Arkansas",
+          "code": "US-AR"
+        },
+        {
+          "name": "California",
+          "code": "US-CA"
+        },
+        {
+          "name": "Colorado",
+          "code": "US-CO"
+        },
+        {
+          "name": "Connecticut",
+          "code": "US-CT"
+        },
+        {
+          "name": "Delaware",
+          "code": "US-DE"
+        },
+        {
+          "name": "Florida",
+          "code": "US-FL"
+        },
+        {
+          "name": "Georgia",
+          "code": "US-GA"
+        },
+        {
+          "name": "Hawaii",
+          "code": "US-HI"
+        },
+        {
+          "name": "Idaho",
+          "code": "US-ID"
+        },
+        {
+          "name": "Illinois",
+          "code": "US-IL"
+        },
+        {
+          "name": "Indiana",
+          "code": "US-IN"
+        },
+        {
+          "name": "Iowa",
+          "code": "US-IA"
+        },
+        {
+          "name": "Kansas",
+          "code": "US-KS"
+        },
+        {
+          "name": "Kentucky",
+          "code": "US-KY"
+        },
+        {
+          "name": "Louisiana",
+          "code": "US-LA"
+        },
+        {
+          "name": "Maine",
+          "code": "US-ME"
+        },
+        {
+          "name": "Maryland",
+          "code": "US-MD"
+        },
+        {
+          "name": "Massachusetts",
+          "code": "US-MA"
+        },
+        {
+          "name": "Michigan",
+          "code": "US-MI"
+        },
+        {
+          "name": "Minnesota",
+          "code": "US-MN"
+        },
+        {
+          "name": "Mississippi",
+          "code": "US-MS"
+        },
+        {
+          "name": "Missouri",
+          "code": "US-MO"
+        },
+        {
+          "name": "Montana",
+          "code": "US-MT"
+        },
+        {
+          "name": "Nebraska",
+          "code": "US-NE"
+        },
+        {
+          "name": "Nevada",
+          "code": "US-NV"
+        },
+        {
+          "name": "New Hampshire",
+          "code": "US-NH"
+        },
+        {
+          "name": "New Jersey",
+          "code": "US-NJ"
+        },
+        {
+          "name": "New Mexico",
+          "code": "US-NM"
+        },
+        {
+          "name": "New York",
+          "code": "US-NY"
+        },
+        {
+          "name": "North Carolina",
+          "code": "US-NC"
+        },
+        {
+          "name": "North Dakota",
+          "code": "US-ND"
+        },
+        {
+          "name": "Ohio",
+          "code": "US-OH"
+        },
+        {
+          "name": "Oklahoma",
+          "code": "US-OK"
+        },
+        {
+          "name": "Oregon",
+          "code": "US-OR"
+        },
+        {
+          "name": "Pennsylvania",
+          "code": "US-PA"
+        },
+        {
+          "name": "Rhode Island",
+          "code": "US-RI"
+        },
+        {
+          "name": "South Carolina",
+          "code": "US-SC"
+        },
+        {
+          "name": "South Dakota",
+          "code": "US-SD"
+        },
+        {
+          "name": "Tennessee",
+          "code": "US-TN"
+        },
+        {
+          "name": "Texas",
+          "code": "US-TX"
+        },
+        {
+          "name": "Utah",
+          "code": "US-UT"
+        },
+        {
+          "name": "Vermont",
+          "code": "US-VT"
+        },
+        {
+          "name": "Virginia",
+          "code": "US-VA"
+        },
+        {
+          "name": "Washington",
+          "code": "US-WA"
+        },
+        {
+          "name": "West Virginia",
+          "code": "US-WV"
+        },
+        {
+          "name": "Wisconsin",
+          "code": "US-WI"
+        },
+        {
+          "name": "Wyoming",
+          "code": "US-WY"
+        },
+        {
+          "name": "District of Columbia",
+          "code": "US-DC"
+        },
+        {
+          "name": "American Samoa",
+          "code": "US-AS"
+        },
+        {
+          "name": "Guam",
+          "code": "US-GU"
+        },
+        {
+          "name": "Northern Mariana Islands",
+          "code": "US-MP"
+        },
+        {
+          "name": "Puerto Rico",
+          "code": "US-PR"
+        },
+        {
+          "name": "United States Minor Outlying Islands",
+          "code": "US-UM"
+        },
+        {
+          "name": "Virgin Islands, U.S.",
+          "code": "US-VI"
+        },
+        {
+          "name": "Alberta",
+          "code": "CA-AB"
+        },
+        {
+          "name": "British Columbia",
+          "code": "CA-BC"
+        },
+        {
+          "name": "Manitoba",
+          "code": "CA-MB"
+        },
+        {
+          "name": "New Brunswick",
+          "code": "CA-NB"
+        },
+        {
+          "name": "Ontario",
+          "code": "CA-ON"
+        },
+        {
+          "name": "Quebec",
+          "code": "CA-QC"
+        },
+        {
+          "name": "Saskatchewan",
+          "code": "CA-SK"
+        },
+        {
+          "name": "Yukon Territory",
+          "code": "CA-YT"
+        },
+        {
+          "name": "Baja California",
+          "code": "MX-BCN"
+        },
+        {
+          "name": "Chihuahua",
+          "code": "MX-CHH"
+        },
+        {
+          "name": "Coahuila",
+          "code": "MX-COA"
+        },
+        {
+          "name": "Nuevo Leon",
+          "code": "MX-NLE"
+        },
+        {
+          "name": "Sonora",
+          "code": "MX-SON"
+        },
+        {
+          "name": "Tamaulipas",
+          "code": "MX-TAM"
+        }
+      ]
     },
     "editable": true,
     "length": 6,
@@ -2127,19 +2538,24 @@
     "domain": {
       "name": "Predominate_Fuel_Model",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "Grass",
-        "code": "Grass"
-      }, {
-        "name": "Brush",
-        "code": "Brush"
-      }, {
-        "name": "Timber",
-        "code": "Timber"
-      }, {
-        "name": "Slash",
-        "code": "Slash"
-      }]
+      "codedValues": [
+        {
+          "name": "Grass",
+          "code": "Grass"
+        },
+        {
+          "name": "Brush",
+          "code": "Brush"
+        },
+        {
+          "name": "Timber",
+          "code": "Timber"
+        },
+        {
+          "name": "Slash",
+          "code": "Slash"
+        }
+      ]
     },
     "editable": true,
     "length": 100,
@@ -2152,46 +2568,60 @@
     "domain": {
       "name": "NFFL_Fuel_Model",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "Short Grass (1 foot)",
-        "code": "Short Grass (1 foot)"
-      }, {
-        "name": "Timber (Grass and Understory)",
-        "code": "Timber (Grass and Understory)"
-      }, {
-        "name": "Tall Grass (2.5 feet)",
-        "code": "Tall Grass (2.5 feet)"
-      }, {
-        "name": "Chaparral (6 feet)",
-        "code": "Chaparral (6 feet)"
-      }, {
-        "name": "Brush (2 feet)",
-        "code": "Brush (2 feet)"
-      }, {
-        "name": "Dormant Brush, Hardwood Slash",
-        "code": "Dormant Brush, Hardwood Slash"
-      }, {
-        "name": "Southern Rough",
-        "code": "Southern Rough"
-      }, {
-        "name": "Closed Timber Litter",
-        "code": "Closed Timber Litter"
-      }, {
-        "name": "Hardwood Litter",
-        "code": "Hardwood Litter"
-      }, {
-        "name": "Timber (Litter and Understory)",
-        "code": "Timber (Litter and Understory)"
-      }, {
-        "name": "Light Logging Slash",
-        "code": "Light Logging Slash"
-      }, {
-        "name": "Medium Logging Slash",
-        "code": "Medium Logging Slash"
-      }, {
-        "name": "Heavy Logging Slash",
-        "code": "Heavy Logging Slash"
-      }]
+      "codedValues": [
+        {
+          "name": "Short Grass (1 foot)",
+          "code": "Short Grass (1 foot)"
+        },
+        {
+          "name": "Timber (Grass and Understory)",
+          "code": "Timber (Grass and Understory)"
+        },
+        {
+          "name": "Tall Grass (2.5 feet)",
+          "code": "Tall Grass (2.5 feet)"
+        },
+        {
+          "name": "Chaparral (6 feet)",
+          "code": "Chaparral (6 feet)"
+        },
+        {
+          "name": "Brush (2 feet)",
+          "code": "Brush (2 feet)"
+        },
+        {
+          "name": "Dormant Brush, Hardwood Slash",
+          "code": "Dormant Brush, Hardwood Slash"
+        },
+        {
+          "name": "Southern Rough",
+          "code": "Southern Rough"
+        },
+        {
+          "name": "Closed Timber Litter",
+          "code": "Closed Timber Litter"
+        },
+        {
+          "name": "Hardwood Litter",
+          "code": "Hardwood Litter"
+        },
+        {
+          "name": "Timber (Litter and Understory)",
+          "code": "Timber (Litter and Understory)"
+        },
+        {
+          "name": "Light Logging Slash",
+          "code": "Light Logging Slash"
+        },
+        {
+          "name": "Medium Logging Slash",
+          "code": "Medium Logging Slash"
+        },
+        {
+          "name": "Heavy Logging Slash",
+          "code": "Heavy Logging Slash"
+        }
+      ]
     },
     "editable": true,
     "length": 30,
@@ -2260,46 +2690,60 @@
     "domain": {
       "name": "NFFL_Fuel_Model",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "Short Grass (1 foot)",
-        "code": "Short Grass (1 foot)"
-      }, {
-        "name": "Timber (Grass and Understory)",
-        "code": "Timber (Grass and Understory)"
-      }, {
-        "name": "Tall Grass (2.5 feet)",
-        "code": "Tall Grass (2.5 feet)"
-      }, {
-        "name": "Chaparral (6 feet)",
-        "code": "Chaparral (6 feet)"
-      }, {
-        "name": "Brush (2 feet)",
-        "code": "Brush (2 feet)"
-      }, {
-        "name": "Dormant Brush, Hardwood Slash",
-        "code": "Dormant Brush, Hardwood Slash"
-      }, {
-        "name": "Southern Rough",
-        "code": "Southern Rough"
-      }, {
-        "name": "Closed Timber Litter",
-        "code": "Closed Timber Litter"
-      }, {
-        "name": "Hardwood Litter",
-        "code": "Hardwood Litter"
-      }, {
-        "name": "Timber (Litter and Understory)",
-        "code": "Timber (Litter and Understory)"
-      }, {
-        "name": "Light Logging Slash",
-        "code": "Light Logging Slash"
-      }, {
-        "name": "Medium Logging Slash",
-        "code": "Medium Logging Slash"
-      }, {
-        "name": "Heavy Logging Slash",
-        "code": "Heavy Logging Slash"
-      }]
+      "codedValues": [
+        {
+          "name": "Short Grass (1 foot)",
+          "code": "Short Grass (1 foot)"
+        },
+        {
+          "name": "Timber (Grass and Understory)",
+          "code": "Timber (Grass and Understory)"
+        },
+        {
+          "name": "Tall Grass (2.5 feet)",
+          "code": "Tall Grass (2.5 feet)"
+        },
+        {
+          "name": "Chaparral (6 feet)",
+          "code": "Chaparral (6 feet)"
+        },
+        {
+          "name": "Brush (2 feet)",
+          "code": "Brush (2 feet)"
+        },
+        {
+          "name": "Dormant Brush, Hardwood Slash",
+          "code": "Dormant Brush, Hardwood Slash"
+        },
+        {
+          "name": "Southern Rough",
+          "code": "Southern Rough"
+        },
+        {
+          "name": "Closed Timber Litter",
+          "code": "Closed Timber Litter"
+        },
+        {
+          "name": "Hardwood Litter",
+          "code": "Hardwood Litter"
+        },
+        {
+          "name": "Timber (Litter and Understory)",
+          "code": "Timber (Litter and Understory)"
+        },
+        {
+          "name": "Light Logging Slash",
+          "code": "Light Logging Slash"
+        },
+        {
+          "name": "Medium Logging Slash",
+          "code": "Medium Logging Slash"
+        },
+        {
+          "name": "Heavy Logging Slash",
+          "code": "Heavy Logging Slash"
+        }
+      ]
     },
     "editable": true,
     "length": 30,
@@ -2352,16 +2796,20 @@
     "domain": {
       "name": "WFDSS_Decision_Status",
       "type": "codedValue",
-      "codedValues": [{
-        "name": "No Decision",
-        "code": "No Decision"
-      }, {
-        "name": "Pending Decision",
-        "code": "Pending Decision"
-      }, {
-        "name": "Approved Decision",
-        "code": "Approved Decision"
-      }]
+      "codedValues": [
+        {
+          "name": "No Decision",
+          "code": "No Decision"
+        },
+        {
+          "name": "Pending Decision",
+          "code": "Pending Decision"
+        },
+        {
+          "name": "Approved Decision",
+          "code": "Approved Decision"
+        }
+      ]
     },
     "editable": true,
     "length": 20,

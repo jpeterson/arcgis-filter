@@ -58,6 +58,7 @@ class ValueInput extends Component {
           />
         );
       case 'date':
+      case 'epoch':
         return (
           <DatePicker
             date={this.getMomentDate(this.props.value.code)}

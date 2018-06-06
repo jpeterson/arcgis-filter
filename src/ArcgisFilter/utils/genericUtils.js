@@ -59,6 +59,9 @@ export function getGenericFieldType(fieldType) {
     case 'date':
       return 'date';
 
+    case 'epoch':
+      return 'epoch';
+
     default:
       console.warn('Invalid field type! Defaulting to string.', fieldType);
       return 'string';
@@ -67,12 +70,4 @@ export function getGenericFieldType(fieldType) {
 
 export function generateId() {
   return uuidv1();
-}
-
-//
-// PRIVATE METHODS
-//
-
-function getFieldsLookup(fields) {
-  return keyBy(fields, 'name');
 }

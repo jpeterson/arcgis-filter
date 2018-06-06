@@ -1,4 +1,10 @@
-import { formatDate, getDayStart, getDayEnd } from './dateUtils';
+import {
+  formatDate,
+  getDayStart,
+  getDayEnd,
+  getEpochDayStart,
+  getEpochDayEnd
+} from './dateUtils';
 import { getGenericFieldType } from './genericUtils';
 
 export function buildExpression(options) {
@@ -44,6 +50,28 @@ export function buildExpression(options) {
         expression += operator.omitValue
           ? ''
           : ` '${formatDate(date, 'date')}'`;
+      }
+      break;
+    case 'epoch':
+      const epochD = new Date(inputValue);
+      const epochDate = new Date(
+        epochD.getUTCFullYear(),
+        epochD.getUTCMonth(),
+        epochD.getUTCDate(),
+        epochD.getUTCHours(),
+        epochD.getUTCMinutes(),
+        epochD.getUTCSeconds()
+      );
+      if (operator.fullDay) {
+        expression = `${fieldName} ${operator.operator}`;
+        expression += ` ${getEpochDayStart(epochDate)} AND ${getEpochDayEnd(
+          epochDate
+        )}`;
+      } else {
+        expression = `${fieldName} ${operator.operator}`;
+        expression += operator.omitValue
+          ? ''
+          : ` '${formatDate(epochDate, 'epoch')}'`;
       }
 
       break;
