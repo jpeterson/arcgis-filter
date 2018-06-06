@@ -14,7 +14,6 @@ export function getDayEnd(date) {
 
 export function getEpochDayStart(date) {
   const dayStart = formatDate(startOfDay(date), 'epoch');
-  console.log(dayStart);
   return dayStart;
 }
 
