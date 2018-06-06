@@ -1837,7 +1837,7 @@
     "length": -1,
     "name": "ModifiedOnDateTime",
     "nullable": true,
-    "type": "esriFieldTypeDate"
+    "type": "epoch"
   },
   "OBJECTID": {
     "alias": "OBJECTID",
