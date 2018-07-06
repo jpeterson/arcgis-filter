@@ -51,6 +51,15 @@ class ArcgisFilter extends Component {
     this.onChange({ ...this.state });
   }
 
+  componentDidUpdate = (prevProps, prevState) => {
+    if (
+      JSON.stringify(prevProps.filterState) !==
+      JSON.stringify(this.props.filterState)
+    ) {
+      this.onChange(this.state);
+    }
+  };
+
   onChange = state => {
     const filter = buildFilter(state);
     this.props.onChange(filter, state);
