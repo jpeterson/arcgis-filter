@@ -44,6 +44,7 @@ class ArcgisFilter extends Component {
       const { filterState } = nextProps;
       return filterState;
     }
+    return null;
   }
 
   componentDidMount() {
