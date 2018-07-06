@@ -39,13 +39,15 @@ class ArcgisFilter extends Component {
     };
   }
 
-  componentDidMount() {
-    if (this.props.filterState) {
-      const { filterState } = this.props;
-      this.setState(filterState, () => {
-        this.onChange(this.state);
-      });
+  static getDerivedStateFromProps(nextProps, prevState) {
+    if (nextProps.filterState) {
+      const { filterState } = nextProps;
+      return filterState;
     }
+  }
+
+  componentDidMount() {
+    this.onChange({ ...this.state });
   }
 
   onChange = state => {
