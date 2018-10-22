@@ -42,9 +42,9 @@ export function buildExpression(options) {
       );
       if (operator.fullDay) {
         expression = `${fieldName} ${operator.operator}`;
-        expression += ` timestamp ${getDayStart(
+        expression += ` timestamp '${getDayStart(
           date
-        )} AND timestamp ${getDayEnd(date)}`;
+        )}' AND timestamp '${getDayEnd(date)}'`;
       } else {
         expression = `${fieldName} ${operator.operator}`;
         expression += operator.omitValue
