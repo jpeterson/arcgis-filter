@@ -62,13 +62,22 @@ export function buildExpression(options) {
         epochD.getUTCMinutes(),
         epochD.getUTCSeconds()
       );
+
+      expression = `${fieldName} ${operator.operator}`;
+
       if (operator.fullDay) {
-        expression = `${fieldName} ${operator.operator}`;
         expression += ` ${getEpochDayStart(epochDate)} AND ${getEpochDayEnd(
           epochDate
         )}`;
+      } else if (operator.alias === 'is before') {
+        expression += ` ${getEpochDayStart(epochDate)}`;
+      } else if (operator.alias === 'is after') {
+        expression += ` ${getEpochDayEnd(epochDate)}`;
+      } else if (operator.alias === 'is on or before') {
+        expression += ` ${getEpochDayEnd(epochDate)}`;
+      } else if (operator.alias === 'is on or after') {
+        expression += ` ${getEpochDayStart(epochDate)}`;
       } else {
-        expression = `${fieldName} ${operator.operator}`;
         expression += operator.omitValue
           ? ''
           : ` '${formatDate(epochDate, 'epoch')}'`;
