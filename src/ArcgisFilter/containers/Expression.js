@@ -108,7 +108,7 @@ class Expression extends Component {
       );
     }
 
-    // Freeform input
+    // Freeform text input (TextField) or Date input (DatePicker)
     return (
       <ValueInput
         value={value}

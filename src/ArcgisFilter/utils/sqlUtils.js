@@ -31,7 +31,9 @@ export function buildExpression(options) {
       expression += operator.omitValue ? '' : ` ${value}`;
       break;
     case 'date':
-      const d = new Date(inputValue);
+      const d =
+        inputValue && inputValue !== '' ? new Date(inputValue) : new Date();
+
       const date = new Date(
         d.getUTCFullYear(),
         d.getUTCMonth(),
@@ -53,7 +55,9 @@ export function buildExpression(options) {
       }
       break;
     case 'epoch':
-      const epochD = new Date(inputValue);
+      const epochD =
+        inputValue && inputValue !== '' ? new Date(inputValue) : new Date();
+
       const epochDate = new Date(
         epochD.getUTCFullYear(),
         epochD.getUTCMonth(),
@@ -62,13 +66,22 @@ export function buildExpression(options) {
         epochD.getUTCMinutes(),
         epochD.getUTCSeconds()
       );
+
+      expression = `${fieldName} ${operator.operator}`;
+
       if (operator.fullDay) {
-        expression = `${fieldName} ${operator.operator}`;
         expression += ` ${getEpochDayStart(epochDate)} AND ${getEpochDayEnd(
           epochDate
         )}`;
+      } else if (operator.alias === 'is before') {
+        expression += ` ${getEpochDayStart(epochDate)}`;
+      } else if (operator.alias === 'is after') {
+        expression += ` ${getEpochDayEnd(epochDate)}`;
+      } else if (operator.alias === 'is on or before') {
+        expression += ` ${getEpochDayEnd(epochDate)}`;
+      } else if (operator.alias === 'is on or after') {
+        expression += ` ${getEpochDayStart(epochDate)}`;
       } else {
-        expression = `${fieldName} ${operator.operator}`;
         expression += operator.omitValue
           ? ''
           : ` '${formatDate(epochDate, 'epoch')}'`;
