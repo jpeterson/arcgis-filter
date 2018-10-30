@@ -33,7 +33,7 @@ class ValueInput extends Component {
   };
 
   getMomentDate = date => {
-    if (date) {
+    if (date && date !== '') {
       return moment(date);
     }
 
