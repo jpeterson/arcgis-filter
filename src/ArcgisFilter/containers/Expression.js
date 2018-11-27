@@ -6,6 +6,7 @@ import ValueInput from '../components/ValueInput';
 import UniqueValueChooser from '../components/UniqueValueChooser';
 import ValueTypeChooser from '../components/ValueTypeChooser';
 import DomainValueChooser from '../components/DomainValueChooser';
+import RelativeDateChooser from '../components/RelativeDateChooser';
 
 import { FormControl, Fieldset } from 'calcite-react/Form';
 import Panel from 'calcite-react/Panel';
@@ -108,7 +109,11 @@ class Expression extends Component {
       );
     }
 
-    // Freeform text input (TextField) or Date input (DatePicker)
+    if (operator && operator.relativeDate) {
+      return <RelativeDateChooser onChange={this.handleValueChanged} />;
+    }
+
+    // Freeform text input (TextField) or non-relative Date input (DatePicker)
     return (
       <ValueInput
         value={value}

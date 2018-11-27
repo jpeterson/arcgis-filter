@@ -113,6 +113,16 @@ export default {
       alias: 'is not blank',
       operator: 'IS NOT NULL',
       omitValue: true
+    },
+    {
+      alias: 'in the last',
+      operator: '?',
+      relativeDate: true
+    },
+    {
+      alias: 'not in the last',
+      operator: '?',
+      relativeDate: true
     }
   ],
   epoch: [
@@ -151,6 +161,16 @@ export default {
       alias: 'is not blank',
       operator: 'IS NOT NULL',
       omitValue: true
+    },
+    {
+      alias: 'in the last',
+      operator: '?',
+      relativeDate: true
+    },
+    {
+      alias: 'not in the last',
+      operator: '?',
+      relativeDate: true
     }
   ]
 };

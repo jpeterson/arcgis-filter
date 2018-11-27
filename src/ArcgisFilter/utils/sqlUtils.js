@@ -47,6 +47,10 @@ export function buildExpression(options) {
         expression += ` timestamp '${getDayStart(
           date
         )}' AND timestamp '${getDayEnd(date)}'`;
+      } else if (operator.relativeDate) {
+        expression = `${fieldName} ${
+          operator.operator
+        } CURRENT_TIMESTAMP - 1 AND CURRENT_TIMESTAMP`;
       } else {
         expression = `${fieldName} ${operator.operator}`;
         expression += operator.omitValue
