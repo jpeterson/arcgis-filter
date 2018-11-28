@@ -1,24 +1,42 @@
-import format from 'date-fns/format';
-import startOfDay from 'date-fns/start_of_day';
-import endOfDay from 'date-fns/end_of_day';
+import moment from 'moment';
 
 export function getDayStart(date) {
-  const dayStart = formatDate(startOfDay(date), 'datetime');
+  const dayStart = formatDate(
+    moment(date)
+      .startOf('day')
+      .toDate(),
+    'datetime'
+  );
   return dayStart;
 }
 
 export function getDayEnd(date) {
-  const dayEnd = formatDate(endOfDay(date), 'datetime');
+  const dayEnd = formatDate(
+    moment(date)
+      .endOf('day')
+      .toDate(),
+    'datetime'
+  );
   return dayEnd;
 }
 
 export function getEpochDayStart(date) {
-  const dayStart = formatDate(startOfDay(date), 'epoch');
+  const dayStart = formatDate(
+    moment(date)
+      .startOf('day')
+      .toDate(),
+    'epoch'
+  );
   return dayStart;
 }
 
 export function getEpochDayEnd(date) {
-  const dayEnd = formatDate(endOfDay(date), 'epoch');
+  const dayEnd = formatDate(
+    moment(date)
+      .endOf('day')
+      .toDate(),
+    'epoch'
+  );
   return dayEnd;
 }
 
@@ -29,12 +47,12 @@ export function formatDate(date, formatter) {
 
   switch (formatter) {
     case 'date':
-      return format(date, dateFormat);
+      return moment(date).format(dateFormat);
     case 'datetime':
-      return format(date, dateTimeFormat);
+      return moment(date).format(dateTimeFormat);
     case 'epoch':
-      return format(date, epochFormat);
+      return moment(date).format(epochFormat);
     default:
-      return format(date, dateTimeFormat);
+      return moment(date).format(dateTimeFormat);
   }
 }
