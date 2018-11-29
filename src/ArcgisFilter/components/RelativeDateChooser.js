@@ -18,11 +18,16 @@ class RelativeDateChooser extends Component {
   }
 
   componentDidMount() {
+    const timeSizeValue =
+      this.props.value.timeSizeValue || this.state.value.timeSizeValue;
+    const timeSpanValue =
+      this.props.value.timeSpanValue || this.state.value.timeSpanValue;
+
     this.setState(
       {
         value: {
-          timeSizeValue: Number(this.props.value.timeSizeValue),
-          timeSpanValue: this.props.value.timeSpanValue
+          timeSizeValue: Number(timeSizeValue),
+          timeSpanValue: timeSpanValue
         }
       },
       () => this.props.onChange(this.state.value)
