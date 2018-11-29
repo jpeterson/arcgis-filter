@@ -44,15 +44,12 @@ class ValueInput extends Component {
     switch (type) {
       case 'string':
         return (
-          <TextField
-            value={this.props.value.code}
-            onChange={this.handleOnChange}
-          />
+          <TextField value={this.props.value} onChange={this.handleOnChange} />
         );
       case 'number':
         return (
           <TextField
-            value={this.props.value.code}
+            value={this.props.value}
             onChange={this.handleOnChange}
             type="number"
           />
@@ -61,7 +58,7 @@ class ValueInput extends Component {
       case 'epoch':
         return (
           <DatePicker
-            date={this.getMomentDate(this.props.value.code)}
+            date={this.getMomentDate(this.props.value)}
             isOutsideRange={() => false}
             numberOfMonths={1}
             anchorDirection="right"
@@ -74,7 +71,7 @@ class ValueInput extends Component {
         return (
           <TextField
             disabled
-            value={this.props.value.code}
+            value={this.props.value}
             onChange={this.handleOnChange}
           />
         );

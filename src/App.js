@@ -170,6 +170,24 @@ const sql = {
           },
           valueType: 'value',
           id: '270dc491-65e5-11e8-bc5a-876600b4d750'
+        },
+        '3ff56880-f40d-11e8-8cd4-7bb9ee449bb2': {
+          field: {
+            alias: 'Containment Date Time',
+            editable: true,
+            length: 8,
+            name: 'ContainmentDateTime',
+            nullable: true,
+            type: 'esriFieldTypeDate'
+          },
+          operator: {
+            alias: 'in the last',
+            operator: 'BETWEEN',
+            relativeDate: true
+          },
+          value: { timeSizeValue: 3, timeSpanValue: 'months' },
+          valueType: 'value',
+          id: '3ff56880-f40d-11e8-8cd4-7bb9ee449bb2'
         }
       }
     }

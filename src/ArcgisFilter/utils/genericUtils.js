@@ -1,5 +1,3 @@
-import { keyBy } from 'lodash';
-
 import uuidv1 from 'uuid/v1';
 
 import operatorDefs from '../defaults/operators';
