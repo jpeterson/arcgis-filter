@@ -83,7 +83,7 @@ const style = {
   valueInput: {
     // overrides here?
   },
-  select: {
+  selectInput: {
     // overrides here?
   }
 };
