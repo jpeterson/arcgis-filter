@@ -8,47 +8,64 @@ import ValueInput from '../components/ValueInput';
 class RelativeDateChooser extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      timeSizeValue: {
-        code: 1,
-        value: 1
-      },
-      timeSpanValue: 'minutes'
+      value: {
+        timeSizeValue: 1,
+        timeSpanValue: 'days'
+      }
     };
   }
 
-  handleValueChange = e => {
-    console.log(e);
-    // props.onChange(e);
-    this.setState({
-      timeSizeValue: e
-    });
+  componentDidMount() {
+    this.setState(
+      {
+        value: {
+          timeSizeValue: Number(this.props.value.timeSizeValue),
+          timeSpanValue: this.props.value.timeSpanValue
+        }
+      },
+      () => this.props.onChange(this.state.value)
+    );
+  }
+
+  handleNumberValueChange = e => {
+    this.setState(
+      {
+        value: {
+          ...this.state.value,
+          timeSizeValue: Number(e.code)
+        }
+      },
+      () => this.props.onChange(this.state.value)
+    );
   };
 
-  handleOptionChange = e => {
-    console.log(e);
-    // props.onChange(e);
-    this.setState({
-      timeSpanValue: e
-    });
+  handleSelectOptionChange = e => {
+    this.setState(
+      {
+        value: {
+          ...this.state.value,
+          timeSpanValue: e
+        }
+      },
+      () => this.props.onChange(this.state.value)
+    );
   };
 
   render() {
-    // TODO: get timeSizeValue from props?
-    // TODO: get timeSpanValue from props?
-
     return (
       <div>
         <ValueInput
           style={style.valueInput}
-          value={this.state.timeSizeValue}
+          value={this.state.value.timeSizeValue}
           type="number"
-          onChange={this.handleValueChange}
+          onChange={this.handleNumberValueChange}
         />
         <Select
-          style={style.select}
-          selectedValue={this.state.timeSpanValue}
-          onChange={this.handleOptionChange}
+          style={style.selectInput}
+          selectedValue={this.state.value.timeSpanValue}
+          onChange={this.handleSelectOptionChange}
         >
           <MenuItem value="minutes">minute(s)</MenuItem>
           <MenuItem value="hours">hour(s)</MenuItem>
@@ -64,10 +81,10 @@ class RelativeDateChooser extends Component {
 
 const style = {
   valueInput: {
-    flex: '0 0 80px'
+    // overrides here?
   },
   select: {
-    flex: '0 0 80px'
+    // overrides here?
   }
 };
 

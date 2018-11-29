@@ -110,13 +110,15 @@ class Expression extends Component {
     }
 
     if (operator && operator.relativeDate) {
-      return <RelativeDateChooser onChange={this.handleValueChanged} />;
+      return (
+        <RelativeDateChooser value={value} onChange={this.handleValueChanged} />
+      );
     }
 
     // Freeform text input (TextField) or non-relative Date input (DatePicker)
     return (
       <ValueInput
-        value={value}
+        value={value.code}
         type={getGenericFieldType(field && field.type)}
         onChange={this.handleValueChanged}
       />

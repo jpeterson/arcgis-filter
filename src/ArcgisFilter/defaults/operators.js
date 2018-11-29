@@ -116,12 +116,12 @@ export default {
     },
     {
       alias: 'in the last',
-      operator: '?',
+      operator: 'BETWEEN',
       relativeDate: true
     },
     {
       alias: 'not in the last',
-      operator: '?',
+      operator: 'NOT BETWEEN',
       relativeDate: true
     }
   ],

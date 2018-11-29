@@ -56,3 +56,23 @@ export function formatDate(date, formatter) {
       return moment(date).format(dateTimeFormat);
   }
 }
+
+export function convertTimeSpanToSQLDays(value = 1, unit = 'days') {
+  switch (unit) {
+    case 'minutes':
+      return moment.duration(value, 'minutes').asDays();
+    case 'hours':
+      return moment.duration(value, 'hours').asDays();
+    case 'days':
+      return moment.duration(value, 'days').asDays();
+    case 'weeks':
+      return moment.duration(value, 'weeks').asDays();
+    case 'months':
+      return moment.duration(value, 'months').asDays();
+    case 'years':
+      return moment.duration(value, 'years').asDays();
+    default:
+      console.error(`You have provided an invalid unit: ${unit}`);
+      return null;
+  }
+}

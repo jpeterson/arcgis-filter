@@ -3,7 +3,8 @@ import {
   getDayStart,
   getDayEnd,
   getEpochDayStart,
-  getEpochDayEnd
+  getEpochDayEnd,
+  convertTimeSpanToSQLDays
 } from './dateUtils';
 import { getGenericFieldType } from './genericUtils';
 
@@ -12,12 +13,13 @@ export function buildExpression(options) {
 
   const fieldName = options.field.name;
   const fieldType = getGenericFieldType(options.field.type);
-  const inputValue = options.value.code || '';
+  const inputValue = options.value || { code: '' };
   const operator = options.operator;
 
   let value;
   if (!operator.omitValue) {
-    value = `${operator.prefix || ''}${inputValue}${operator.suffix || ''}`;
+    value = `${operator.prefix || ''}${inputValue.code}${operator.suffix ||
+      ''}`;
   }
 
   let expression;
@@ -32,7 +34,9 @@ export function buildExpression(options) {
       break;
     case 'date':
       const d =
-        inputValue && inputValue !== '' ? new Date(inputValue) : new Date();
+        inputValue.code && inputValue.code !== ''
+          ? new Date(inputValue.code)
+          : new Date();
 
       const date = new Date(
         d.getUTCFullYear(),
@@ -42,6 +46,7 @@ export function buildExpression(options) {
         d.getUTCMinutes(),
         d.getUTCSeconds()
       );
+
       if (operator.fullDay) {
         expression = `${fieldName} ${operator.operator}`;
         expression += ` timestamp '${getDayStart(
@@ -50,7 +55,10 @@ export function buildExpression(options) {
       } else if (operator.relativeDate) {
         expression = `${fieldName} ${
           operator.operator
-        } CURRENT_TIMESTAMP - 1 AND CURRENT_TIMESTAMP`;
+        } CURRENT_TIMESTAMP - ${convertTimeSpanToSQLDays(
+          inputValue.timeSizeValue,
+          inputValue.timeSpanValue
+        )} AND CURRENT_TIMESTAMP`;
       } else {
         expression = `${fieldName} ${operator.operator}`;
         expression += operator.omitValue
@@ -60,7 +68,9 @@ export function buildExpression(options) {
       break;
     case 'epoch':
       const epochD =
-        inputValue && inputValue !== '' ? new Date(inputValue) : new Date();
+        inputValue.code && inputValue.code !== ''
+          ? new Date(inputValue.code)
+          : new Date();
 
       const epochDate = new Date(
         epochD.getUTCFullYear(),
