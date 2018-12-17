@@ -39,26 +39,11 @@ class ArcgisFilter extends Component {
     };
   }
 
-  static getDerivedStateFromProps(nextProps, prevState) {
-    if (nextProps.filterState) {
-      const { filterState } = nextProps;
-      return filterState;
-    }
-    return null;
-  }
-
   componentDidMount() {
-    this.onChange({ ...this.state });
-  }
-
-  componentDidUpdate = (prevProps, prevState) => {
-    if (
-      JSON.stringify(prevProps.filterState) !==
-      JSON.stringify(this.props.filterState)
-    ) {
+    this.setState({ ...this.props.filterState }, () => {
       this.onChange(this.state);
-    }
-  };
+    });
+  }
 
   onChange = state => {
     const filter = buildFilter(state);
@@ -69,10 +54,6 @@ class ArcgisFilter extends Component {
     this.setState({ sets }, () => {
       this.onChange(this.state);
     });
-  };
-
-  updateSetOperator = mustMatchAll => {
-    this.setState({ mustMatchAll });
   };
 
   handleAddSet = () => {
@@ -121,7 +102,9 @@ class ArcgisFilter extends Component {
   };
 
   handleUpdateFilterOperator = mustMatchAll => {
-    this.updateSetOperator(mustMatchAll);
+    this.setState({ mustMatchAll }, () => {
+      this.onChange(this.state);
+    });
   };
 
   getSets = sets => {
