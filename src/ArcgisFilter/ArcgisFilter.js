@@ -17,6 +17,8 @@ import { FormControl, FormControlLabel } from 'calcite-react/Form';
 import Tooltip from 'calcite-react/Tooltip';
 import PlusIcon from './icons/PlusIcon';
 
+import { isEqual } from 'lodash';
+
 import {
   StyledSetHeaderRow,
   StyledAddSetButton
@@ -40,9 +42,14 @@ class ArcgisFilter extends Component {
   }
 
   componentDidMount() {
-    this.setState({ ...this.props.filterState }, () => {
-      this.onChange(this.state);
-    });
+    if (
+      this.props &&
+      this.props.filterState &&
+      !isEqual(this.props.filterState, this.state)
+    )
+      this.setState({ ...this.props.filterState }, () => {
+        this.onChange(this.state);
+      });
   }
 
   onChange = state => {
