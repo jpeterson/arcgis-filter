@@ -9,7 +9,7 @@ import Tooltip from 'calcite-react/Tooltip';
 import PlusIcon from '../icons/PlusIcon';
 
 import { StyledSetHeaderRow, StyledAddSetButton } from './Set-styled';
-import CalciteTheme from 'calcite-react/theme/CalciteTheme';
+import { CalciteTheme } from 'calcite-react/CalciteThemeProvider';
 
 const Set = props => {
   const addExpression = () => {

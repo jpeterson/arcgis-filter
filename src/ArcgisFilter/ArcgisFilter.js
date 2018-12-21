@@ -8,8 +8,9 @@ import { generateId } from './utils/genericUtils';
 import { buildFilter } from './utils/sqlUtils';
 import expressionTemplate from './defaults/expression';
 
-import { ThemeProvider } from 'styled-components';
-import CalciteTheme from 'calcite-react/theme/CalciteTheme';
+import CalciteThemeProvider, {
+  CalciteTheme
+} from 'calcite-react/CalciteThemeProvider';
 
 import Panel from 'calcite-react/Panel';
 import Button, { ButtonGroup } from 'calcite-react/Button';
@@ -154,7 +155,7 @@ class ArcgisFilter extends Component {
     }
 
     return (
-      <ThemeProvider theme={CalciteTheme}>
+      <CalciteThemeProvider>
         <Panel white>
           <StyledSetHeaderRow>
             <FormControl horizontal style={{ marginBottom: '5px' }}>
@@ -194,7 +195,7 @@ class ArcgisFilter extends Component {
             }}
           />
         </Panel>
-      </ThemeProvider>
+      </CalciteThemeProvider>
     );
   }
 }
