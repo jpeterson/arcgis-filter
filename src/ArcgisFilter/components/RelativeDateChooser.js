@@ -60,7 +60,7 @@ class RelativeDateChooser extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{ display: 'inline-flex' }}>
         <ValueInput
           style={style.valueInput}
           value={this.state.value.timeSizeValue}
