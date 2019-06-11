@@ -53,6 +53,18 @@ class ArcgisFilter extends Component {
       });
   }
 
+  componentDidUpdate = (prevProps, prevState) => {
+    // check if rehydrating from filterState
+    if (
+      JSON.stringify(prevProps.filterState) !==
+      JSON.stringify(this.props.filterState)
+    ) {
+      this.setState({ ...this.props.filterState }, () => {
+        this.onChange(this.state);
+      });
+    }
+  };
+
   onChange = state => {
     const filter = buildFilter(state);
     this.props.onChange(filter, state);
