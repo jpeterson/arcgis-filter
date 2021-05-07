@@ -4,7 +4,7 @@
   "main": "./dist",
   "dependencies": {
     "calcite-react": "^0.28.1",
-    "lodash": "^4.17.10",
+    "lodash": "^4.17.21",
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
