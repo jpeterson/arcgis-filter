@@ -3,12 +3,12 @@
   "version": "0.9.0",
   "main": "./dist",
   "dependencies": {
-    "calcite-react": "^0.28.1",
+    "calcite-react": "^0.62.1",
     "lodash": "^4.17.10",
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
-    "react-scripts": "1.1.4",
+    "react-scripts": "5.0.1",
     "uuid": "^3.2.1"
   },
   "scripts": {
